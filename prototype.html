@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet"/>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+
+    <style>
+        td{
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <!--Dataset-->
+              <div id="spoiler" role="aria-hidden">
+                <form action="javascript:void(0);" method="POST" id="saveEdit">
+                  <input type="text" id="edit-name">
+                  <input type="submit" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                </form>
+              </div>
+              
+              <p id="counter"></p>
+              <button class="btn btn-primary float-end mb-2" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD</button>
+              <table class="table align-middle mb-0 bg-white">
+                <thead class="bg-light">
+                    <th>UID</th>
+                    <th>Name</th>
+                    <th>Area Harvester (ha)</th>
+                    <th>Production (mt)</th>
+                    <th>Productivity (mt/ha)</th>
+                    <th>Action</th>
+                </thead>
+                  <tbody id="uid">
+                  </tbody>
+              </table>
+              
+              <script>
+              var app = new function() {
+              
+                this.el = document.getElementById('uid');
+              
+                this.uid = ['1', '2', '3', '4', '5', '6', '7', '8', '9','10','11','12','13'];
+                
+                this.names = [
+                    'Vegetables', 
+                    'LEAFY VEGETABLES', 
+                    'CABBAGE', 
+                    'CHINESE CABBAGE', 
+                    'LETTUCE',
+                    'CAULIFLOWER',
+                    'FRUIT VEGETABLES',
+                    'SNAP BEANS',
+                    'GARDEN PEAS',
+                    'SWEET PEPPER',
+                    'ROOT VEGETABLE',
+                    'WHITE POTATO',
+                    'CARROTS'];
+              
+                this.ha = [
+                    '41,028.36', 
+                    '17,358.24', 
+                    '8,825.96', 
+                    '3,276.91', 
+                    '835.76',
+                    '632.86',
+                    '8,214.23',
+                    '1,915.83',
+                    '655.91',
+                    '986.97',
+                    '15455.89',
+                    '10152.53',
+                    '4,595.02'];
+                this.mt = [
+                    '836,410.79', 
+                    '286,851.69', 
+                    '170,017.71', 
+                    '65,844.30', 
+                    '8,401.74',
+                    '7,608.64',
+                    '286,281.85',
+                    '18,596.43',
+                    '3,587.15',
+                    '7161.43',
+                    '263277.25',
+                    '184770.95',
+                    '70,787.61'];
+                
+                this.mt_ha = [
+                    '20.39', 
+                    '16.53', 
+                    '19.26', 
+                    '20.09', 
+                    '10.05',
+                    '12.02',
+                    '34.85',
+                    '9.71',
+                    '5.47',
+                    '7.26',
+                    '17.03',
+                    '18.2',
+                    '15.41'];
+                this.Count = function(data) {
+                  var el   = document.getElementById('counter');
+                  var name = 'country';
+              
+                  if (data) {
+                    if (data > 1) {
+                      name = 'uid';
+                    }
+                    el.innerHTML = data + ' ' + name ;
+                  } else {
+                    el.innerHTML = 'No ' + name;
+                  }
+                };
+                
+                this.FetchAll = function() {
+                  var data = '';
+              
+                  if (this.uid.length > 0) {
+                    for (i = 0; i < this.uid.length; i++) {
+                      data += '<tr>';
+                      data += '<td>' + this.uid[i] + '</td>';
+                      data += '<td>' + this.names[i] + '</td>';
+                      data += '<td>' + this.ha[i] + '</td>';
+                      data += '<td>' + this.mt[i] + '</td>';
+                      data += '<td>' + this.mt_ha[i] + '</td>';
+                      data += '<td><button class="btn btn-success" onclick="app.Edit(' + i + ')">Edit</button>  <button class="btn btn-danger" onclick="app.Delete(' + i + ')">Delete</button></td>';
+                      data += '</tr>';
+                    }
+                  }
+              
+                  this.Count(this.uid.length);
+                  return this.el.innerHTML = data;
+                };
+              
+                this.Add = function () {
+                  el = document.getElementById('add-id');
+                  name_val = document.getElementById('add-name');
+                  ha_val = document.getElementById('add-ha');
+                  mt_val = document.getElementById('add-mt');
+                  productivity_val = document.getElementById('add-productivity');
+                  // Get the value
+                  var id = el.value;
+                  var get_name = name_val.value;
+                  var ha = ha_val.value;
+                  var mt = mt_val.value;
+                  var productivity = productivity_val.value;
+
+                  if (id) {
+                    // Add the new value
+                    this.uid.push(id.trim());
+                    this.names.push(get_name.trim());
+                    this.ha.push(ha.trim());
+                    this.mt.push(mt.trim());
+                    this.mt_ha.push(productivity.trim());
+
+                    // Reset input value
+                    el.value = '';
+                    name_val = '';
+                    ha_val  = '';
+                    mt_val  = '';
+                    productivity_val  = '';
+                    // Dislay the new list
+                    this.FetchAll();
+                  }
+                };
+              
+                this.Edit = function (item) {
+                  var el = document.getElementById('edit-name');
+                  // Display value in the field
+                  el.value = this.uid[item];
+                  // Display fields
+                  document.getElementById('spoiler').style.display = 'block';
+                  self = this;
+              
+                  document.getElementById('saveEdit').onsubmit = function() {
+                    // Get value
+                    var country = el.value;
+              
+                    if (country) {
+                      // Edit value
+                      self.countries.splice(item, 1, country.trim());
+                      // Display the new list
+                      self.FetchAll();
+                      // Hide fields
+                      CloseInput();
+                    }
+                  }
+                };
+              
+                this.Delete = function (item) {
+                  // Delete the current row
+                  this.uid.splice(item, 1);
+                  // Display the new list
+                  this.FetchAll();
+                };
+                
+              }
+              
+              app.FetchAll();
+              
+              function CloseInput() {
+                document.getElementById('spoiler').style.display = 'none';
+              }
+              </script>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <!--add--->
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">           
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Record</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- id input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="add-id" placeholder="ID" class="form-control" />
+                            <label class="form-label" for="add-id">ID</label>
+                        </div>
+
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="add-name" placeholder="Name" class="form-control" />
+                            <label class="form-label" for="add-id">Name</label>
+                        </div>
+
+                        <!-- ha input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="add-ha" placeholder="Area Harvester" class="form-control" />
+                            <label class="form-label" for="add-ha">Area Harvester</label>
+                        </div>
+
+                        <!-- mt input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="add-mt" placeholder="Production" class="form-control" />
+                            <label class="form-label" for="add-mt">Production</label>
+                        </div>
+
+                        <!-- add-productivity input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="add-productivity" placeholder="ID" class="form-control" />
+                            <label class="form-label" for="add-productivity">Productivity</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button  type="submit" class="btn btn-primary" data-mdb-dismiss="modal">Save changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
