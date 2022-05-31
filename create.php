@@ -147,7 +147,14 @@
 <?php
   if(isset($_POST['insert']))
   {
-    mysqli_query($link, "insert into maintable values(NULL, '$_POST[name]', '$_POST[municipality]', '$_POST[area]', '$_POST[production]', '$_POST[productivity]')");
+    $val1 = (int)$_POST['area'];
+    $val2 = (int)$_POST['production'];
+    
+
+    $ha = floatval( $val1 );
+    $mt = floatval( $val2 );
+    $res = floatval( $ha / $mt );
+    mysqli_query($link, "insert into maintable values(NULL, '$_POST[name]', '$_POST[municipality]', '$_POST[area]', '$_POST[production]', '$res')");
     ?>
     <script type="text/javascript">
       window.location.href=window.location.href;
