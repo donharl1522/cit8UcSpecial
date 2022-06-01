@@ -42,7 +42,7 @@
                       <h6 class="mb-0"><?php echo $row["production"]; ?> (mt)</h6>
                     </div>
                     <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
-                      <h6 class="mb-0"><?php echo $row["productivity"]; ?> (mt/ha)	</h6>
+                      <h6 class="mb-0"><?php echo $row["productivity"]; ?> (mt/ha)  </h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="edit.php?id=<?php echo $row["id"]; ?>" class="text-muted"><i class="far fa-edit"></i></a>
@@ -99,7 +99,7 @@
                     </div>
 
 
-                    <h5 class="text-uppercase mb-3">Area Harvested (ha)	</h5>
+                    <h5 class="text-uppercase mb-3">Area Harvested (ha) </h5>
 
                     <div class="mb-5">
                       <div class="form-outline">
@@ -109,7 +109,7 @@
                     </div>
 
 
-                    <h5 class="text-uppercase mb-3">Production (mt)	</h5>
+                    <h5 class="text-uppercase mb-3">Production (mt) </h5>
 
                     <div class="mb-5">
                       <div class="form-outline">
