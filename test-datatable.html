@@ -1,48 +1,53 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>PrototypeSQL</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome -->
+  <head>
+    <title>PrototypeSQL TEST</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
     />
     <!-- Google Fonts -->
     <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
     />
     <!-- MDB -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
+      rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="css/style.css"/>
+
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- MDB -->
     <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
     ></script>
-</head>
-<body class="background-color-light">
-    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 font-weight-normal">Data Filtering</h1>
-          <p class="lead font-weight-normal">Data Table</p>
-        </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </head>
+  <body class="background-color-light">
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light"
+    >
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Data Filtering</h1>
+        <p class="lead font-weight-normal">Data Table</p>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 shadow-sm d-none d-md-block"
+      ></div>
     </div>
 
     <!--Navigation-->
     <div class="container my-5">
-      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white">
+      <nav
+        id="main-navbar"
+        class="navbar navbar-expand-lg navbar-light bg-white"
+      >
         <!-- Container wrapper -->
         <div class="container-fluid">
           <h6>Table Name</h6>
@@ -50,13 +55,20 @@
           <ul class="navbar-nav ms-auto d-flex flex-row">
             <!-- Search form -->
             <form class="d-none d-md-flex input-group w-auto my-auto">
-              <input autocomplete="off" type="search" class="form-control rounded" placeholder='Search'
-                style="min-width: 225px" />
-              <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+              <input
+                autocomplete="off"
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                style="min-width: 225px"
+              />
+              <span class="input-group-text border-0"
+                ><i class="fas fa-search"></i
+              ></span>
             </form>
           </ul>
         </div>
-      <!-- Container wrapper -->
+        <!-- Container wrapper -->
       </nav>
     </div>
     <!---End Navigation-->
@@ -64,35 +76,35 @@
     <!--Sort Data-->
     <script type="text/javascript">
       window.onload = function () {
-          //Reference the DropDownList.
-          var ddlYears = document.getElementById("year");
-   
-          //Determine the Current Year.
-          var currentYear = (new Date()).getFullYear();
-   
-          //Loop and add the Year values to DropDownList.
-          for (var i = 2015; i <= currentYear; i++) {
-              var option = document.createElement("OPTION");
-              option.innerHTML = i;
-              option.value = i;
-              ddlYears.appendChild(option);
-          }
+        //Reference the DropDownList.
+        var ddlYears = document.getElementById("year");
+
+        //Determine the Current Year.
+        var currentYear = new Date().getFullYear();
+
+        //Loop and add the Year values to DropDownList.
+        for (var i = 2015; i <= currentYear; i++) {
+          var option = document.createElement("OPTION");
+          option.innerHTML = i;
+          option.value = i;
+          ddlYears.appendChild(option);
+        }
       };
-  </script>
+    </script>
     <div class="container">
       <div class="container-fluid">
         <div class="row">
           <div class="col">
-              <h5 class="text-uppercase mb-3">Year</h5>
-              <select class="form-select"  name="year" id="year">
-                <option value="">Choose Year</option>
-                <
-              </select>
+            <h5 class="text-uppercase mb-3">Year</h5>
+            <select class="form-select" name="year" id="year">
+              <option value="">Choose Year</option>
+              <
+            </select>
           </div>
 
           <div class="col">
             <h5 class="text-uppercase mb-3">Crop</h5>
-            <select class="form-select"  name="crop" id="crop">
+            <select class="form-select" name="crop" id="crop">
               <option value="">Choose Crop</option>
               <option value="">Mais</option>
             </select>
@@ -100,7 +112,7 @@
 
           <div class="col">
             <h5 class="text-uppercase mb-3">Municipality</h5>
-            <select class="form-select"  name="municipality" id="municipality">
+            <select class="form-select" name="municipality" id="municipality">
               <option value="">Choose Municipality</option>
               <option value="Baguio">Atok</option>
               <option value="Bakun">Bakun</option>
@@ -121,7 +133,6 @@
       </div>
     </div>
     <!--end Sort Data-->
-
 
     <div class="container my-5">
       <div class="container-fluid">
@@ -200,14 +211,323 @@
         </div>
       </div>
     </div>
-</body>
 
-</body>
+    <!--NEW DATA SORTING-->
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 text-center bg-white"
+    >
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Data Filtering</h1>
+        <p class="lead font-weight-normal">NEW Data Table</p>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 shadow-sm d-none d-md-block"
+      ></div>
+    </div>
 
-<script>
-if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href );
+    <!--******SORTING TABLE STARTS HERE-->
+
+    <!--END SORTING TABLE STARTS HERE-->
+
+    <!--Navigation-->
+    <div class="container my-5">
+      <nav
+        id="main-navbar"
+        class="navbar navbar-expand-lg navbar-light bg-white"
+      >
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <h6>Table Name</h6>
+
+          <div class="row ps-5">
+            <div class="col">
+              <select class="form-select" name="munName" id="munName">
+                <option disabled selected>From</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <select class="form-select" name="munName" id="munName">
+                <option disabled selected>To</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select>
+            </div>
+          </div>
+          <!-- Right links -->
+          <ul class="navbar-nav ms-auto d-flex flex-row">
+            <!-- Search form -->
+            <form class="d-none d-md-flex input-group w-auto my-auto">
+              <select
+                class="form-select"
+                name="munName"
+                id="munName"
+                onchange="yesnoCheck(this)"
+              >
+                <option disabled selected>Crops</option>
+                <option value="VEGETABLES">VEGETABLES</option>
+                <option value="VEGETABLES">VEGETABLES</option>
+                <option value="other">Others</option>
+              </select>
+
+              <input
+                autocomplete="off"
+                type="search"
+                class="form-control rounded"
+                placeholder="Search"
+                style="min-width: 225px"
+                style="display: none"
+                id="ifYes"
+              />
+              <span class="input-group-text border-0"
+                ><i class="fas fa-search"></i
+              ></span>
+            </form>
+          </ul>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    </div>
+    <!---End Navigation-->
+    <div class="container my-5">
+      <div class="container-fluid">
+        <h1>Search Result for Atok</h1>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <!-- Tabs navs -->
+            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >All</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="ex2-tab-1"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-1"
+                  role="tab"
+                  aria-controls="ex2-tabs-1"
+                  aria-selected="true"
+                  >ATOK</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-2"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-2"
+                  role="tab"
+                  aria-controls="ex2-tabs-2"
+                  aria-selected="false"
+                  >BAKUN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >BOKOD</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >BUGUIAS</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >ITOGON</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >KABAYAN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >KAPANGAN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >KIBUNGAN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >LA TRINIDAD</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >MANKAYAN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >SABLAN</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >TUBA</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="ex2-tab-3"
+                  data-mdb-toggle="tab"
+                  href="#ex2-tabs-3"
+                  role="tab"
+                  aria-controls="ex2-tabs-3"
+                  aria-selected="false"
+                  >TUBLAY</a
+                >
+              </li>
+            </ul>
+            <!-- Tabs navs -->
+
+            <!-- Tabs content -->
+            <div class="tab-content" id="ex2-content">
+              <div
+                class="tab-pane fade show active"
+                id="ex2-tabs-1"
+                role="tabpanel"
+                aria-labelledby="ex2-tab-1"
+              >
+                Tab 1 content
+              </div>
+              <div
+                class="tab-pane fade"
+                id="ex2-tabs-2"
+                role="tabpanel"
+                aria-labelledby="ex2-tab-2"
+              >
+                Tab 2 content
+              </div>
+              <div
+                class="tab-pane fade"
+                id="ex2-tabs-3"
+                role="tabpanel"
+                aria-labelledby="ex2-tab-3"
+              >
+                Tab 3 content
+              </div>
+            </div>
+            <!-- Tabs content -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END NEW DATA SORTING-->
+
+    <!--END SORTING TABLE-->
+
+    <script>
+      function yesnoCheck(that) {
+        if (that.value == "other") {
+          //alert("check");
+          document.getElementById("ifYes").style.display = "block";
+        } else {
+          document.getElementById("ifYes").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+
+  <script>
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
     }
-</script>
-
+  </script>
 </html>
