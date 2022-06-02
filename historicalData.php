@@ -17,7 +17,7 @@
             <p class="h1">Historical Data </p>
             <p class="lead">This website is meant as a prototype</p>
 
-            <a class="btn btn-color-primary" href="index.php?id=">Home</a>
+            <a class="btn btn-color-primary" href="homePage.php?id=">Home</a>
           </div>
         </div>
       </div>

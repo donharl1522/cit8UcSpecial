@@ -1,5 +1,5 @@
 <?php
-  include "config/connection.php";
+  require "config/connection.php";
   $id=$_GET["id"];
 
   $name="";
@@ -90,7 +90,7 @@
     mysqli_query($link, "update maintable set name='$_POST[name]', municipality='$_POST[municipality]', area='$_POST[area]', production='$_POST[production]', productivity='$_POST[productivity]' where id=$id");
     ?>
     <script type="text/javascript">
-      window.location="index.php";
+      window.location="homePage.php";
     </script>
     <?php
   }

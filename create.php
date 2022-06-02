@@ -1,5 +1,5 @@
 <?php
-  include "config/connection.php";
+  require "config/connection.php";
 ?>
 
 <?php include 'template/header.php'; ?>
@@ -55,7 +55,7 @@
                   <!--end crop list-->
 
                   <div class="pt-5">
-                    <h6 class="mb-0"><a href="index.php?id=" class="text-body"><i
+                    <h6 class="mb-0"><a href="homePage.php?id=" class="text-body"><i
                           class="fas fa-long-arrow-alt-left me-2"></i>Back to home</a></h6>
                   </div>
                 </div>
