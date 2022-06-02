@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 05:11 AM
+-- Generation Time: Jun 02, 2022 at 09:48 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -76,11 +76,10 @@ CREATE TABLE `maintable` (
 --
 
 INSERT INTO `maintable` (`id`, `harvestYear`, `cropName`, `munName`, `prodArea`, `cropProd`, `prodRate`) VALUES
-(140, 0, 'AFGAG', 'Kabayan', 3, 10, 0),
-(141, 0, '', '', 0, 0, 0),
-(142, 0, '', '', 2, 10, 10),
-(143, 0, 'enew', 'Kibungan', 2, 10, 0.2),
-(144, 0, 'new', 'Sablan', 2, 10, 5);
+(146, 2019, 'asadv', 'Kabayan', 2, 10, 0.2),
+(147, 2019, 'new', 'Kapangan', 2, 10, 0.2),
+(148, 2018, '123', 'Buguias', 3, 1, 0.333333),
+(149, 2019, 'gsfgg', 'Kapangan', 2342, 23, 0.00982067);
 
 -- --------------------------------------------------------
 
@@ -185,7 +184,7 @@ ALTER TABLE `historicaltable`
 -- AUTO_INCREMENT for table `maintable`
 --
 ALTER TABLE `maintable`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
 
 --
 -- AUTO_INCREMENT for table `table1`
