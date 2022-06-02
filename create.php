@@ -32,16 +32,27 @@
                         class="img-fluid rounded-3">
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2">
-                      <h6 class="text-muted"><?php echo $row["munName"]; ?></h6>
+                      <h6 class="text-muted"><?php echo " Harvest Year"; ?></h6>
+                      <h6 class="text-black mb-0"><?php echo $row["harvestYear"]; ?></h6>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <h6 class="text-muted"><?php echo "Crop Name"; ?></h6>
                       <h6 class="text-black mb-0"><?php echo $row["cropName"]; ?></h6>
                     </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <h6 class="text-muted"><?php echo "Municipality"; ?></h6>
+                      <h6 class="text-black mb-0"><?php echo $row["munName"]; ?></h6>
+                    </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 d-flex">
+                      <h6 class="text-muted"><?php echo "Area"; ?></h6>
                       <h6 class="mb-0"><?php echo $row["prodArea"]; ?> (ha)</h6>
                     </div>
                     <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
+                      <h6 class="text-muted"><?php echo "Production"; ?></h6>
                       <h6 class="mb-0"><?php echo $row["cropProd"]; ?> (mt)</h6>
                     </div>
                     <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
+                      <h6 class="text-muted"><?php echo "Productivity"; ?></h6>
                       <h6 class="mb-0"><?php echo $row["prodRate"]; ?> (mt/ha)  </h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
@@ -67,7 +78,7 @@
                     <h3 class="fw-bold mb-5 mt-2 pt-1">Add Crop Data</h3>
                     <hr class="my-4">
 
-                    <h5 class="text-uppercase mb-3">munName</h5>
+                    <h5 class="text-uppercase mb-3">Municipality</h5>
 
                     <div class="mb-4 pb-2">
                       <select class="form-select"  name="munName" id="munName">
@@ -88,6 +99,15 @@
                       </select>
                     </div>
 
+                    <h5 class="text-uppercase mb-3"> Harvest Year </h5>
+
+                    <div class="mb-5">
+                      <div class="form-outline">
+                        <input type="number" id="harvestYear" name="harvestYear" class="form-control form-control-lg" />
+                        <label class="form-label" for="harvestYear">Harvest Year</label>
+                      </div>
+                    </div>
+
 
                     <h5 class="text-uppercase mb-3">Crop name</h5>
 
@@ -104,21 +124,19 @@
                     <div class="mb-5">
                       <div class="form-outline">
                         <input type="number" id="prodArea" name="prodArea" class="form-control form-control-lg" />
-                        <label class="form-label" for="prodArea">Enter prodArea Harvested (ha) here</label>
+                        <label class="form-label" for="prodArea">Enter Area Harvested (ha) here</label>
                       </div>
                     </div>
 
 
-                    <h5 class="text-uppercase mb-3">Production (mt) </h5>
+                    <h5 class="text-uppercase mb-3">cropProd (mt) </h5>
 
                     <div class="mb-5">
                       <div class="form-outline">
                         <input type="number" id="cropProd" name="cropProd" class="form-control form-control-lg" />
-                        <label class="form-label" for="cropProd">Enter cropProd (mt) here</label>
+                        <label class="form-label" for="cropProd">Enter Production (mt) here</label>
                       </div>
                     </div>
-
-
 
                     <hr class="my-4">
 
@@ -138,6 +156,7 @@
 </body>
 
 <?php
+  try{
   if(isset($_POST['insert']))
   {
     $val1 = (int)$_POST['prodArea'];
@@ -146,14 +165,20 @@
 
     $ha = floatval( $val1 );
     $mt = floatval( $val2 );
-    $res = floatval( $ha / $mt );
-    mysqli_query($link, "insert into maintable values(NULL, '$_POST[cropName]', '$_POST[munName]', '$_POST[prodArea]', '$_POST[cropProd]', '$res')");
+    $res = floatval( $mt / $ha );
+    mysqli_query($link, "insert into maintable values(NULL, '$_POST[harvestYear]', '$_POST[cropName]', '$_POST[munName]', '$_POST[prodArea]', '$_POST[cropProd]', '$res')");
     ?>
     <script type="text/javascript">
       window.location.href=window.location.href;
     </script>
     <?php
   }
+  } catch (Exception $e) {
+    echo $e->getMessage();
+}
+catch (InvalidArgumentException $e) {
+    echo $e->getMessage();
+}
 
 
   if(isset($_POST["delete"]))
