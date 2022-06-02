@@ -32,17 +32,17 @@
                         class="img-fluid rounded-3">
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2">
-                      <h6 class="text-muted"><?php echo $row["municipality"]; ?></h6>
-                      <h6 class="text-black mb-0"><?php echo $row["name"]; ?></h6>
+                      <h6 class="text-muted"><?php echo $row["munName"]; ?></h6>
+                      <h6 class="text-black mb-0"><?php echo $row["cropName"]; ?></h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 d-flex">
-                      <h6 class="mb-0"><?php echo $row["area"]; ?> (ha)</h6>
+                      <h6 class="mb-0"><?php echo $row["prodArea"]; ?> (ha)</h6>
                     </div>
                     <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
-                      <h6 class="mb-0"><?php echo $row["production"]; ?> (mt)</h6>
+                      <h6 class="mb-0"><?php echo $row["cropProd"]; ?> (mt)</h6>
                     </div>
                     <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
-                      <h6 class="mb-0"><?php echo $row["productivity"]; ?> (mt/ha)  </h6>
+                      <h6 class="mb-0"><?php echo $row["prodRate"]; ?> (mt/ha)  </h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="edit.php?id=<?php echo $row["id"]; ?>" class="text-muted"><i class="far fa-edit"></i></a>
@@ -67,10 +67,10 @@
                     <h3 class="fw-bold mb-5 mt-2 pt-1">Add Crop Data</h3>
                     <hr class="my-4">
 
-                    <h5 class="text-uppercase mb-3">Municipality</h5>
+                    <h5 class="text-uppercase mb-3">munName</h5>
 
                     <div class="mb-4 pb-2">
-                      <select class="form-select"  name="municipality" id="municipality">
+                      <select class="form-select"  name="munName" id="munName">
                         <option value="">Choose Municipality</option>
                         <option value="Baguio">Atok</option>
                         <option value="Bakun">Bakun</option>
@@ -89,12 +89,12 @@
                     </div>
 
 
-                    <h5 class="text-uppercase mb-3">Cropname</h5>
+                    <h5 class="text-uppercase mb-3">Crop name</h5>
 
                     <div class="mb-5">
                       <div class="form-outline">
-                        <input type="text" id="name" name="name" class="form-control form-control-lg" />
-                        <label class="form-label" for="name">Enter Crop Name Here</label>
+                        <input type="text" id="cropName" name="cropName" class="form-control form-control-lg" />
+                        <label class="form-label" for="cropName">Enter Crop Name Here</label>
                       </div>
                     </div>
 
@@ -103,8 +103,8 @@
 
                     <div class="mb-5">
                       <div class="form-outline">
-                        <input type="number" id="area" name="area" class="form-control form-control-lg" />
-                        <label class="form-label" for="area">Enter Area Harvested (ha) here</label>
+                        <input type="number" id="prodArea" name="prodArea" class="form-control form-control-lg" />
+                        <label class="form-label" for="prodArea">Enter prodArea Harvested (ha) here</label>
                       </div>
                     </div>
 
@@ -113,19 +113,12 @@
 
                     <div class="mb-5">
                       <div class="form-outline">
-                        <input type="number" id="production" name="production" class="form-control form-control-lg" />
-                        <label class="form-label" for="production">Enter Production (mt) here</label>
+                        <input type="number" id="cropProd" name="cropProd" class="form-control form-control-lg" />
+                        <label class="form-label" for="cropProd">Enter cropProd (mt) here</label>
                       </div>
                     </div>
 
-                    <h5 class="text-uppercase mb-3">Productivity (mt/ha)</h5>
 
-                    <div class="mb-5">
-                      <div class="form-outline">
-                        <input type="number" id="productivity" name="productivity" class="form-control form-control-lg" />
-                        <label class="form-label" for="productivity">Enter Productivity (mt/ha) here</label>
-                      </div>
-                    </div>
 
                     <hr class="my-4">
 
@@ -147,14 +140,14 @@
 <?php
   if(isset($_POST['insert']))
   {
-    $val1 = (int)$_POST['area'];
-    $val2 = (int)$_POST['production'];
+    $val1 = (int)$_POST['prodArea'];
+    $val2 = (int)$_POST['cropProd'];
     
 
     $ha = floatval( $val1 );
     $mt = floatval( $val2 );
     $res = floatval( $ha / $mt );
-    mysqli_query($link, "insert into maintable values(NULL, '$_POST[name]', '$_POST[municipality]', '$_POST[area]', '$_POST[production]', '$res')");
+    mysqli_query($link, "insert into maintable values(NULL, '$_POST[cropName]', '$_POST[munName]', '$_POST[prodArea]', '$_POST[cropProd]', '$res')");
     ?>
     <script type="text/javascript">
       window.location.href=window.location.href;
@@ -165,11 +158,11 @@
 
   if(isset($_POST["delete"]))
   {
-    mysqli_query($link, "delete from maintable where name='$_POST[name]'");
-    mysqli_query($link, "delete from maintable where municipality='$_POST[municipality]'");
-    mysqli_query($link, "delete from maintable where area='$_POST[area]'");
-    mysqli_query($link, "delete from maintable where production='$_POST[production]'");
-    mysqli_query($link, "delete from maintable where productivity='$_POST[productivity]'");
+    mysqli_query($link, "delete from maintable where cropName='$_POST[cropName]'");
+    mysqli_query($link, "delete from maintable where munName='$_POST[munName]'");
+    mysqli_query($link, "delete from maintable where prodArea='$_POST[prodArea]'");
+    mysqli_query($link, "delete from maintable where cropProd='$_POST[cropProd]'");
+    mysqli_query($link, "delete from maintable where prodRate='$_POST[prodRate]'");
     ?>
     <script type="text/javascript">
       window.location.href=window.location.href;

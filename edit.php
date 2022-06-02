@@ -2,19 +2,19 @@
   require "config/connection.php";
   $id=$_GET["id"];
 
-  $name="";
-  $municipality="";
-  $area="";
-  $production="";
-  $productivity="";
+  $cropName="";
+  $munName="";
+  $prodArea="";
+  $cropProd="";
+  $prodRate="";
 
   $res=mysqli_query($link, "select * from maintable where id=$id");
   while($row=mysqli_fetch_array($res)){
-      $name=$row["name"];
-      $municipality=$row["municipality"];
-      $area=$row["area"];
-      $production=$row["production"];
-      $productivity=$row["productivity"];
+      $cropName=$row["cropName"];
+      $munName=$row["munName"];
+      $prodArea=$row["prodArea"];
+      $cropProd=$row["cropProd"];
+      $prodRate=$row["prodRate"];
   }
 ?>
 
@@ -36,13 +36,13 @@
                     <h2>New Crop Data</h2>
                     <form action="" name="form1" method="post">
                       <div class="form-group">
-                          <label for="name">Crop Name:</label>
-                          <input type="text" class="form-control" id="name" placeholder="Enter Crop Name" name="name" value="<?php echo $name; ?>">
+                          <label for="cropName">Crop Name:</label>
+                          <input type="text" class="form-control" id="namcropNamee" placeholder="Enter Crop Name" name="cropName" value="<?php echo $cropName; ?>">
                       </div>
                       <div class="form-group">
                           <label for="name">Municipality:</label>
-                          <select class="form-select" name="municipality" id="municipality">
-                            <option value="<?php echo $municipality; ?>" selected><?php echo $municipality; ?> - Current</option>
+                          <select class="form-select" name="munName" id="munName">
+                            <option value="<?php echo $munName; ?>" selected><?php echo $munName; ?> - Current</option>
                             <option value="Baguio">Atok</option>
                             <option value="Bakun">Bakun</option>
                             <option value="Bokod">Bokod</option>
@@ -59,16 +59,12 @@
                           </select>
                       </div>
                       <div class="form-group">
-                          <label for="area">Area:</label>
-                          <input type="text" class="form-control" id="area" placeholder="Enter Area in Hectares" name="area"  value="<?php echo $area; ?>">
+                          <label for="prodArea">Area:</label>
+                          <input type="text" class="form-control" id="prodArea" placeholder="Enter Area in Hectares" name="prodArea"  value="<?php echo $prodArea; ?>">
                       </div>
                       <div class="form-group">
-                          <label for="area">Production:</label>
-                          <input type="text" class="form-control" id="production" placeholder="Enter Production value" name="production"  value="<?php echo $production; ?>">
-                      </div>
-                      <div class="form-group">
-                          <label for="productivity">Productivity:</label>
-                          <input type="text" class="form-control" id="productivity" placeholder="Enter Productivity Value" name="productivity"  value="<?php echo $productivity; ?>">
+                          <label for="cropProd">Production:</label>
+                          <input type="text" class="form-control" id="cropProd" placeholder="Enter cropProd value" name="cropProd"  value="<?php echo $cropProd; ?>">
                       </div>
                   
                       <div class="my-3">
@@ -87,7 +83,7 @@
 <?php
   if(isset($_POST["update"]))
   {
-    mysqli_query($link, "update maintable set name='$_POST[name]', municipality='$_POST[municipality]', area='$_POST[area]', production='$_POST[production]', productivity='$_POST[productivity]' where id=$id");
+    mysqli_query($link, "update maintable set cropName='$_POST[cropName]', munName='$_POST[munName]', prodArea='$_POST[prodArea]', cropProd='$_POST[cropProd]', prodRate='$_POST[prodRate]' where id=$id");
     ?>
     <script type="text/javascript">
       window.location="homePage.php";
