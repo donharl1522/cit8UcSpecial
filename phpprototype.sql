@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 09:48 AM
+-- Generation Time: Jun 02, 2022 at 10:12 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -79,40 +79,8 @@ INSERT INTO `maintable` (`id`, `harvestYear`, `cropName`, `munName`, `prodArea`,
 (146, 2019, 'asadv', 'Kabayan', 2, 10, 0.2),
 (147, 2019, 'new', 'Kapangan', 2, 10, 0.2),
 (148, 2018, '123', 'Buguias', 3, 1, 0.333333),
-(149, 2019, 'gsfgg', 'Kapangan', 2342, 23, 0.00982067);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `table1`
---
-
-CREATE TABLE `table1` (
-  `id` int(5) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `area` float NOT NULL,
-  `production` float NOT NULL,
-  `productivity` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `table1`
---
-
-INSERT INTO `table1` (`id`, `name`, `area`, `production`, `productivity`) VALUES
-(40, 'new', 10, 50, 0);
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `table2`
--- (See below for the actual view)
---
-CREATE TABLE `table2` (
-`production` float
-,`area` float
-,`productivity` double
-);
+(149, 2019, 'gsfgg', 'Kapangan', 2342, 23, 0.00982067),
+(150, 2018, 'asdfasbas', 'Bokod', 9, 18, 2);
 
 -- --------------------------------------------------------
 
@@ -139,15 +107,6 @@ INSERT INTO `user` (`userID`, `userFirstName`, `userLastName`, `userAge`, `userG
 (1, '', '', 0, '', 0, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa'),
 (0, 'fdg', 'fdg', 4, 'M', 3, 'vfg', '$2y$10$yBKy1H3g50tycJP2uWi1lOkwBhTyB8Q/QOHUvXE981YAQZxd1iVD6');
 
--- --------------------------------------------------------
-
---
--- Structure for view `table2`
---
-DROP TABLE IF EXISTS `table2`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `table2`  AS SELECT `table1`.`production` AS `production`, `table1`.`area` AS `area`, `table1`.`production`/ `table1`.`area` AS `productivity` FROM `table1``table1`  ;
-
 --
 -- Indexes for dumped tables
 --
@@ -165,12 +124,6 @@ ALTER TABLE `maintable`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table1`
---
-ALTER TABLE `table1`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -184,13 +137,7 @@ ALTER TABLE `historicaltable`
 -- AUTO_INCREMENT for table `maintable`
 --
 ALTER TABLE `maintable`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
-
---
--- AUTO_INCREMENT for table `table1`
---
-ALTER TABLE `table1`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
