@@ -41,38 +41,106 @@
 
           <div class="row ps-5">
             <div class="col">
-              <select class="form-select" name="munName" id="munName">
+              <select class="form-select" name="fromYear" id="fromYear">
                 <option disabled selected>From</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
                 <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
               </select>
             </div>
 
             <div class="col">
-              <select class="form-select" name="munName" id="munName">
+              <select disabled class="form-select"  name="toYear" id="toYear">
                 <option disabled selected>To</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
+                <option id="to2015" value="2015">2015</option>
+                <option id="to2016" value="2016">2016</option>
+                <option id="to2017" value="2017">2017</option>
+                <option id="to2018" value="2018">2018</option>
+                <option id="to2019" value="2019">2019</option>
               </select>
+
+              <script type="text/javascript">
+                document.getElementById("fromYear").onchange = function () {
+                  document.getElementById("toYear").setAttribute("disabled", "disabled");
+                  if (this.value == '2015'){
+                    document.getElementById("toYear").removeAttribute("disabled");
+                    document.getElementById("to2015").disabled = false; 
+                    document.getElementById("to2016").disabled = false; 
+                    document.getElementById("to2017").disabled = false; 
+                    document.getElementById("to2018").disabled = false;
+                    document.getElementById("to2019").disabled = false;
+
+                  }
+                  else if (this.value == '2016'){
+                    document.getElementById("toYear").removeAttribute("disabled");
+                    document.getElementById("to2015").disabled = true; 
+                    document.getElementById("to2016").disabled = false; 
+                    document.getElementById("to2017").disabled = false; 
+                    document.getElementById("to2018").disabled = false;
+                    document.getElementById("to2019").disabled = false; 
+
+                    
+                  } 
+                  else if (this.value == '2017'){
+                    document.getElementById("toYear").removeAttribute("disabled");
+                    document.getElementById("to2015").disabled = true;
+                    document.getElementById("to2016").disabled = true;
+                    document.getElementById("to2017").disabled = false; 
+                    document.getElementById("to2018").disabled = false;
+                    document.getElementById("to2019").disabled = false; 
+                  }
+                  else if (this.value == '2018'){
+                    document.getElementById("toYear").removeAttribute("disabled");
+                    document.getElementById("to2015").disabled = true;
+                    document.getElementById("to2016").disabled = true;
+                    document.getElementById("to2017").disabled = true;
+                    document.getElementById("to2018").disabled = false;
+                    document.getElementById("to2019").disabled = false; 
+                  }
+                  else if (this.value == '2019'){
+                    document.getElementById("toYear").removeAttribute("disabled");
+                    document.getElementById("to2015").disabled = true;
+                    document.getElementById("to2016").disabled = true;
+                    document.getElementById("to2017").disabled = true;    
+                    document.getElementById("to2018").disabled = true;
+                    document.getElementById("to2019").disabled = false;               
+                  }
+                };
+              </script>
+
+
             </div>
           </div>
           <!-- Right links -->
           <ul class="navbar-nav ms-auto d-flex flex-row">
             <!-- Search form -->
             <form class="d-none d-md-flex input-group w-auto my-auto">
-              <select
+
+      
+              
+              <select disabled 
                 class="form-select"
-                name="munName"
-                id="munName"
+                name="cropNameSelect"
+                id="cropNameSelect"
                 onchange="yesnoCheck(this)"
               >
+
                 <option disabled selected>Crops</option>
                 <option value="VEGETABLES">VEGETABLES</option>
                 <option value="VEGETABLES">VEGETABLES</option>
                 <option value="other">Others</option>
               </select>
+
+              <script type="text/javascript">
+                document.getElementById("toYear").onchange = function () {
+                  document.getElementById("cropNameSelect").setAttribute("disabled", "disabled");
+                  if (this.value !== null){
+                    document.getElementById("cropNameSelect").removeAttribute("disabled");
+                  }
+                };
+              </script>
 
               <input
                 autocomplete="off"
@@ -95,7 +163,6 @@
     <!---End Navigation-->
     <div class="container my-5">
       <div class="container-fluid">
-        <h1>Search Result for Atok</h1>
       </div>
     </div>
 
@@ -104,7 +171,7 @@
         <div class="card">
           <div class="card-body">
             <!-- Tabs navs -->
-            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist" method ="post">
               <li class="nav-item" role="presentation">
                 <a
                   class="nav-link"
@@ -277,7 +344,7 @@
             <!-- Tabs navs -->
 
             <!-- Tabs content -->
-            <div class="tab-content" id="ex2-content">
+            <div class="tab-content" id="ex2-content" method="post">
               <div
                 class="tab-pane fade show active"
                 id="all-tabs-1"
@@ -386,6 +453,7 @@
                 class="tab-pane fade"
                 id="tublay-tabs-12"
                 role="tabpanel"
+                name="tublayTab"
                 aria-labelledby="tublay-tab-12"
               >
                 Tublay content
@@ -404,90 +472,6 @@
 <div class="container my-5">
   <div class="container-fluid">
     <table class="table align-middle mb-0 bg-white">
-
-        <form action="" method="POST">
-
-          <select  name="harvestYear" id="harvestYear">
-          <option value="">Choose Year</option>
-          <option value="2019">2019</option>
-          <option value="2018">2018</option>
-          <option value="2017">2017</option>
-          <option value="2016">2016</option>
-          <option value="2015">2015</option>
-        </select>
-
-        <input type="text" name="cropName" placeholder="Enter Crop Name">
-
-        <select  name="munName" id="munName">
-          <option value="">Choose Municipality</option>
-          <option value="Baguio">Atok</option>
-          <option value="Bakun">Bakun</option>
-          <option value="Bokod">Bokod</option>
-          <option value="Buguias">Buguias</option>
-          <option value="Itogon">Itogon</option>
-          <option value="Kabayan">Kabayan</option>
-          <option value="Kapangan">Kapangan</option>
-          <option value="Kibungan">Kibungan</option>
-          <option value="La Trinidad">La Trinidad</option>
-          <option value="Mankayan">Mankayan</option>
-          <option value="Sablan">Sablan</option>
-          <option value="Tuba">Tuba</option>
-          <option value="Tublay">Tublay</option>
-        </select>
-
-
-        <br>
-        <input type="submit" name="search" value="Search Data">
-        </form>
-
-        <?php
-          if(isset($_POST['search']))
-          {
-            $harvestYear = $_POST['harvestYear'];
-            $munName = $_POST['munName'];
-            $cropName = $_POST['cropName'];
-
-            $query= "SELECT * FROM historicaltable 
-              where harvestYear = '$harvestYear'
-                OR (cropName = '$cropName'
-                      OR cropName = Null)
-                OR (munName = '$munName'
-                      OR munName = Null)";
-
-            $query_run = mysqli_query($link, $query);
-
-            while($row = mysqli_fetch_array($query_run))
-          {
-        ?>
-
-          <tr>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
-              <p class="text-muted mb-0">Benguet</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
-              <p class="text-muted mb-0">ha</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
-              <p class="text-muted mb-0">mt</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
-              <p class="text-muted mb-0">mt/ha</p>
-            </td>
-          </tr>
-          <?php
-            }
-          }
-        ?>
 
       <thead class="bg-light">
         <tr>
@@ -531,5 +515,17 @@
       </tbody>
     </table>
   </div>
+
+  <script>
+    document.getElementById("ifYes").style.display = "none";
+      function yesnoCheck(that) {
+        if (that.value == "other") {
+          //alert("check");
+          document.getElementById("ifYes").style.display = "block";
+        } else {
+          document.getElementById("ifYes").style.display = "none";
+        }
+      }
+    </script>
 </div>
 <?php include 'template/footer.php'; ?>
