@@ -43,60 +43,11 @@
           <div class="row ps-5">
             <div class="col">
               <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
-              <input type="date" name="fromYear" id="fromYear">
+              <input type="date" name="fromDate" id="fromDate">
             </div>
 
             <div class="col">
-              <input type="date" name="toYear" id="toYear">
-
-              <script type="text/javascript">
-                document.getElementById("fromYear").onchange = function () {
-                  document.getElementById("toYear").setAttribute("disabled", "disabled");
-                  if (this.value == '2015'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = false; 
-                    document.getElementById("to2016").disabled = false; 
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false;
-
-                  }
-                  else if (this.value == '2016'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true; 
-                    document.getElementById("to2016").disabled = false; 
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
-
-
-                  } 
-                  else if (this.value == '2017'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
-                  }
-                  else if (this.value == '2018'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = true;
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
-                  }
-                  else if (this.value == '2019'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = true;    
-                    document.getElementById("to2018").disabled = true;
-                    document.getElementById("to2019").disabled = false;               
-                  }
-                };
-              </script>
+              <input type="date" name="toDate" id="toDate">
 
 
             </div>
@@ -120,7 +71,7 @@
               </select>
 
               <script type="text/javascript">
-                document.getElementById("toYear").onchange = function () {
+                document.getElementById("toDate").onchange = function () {
                   document.getElementById("cropNameSelect").setAttribute("disabled", "disabled");
                   if (this.value !== null){
                     document.getElementById("cropNameSelect").removeAttribute("disabled");
@@ -342,7 +293,7 @@
 
                   <thead class="bg-light">
                     <tr>
-                      <th>Year</th>
+                      <th>Date</th>
                       <th>Crop Name</th>
                       <th>Municipality</th>
                       <th>Area Harvested (ha)</th>
@@ -353,93 +304,13 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
-
-                      $yearSearchedFrom = $_POST['fromYear'];
-                      $yearSearchedTo = $_POST['toYear'];
-                      
-                      if($yearSearchedFrom == '2015' and $yearSearchedTo == '2015'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2015%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2015' and $yearSearchedTo == '2016'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2015%' or harvestYear like '%2016%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2015' and $yearSearchedTo == '2017'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2015%' or harvestYear like '%2016%' or harvestYear like '%2017%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2015' and $yearSearchedTo == '2018'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2015%' or harvestYear like '%2016%' or harvestYear like '%2017%' or harvestYear like '%2018%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2015' and $yearSearchedTo == '2019'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2015%' or harvestYear like '%2016%' or harvestYear like '%2017%' or harvestYear like '%2018%' or harvestYear like '%2019%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2016' and $yearSearchedTo == '2016'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2016%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2016' and $yearSearchedTo == '2017'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2016%' or harvestYear like '%2017%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2016' and $yearSearchedTo == '2018'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2016%' or harvestYear like '%2017%' or harvestYear like '%2018%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2016' and $yearSearchedTo == '2019'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2016%' or harvestYear like '%2017%' or harvestYear like '%2018%' or harvestYear like '%2019%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2017' and $yearSearchedTo == '2017'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2017%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2017' and $yearSearchedTo == '2018'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2017%' or harvestYear like '%2018%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2017' and $yearSearchedTo == '2019'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2017%' or harvestYear like '%2018%' or harvestYear like '%2019%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2018' and $yearSearchedTo == '2018'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2018%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2018' and $yearSearchedTo == '2019'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2018%' or harvestYear like '%2019%'
-                        ");
-                      }
-                      else if($yearSearchedFrom == '2019' and $yearSearchedTo == '2019'){
-                        $res=mysqli_query($link,"select * from historicaltable 
-                          where harvestYear like '%2019%'
-                        ");
-                      }
-
-                      
-
-
+                      $fromDate=$_POST['fromDate'];
+                      $toDate=$_POST['toDate'];
+                      $res=mysqli_query($link,"select * from historicaltable1 where harvestDate Between '$fromDate' and '$toDate' order by harvestDate");
                       while($row=mysqli_fetch_array($res)):?>
                         <tr>
                           <td>
-                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestDate"]; ?></p>
                           </td>
                          <td>           
                            <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
@@ -473,7 +344,7 @@
 
                   <thead class="bg-light">
                     <tr>
-                      <th>Year</th>
+                      <th>Date</th>
                       <th>Crop Name</th>
                       <th>Municipality</th>
                       <th>Area Harvested (ha)</th>
@@ -483,11 +354,11 @@
                   </thead>
                   <tbody>
                     <?php
-                      $res=mysqli_query($link,"select * from historicaltable where munName LIKE '%atok%'");
+                      $res=mysqli_query($link,"select * from historicaltable1 where munName LIKE '%atok%'");
                       while($row=mysqli_fetch_array($res)):?>
                         <tr>
                           <td>
-                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestDate"]; ?></p>
                           </td>
                          <td>           
                            <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
