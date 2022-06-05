@@ -12,6 +12,12 @@ call variable in CSS var(--variableName)
 .background-color-light {
   background-color: var(--background);
 }
+.background-color-primary {
+  background-color: var(--primary);
+}
+.custom-text-primary {
+  color: var(--secondary);
+}
 
 /*button*/
 .btn-color-primary,
