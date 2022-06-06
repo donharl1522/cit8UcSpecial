@@ -371,7 +371,10 @@
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       
-                      if($yearSearchedFrom == '2015' and $yearSearchedTo == '2015'){
+                      $res=mysqli_query($link,"SELECT * FROM historicaltable WHERE harvestYear BETWEEN $yearSearchedFrom AND $yearSearchedTo
+                      ");
+                        
+                      /*if($yearSearchedFrom == '2015' and $yearSearchedTo == '2015'){
                         $res=mysqli_query($link,"select * from historicaltable 
                           where harvestYear like '%2015%'
                         ");
@@ -445,7 +448,7 @@
                         $res=mysqli_query($link,"select * from historicaltable 
                           where harvestYear like '%2019%'
                         ");
-                      }
+                      }*/
 
                       
 
