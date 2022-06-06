@@ -1,0 +1,631 @@
+harvestYear,munName,cropName,prodArea,cropProd,prodRate
+2015,Atok,Cabbage,1774.99,30764.26,17.33
+2015,Atok,Chinese Cabbage,141.65,2453.65,17.32
+2015,Atok,Lettuce,127.09,1151.58,9.06
+2015,Atok,Cauliflower,29.00,288.54,9.95
+2015,Atok,Snap Beans,113.90,1041.98,9.15
+2015,Atok,Garden Peas,71.40,406.59,5.69
+2015,Atok,Sweet Pepper,19.36,153.40,7.92
+2015,Atok,White Potato,1414.10,21453.60,15.17
+2015,Atok,Carrots,989.96,14525.40,14.67
+2015,Bakun,Cabbage,1473.73,29739.60,20.18
+2015,Bakun,Chinese Cabbage,665.42,16635.40,25
+2015,Bakun,Lettuce,60.79,607.90,10
+2015,Bakun,Cauliflower,0.00,0.00,0
+2015,Bakun,Snap Beans,265.21,2652.10,10
+2015,Bakun,Garden Peas,121.92,731.52,6
+2015,Bakun,Sweet Pepper,131.94,1052.74,7.98
+2015,Bakun,White Potato,1451.70,29034.00,20
+2015,Bakun,Carrots,374.24,5987.84,16
+2015,Bokod,Cabbage,44.85,887.60,19.79
+2015,Bokod,Chinese Cabbage,42.70,604.95,14.17
+2015,Bokod,Lettuce,18.95,189.50,10
+2015,Bokod,Cauliflower,22.44,269.29,12
+2015,Bokod,Snap Beans,57.88,463.04,8
+2015,Bokod,Garden Peas,37.78,151.12,4
+2015,Bokod,Sweet Pepper,32.95,259.28,7.87
+2015,Bokod,White Potato,46.69,735.27,15.75
+2015,Bokod,Carrots,34.45,529.88,15.38
+2015,Buguias,Cabbage,3092.66,63676.60,20.59
+2015,Buguias,Chinese Cabbage,1377.08,26755.50,19.43
+2015,Buguias,Lettuce,250.59,2256.07,9
+2015,Buguias,Cauliflower,28.69,283.95,9.9
+2015,Buguias,Snap Beans,34.80,248.26,7.13
+2015,Buguias,Garden Peas,70.41,379.97,5.4
+2015,Buguias,Sweet Pepper,57.99,398.94,6.88
+2015,Buguias,White Potato,3810.74,61505.36,16.14
+2015,Buguias,Carrots,1993.27,30920.20,15.51
+2015,Itogon,Cabbage,59.00,590.00,10
+2015,Itogon,Chinese Cabbage,75.00,750.00,10
+2015,Itogon,Lettuce,20.00,180.00,9
+2015,Itogon,Cauliflower,30.00,280.00,9.33
+2015,Itogon,Snap Beans,42.00,294.00,7
+2015,Itogon,Garden Peas,19.00,66.50,3.5
+2015,Itogon,Sweet Pepper,20.00,120.00,6
+2015,Itogon,White Potato,8.00,128.00,16
+2015,Itogon,Carrots,8.00,112.00,10
+2015,Kabayan,Cabbage,502.00,9055.00,18.04
+2015,Kabayan,Chinese Cabbage,104.00,2380.00,22.88
+2015,Kabayan,Lettuce,15.10,136.00,9.01
+2015,Kabayan,Cauliflower,272.00,3990.00,14.67
+2015,Kabayan,Snap Beans,122.00,957.00,7.84
+2015,Kabayan,Garden Peas,79.00,395.00,5
+2015,Kabayan,Sweet Pepper,244.00,1629.00,6.68
+2015,Kabayan,White Potato,267.00,5520.00,20.67
+2015,Kabayan,Carrots,600.00,10240.00,17.07
+2015,Kapangan,Cabbage,3.41,40.92,12
+2015,Kapangan,Chinese Cabbage,3.86,46.32,12
+2015,Kapangan,Lettuce,1.98,23.76,12
+2015,Kapangan,Cauliflower,1.06,10.60,10
+2015,Kapangan,Snap Beans,126.80,1521.60,12
+2015,Kapangan,Garden Peas,14.18,141.80,10
+2015,Kapangan,Sweet Pepper,87.20,1046.40,12
+2015,Kapangan,White Potato,0.00,0.00,0
+2015,Kapangan,Carrots,0.00,0.00,0
+2015,Kibungan,Cabbage,997.50,15732.00,15.77
+2015,Kibungan,Chinese Cabbage,31.00,464.00,14.97
+2015,Kibungan,Lettuce,25.55,194.40,7.61
+2015,Kibungan,Cauliflower,2.70,14.70,5.44
+2015,Kibungan,Snap Beans,83.55,595.55,7.13
+2015,Kibungan,Garden Peas,21.00,83.45,3.97
+2015,Kibungan,Sweet Pepper,63.65,381.45,5.99
+2015,Kibungan,White Potato,1360.50,25792.00,18.96
+2015,Kibungan,Carrots,211.75,2700.00,12.75
+2015,La Trinidad,Cabbage,57.50,877.85,15.27
+2015,La Trinidad,Chinese Cabbage,152.41,2179.81,14.3
+2015,La Trinidad,Lettuce,179.90,2266.90,12.6
+2015,La Trinidad,Cauliflower,22.65,323.33,14.27
+2015,La Trinidad,Snap Beans,54.84,374.76,6.83
+2015,La Trinidad,Garden Peas,34.27,125.37,3.66
+2015,La Trinidad,Sweet Pepper,25.32,192.50,7.6
+2015,La Trinidad,White Potato,19.80,309.33,15.62
+2015,La Trinidad,Carrots,33.82,313.19,9.26
+2015,Mankayan,Cabbage,705.49,17773.51,25.19
+2015,Mankayan,Chinese Cabbage,606.79,12830.45,21.14
+2015,Mankayan,Lettuce,112.56,1273.16,11.31
+2015,Mankayan,Cauliflower,180.00,1900.00,10.56
+2015,Mankayan,Snap Beans,131.96,1069.43,8.1
+2015,Mankayan,Garden Peas,130.30,709.60,5.45
+2015,Mankayan,Sweet Pepper,99.49,658.43,6.62
+2015,Mankayan,White Potato,1708.64,39683.93,23.23
+2015,Mankayan,Carrots,306.21,5040.78,16.46
+2015,Sablan,Cabbage,0.80,14.40,18
+2015,Sablan,Chinese Cabbage,2.90,58.00,20
+2015,Sablan,Lettuce,0.00,0.00,0
+2015,Sablan,Cauliflower,0.00,0.00,0
+2015,Sablan,Snap Beans,251.22,2512.20,10
+2015,Sablan,Garden Peas,13.10,96.40,7.36
+2015,Sablan,Sweet Pepper,54.12,432.96,8
+2015,Sablan,White Potato,0.00,0.00,0
+2015,Sablan,Carrots,0.00,0.00,0
+2015,Tuba,Cabbage,65.10,781.20,12
+2015,Tuba,Chinese Cabbage,52.00,624.00,12
+2015,Tuba,Lettuce,8.30,88.40,10.65
+2015,Tuba,Cauliflower,14.20,170.40,12
+2015,Tuba,Snap Beans,560.95,6731.40,12
+2015,Tuba,Garden Peas,30.00,280.00,9.33
+2015,Tuba,Sweet Pepper,68.30,564.70,8.27
+2015,Tuba,White Potato,43.00,516.00,12
+2015,Tuba,Carrots,32.00,384.00,12
+2015,Tublay,Cabbage,48.93,84.77,1.73
+2015,Tublay,Chinese Cabbage,22.10,62.22,2.82
+2015,Tublay,Lettuce,14.95,34.07,2.28
+2015,Tublay,Cauliflower,30.12,77.84,2.58
+2015,Tublay,Snap Beans,70.73,135.11,1.91
+2015,Tublay,Garden Peas,13.55,19.83,1.46
+2015,Tublay,Sweet Pepper,82.65,271.63,3.29
+2015,Tublay,White Potato,22.35,93.46,4.18
+2015,Tublay,Carrots,11.32,34.32,3.03
+2015,Total,Cabbage,8825.96,170017.71,19.26
+2015,Total,Chinese Cabbage,3276.91,65844.30,20.09
+2015,Total,Lettuce,835.76,8401.74,10.05
+2015,Total,Cauliflower,632.86,7608.64,12.02
+2015,Total,Snap Beans,1915.83,18596.43,9.71
+2015,Total,Garden Peas,655.91,3587.15,5.47
+2015,Total,Sweet Pepper,986.97,7161.43,7.26
+2015,Total,White Potato,10152.53,184770.95,18.2
+2015,Total,Carrots,4595.02,70787.61,15.41
+2016,Atok,Cabbage,927.75,14498.91,15.63
+2016,Atok,Chinese Cabbage,156.92,2813.19,17.93
+2016,Atok,Lettuce,75.98,630.88,8.3
+2016,Atok,Cauliflower,27.55,190.48,6.91
+2016,Atok,Snap Beans,97.51,696.98,7.15
+2016,Atok,Garden Peas,86.18,436.71,5.07
+2016,Atok,Sweet Pepper,25.20,143.10,5.68
+2016,Atok,White Potato,727.12,12133.41,16.69
+2016,Atok,Carrots,915.96,10859.80,11.86
+2016,Bakun,Cabbage,1754.61,35131.80,20.02
+2016,Bakun,Chinese Cabbage,623.75,15593.79,25
+2016,Bakun,Lettuce,73.65,736.50,10
+2016,Bakun,Cauliflower,0.00,0.00,0
+2016,Bakun,Snap Beans,304.76,2620.12,8.6
+2016,Bakun,Garden Peas,122.15,867.06,7.1
+2016,Bakun,Sweet Pepper,140.75,1126.00,8
+2016,Bakun,White Potato,1269.71,25394.20,20
+2016,Bakun,Carrots,490.18,7842.88,16
+2016,Bokod,Cabbage,61.00,1220.00,20
+2016,Bokod,Chinese Cabbage,40.50,577.50,14.26
+2016,Bokod,Lettuce,18.00,180.00,10
+2016,Bokod,Cauliflower,28.00,336.00,12
+2016,Bokod,Snap Beans,63.00,504.00,8
+2016,Bokod,Garden Peas,55.00,220.00,4
+2016,Bokod,Sweet Pepper,38.00,304.00,8
+2016,Bokod,White Potato,63.00,884.00,14.03
+2016,Bokod,Carrots,51.00,784.00,15.37
+2016,Buguias,Cabbage,3034.80,62836.60,20.71
+2016,Buguias,Chinese Cabbage,1342.50,24779.00,18.46
+2016,Buguias,Lettuce,318.30,2850.65,8.96
+2016,Buguias,Cauliflower,31.76,332.76,10.48
+2016,Buguias,Snap Beans,34.84,261.88,7.52
+2016,Buguias,Garden Peas,69.00,382.80,5.55
+2016,Buguias,Sweet Pepper,66.95,505.00,7.54
+2016,Buguias,White Potato,4143.36,67813.76,16.37
+2016,Buguias,Carrots,3206.00,48388.00,15.09
+2016,Itogon,Cabbage,61.00,610.00,10
+2016,Itogon,Chinese Cabbage,79.50,795.00,10
+2016,Itogon,Lettuce,13.00,117.00,9
+2016,Itogon,Cauliflower,30.00,300.00,10
+2016,Itogon,Snap Beans,44.00,308.00,7
+2016,Itogon,Garden Peas,30.00,105.00,3.5
+2016,Itogon,Sweet Pepper,20.00,120.00,6
+2016,Itogon,White Potato,30.00,300.00,10
+2016,Itogon,Carrots,30.00,300.00,10
+2016,Kabayan,Cabbage,520.66,9789.85,18.8
+2016,Kabayan,Chinese Cabbage,87.82,2026.20,23.07
+2016,Kabayan,Lettuce,32.47,304.29,9.37
+2016,Kabayan,Cauliflower,424.03,6035.30,14.23
+2016,Kabayan,Snap Beans,122.59,959.51,7.83
+2016,Kabayan,Garden Peas,81.00,401.00,4.95
+2016,Kabayan,Sweet Pepper,63.58,431.90,6.79
+2016,Kabayan,White Potato,240.00,4750.00,19.79
+2016,Kabayan,Carrots,851.32,15653.40,18.39
+2016,Kapangan,Cabbage,6.55,78.60,12
+2016,Kapangan,Chinese Cabbage,3.55,42.60,12
+2016,Kapangan,Lettuce,3.10,37.20,12
+2016,Kapangan,Cauliflower,0.65,6.50,10
+2016,Kapangan,Snap Beans,281.80,3381.60,12
+2016,Kapangan,Garden Peas,75.00,625.00,8.33
+2016,Kapangan,Sweet Pepper,339.00,4068.00,12
+2016,Kapangan,White Potato,0.00,0.00,0
+2016,Kapangan,Carrots,0.00,0.00,0
+2016,Kibungan,Cabbage,2266.00,40298.00,17.78
+2016,Kibungan,Chinese Cabbage,80.25,947.00,11.8
+2016,Kibungan,Lettuce,53.80,503.40,9.36
+2016,Kibungan,Cauliflower,2.00,11.80,5.9
+2016,Kibungan,Snap Beans,50.25,472.50,9.4
+2016,Kibungan,Garden Peas,26.50,209.80,7.92
+2016,Kibungan,Sweet Pepper,112.05,915.60,8.17
+2016,Kibungan,White Potato,2702.00,51559.00,19.08
+2016,Kibungan,Carrots,474.50,7128.50,15.02
+2016,La Trinidad,Cabbage,52.50,806.84,15.37
+2016,La Trinidad,Chinese Cabbage,58.70,936.46,15.95
+2016,La Trinidad,Lettuce,61.70,845.06,13.7
+2016,La Trinidad,Cauliflower,25.00,352.32,14.09
+2016,La Trinidad,Snap Beans,96.78,831.59,8.59
+2016,La Trinidad,Garden Peas,54.34,208.77,3.84
+2016,La Trinidad,Sweet Pepper,34.84,299.12,8.59
+2016,La Trinidad,White Potato,17.37,300.29,17.29
+2016,La Trinidad,Carrots,24.58,223.53,9.09
+2016,Mankayan,Cabbage,1152.76,30306.14,26.29
+2016,Mankayan,Chinese Cabbage,794.35,17057.00,21.47
+2016,Mankayan,Lettuce,182.10,2156.25,11.84
+2016,Mankayan,Cauliflower,172.00,1884.00,10.95
+2016,Mankayan,Snap Beans,233.15,1984.20,8.51
+2016,Mankayan,Garden Peas,158.00,908.00,5.75
+2016,Mankayan,Sweet Pepper,170.28,1125.68,6.61
+2016,Mankayan,White Potato,1450.00,33650.00,23.21
+2016,Mankayan,Carrots,361.80,5912.40,16.34
+2016,Sablan,Cabbage,0.00,0.00,0
+2016,Sablan,Chinese Cabbage,2.90,58.00,20
+2016,Sablan,Lettuce,0.00,0.00,0
+2016,Sablan,Cauliflower,0.00,0.00,0
+2016,Sablan,Snap Beans,226.98,2269.80,10
+2016,Sablan,Garden Peas,13.08,96.24,7.36
+2016,Sablan,Sweet Pepper,69.23,553.84,8
+2016,Sablan,White Potato,0.00,0.00,0
+2016,Sablan,Carrots,0.00,0.00,0
+2016,Tuba,Cabbage,47.00,564.00,12
+2016,Tuba,Chinese Cabbage,36.99,443.88,12
+2016,Tuba,Lettuce,13.00,78.00,6
+2016,Tuba,Cauliflower,0.00,0.00,0
+2016,Tuba,Snap Beans,246.99,2961.00,11.99
+2016,Tuba,Garden Peas,18.50,152.62,8.25
+2016,Tuba,Sweet Pepper,18.50,166.48,9
+2016,Tuba,White Potato,35.00,420.00,12
+2016,Tuba,Carrots,25.49,305.80,12
+2016,Tublay,Cabbage,19.60,165.59,8.45
+2016,Tublay,Chinese Cabbage,21.90,167.89,7.67
+2016,Tublay,Lettuce,22.90,180.92,7.9
+2016,Tublay,Cauliflower,16.45,135.11,8.21
+2016,Tublay,Snap Beans,95.50,594.21,6.22
+2016,Tublay,Garden Peas,11.25,44.75,3.98
+2016,Tublay,Sweet Pepper,133.15,904.43,6.79
+2016,Tublay,White Potato,16.55,146.24,8.84
+2016,Tublay,Carrots,12.85,94.22,7.33
+2016,Total,Cabbage,9904.23,196306.33,19.82
+2016,Total,Chinese Cabbage,3329.63,66237.51,19.89
+2016,Total,Lettuce,868.00,8620.15,9.93
+2016,Total,Cauliflower,757.44,9584.27,12.65
+2016,Total,Snap Beans,1898.15,17845.39,9.4
+2016,Total,Garden Peas,800.00,4657.75,5.82
+2016,Total,Sweet Pepper,1231.53,10663.15,8.66
+2016,Total,White Potato,10694.11,197350.90,18.45
+2016,Total,Carrots,6443.68,97492.53,15.13
+2017,Atok,Cabbage,1322.77,23105.20,17.47
+2017,Atok,Chinese Cabbage,212.81,4402.66,20.69
+2017,Atok,Lettuce,75.71,697.72,9.22
+2017,Atok,Cauliflower,26.79,281.00,10.49
+2017,Atok,Snap Beans,46.08,374.99,8.14
+2017,Atok,Garden Peas,47.73,212.65,4.46
+2017,Atok,Sweet Pepper,7.55,51.65,6.84
+2017,Atok,White Potato,1120.15,20142.96,17.98
+2017,Atok,Carrots,645.37,9675.38,14.99
+2017,Bakun,Cabbage,1555.45,32216.74,20.71
+2017,Bakun,Chinese Cabbage,727.58,16548.98,22.75
+2017,Bakun,Lettuce,84.46,844.60,10
+2017,Bakun,Cauliflower,0.00,0.00,0
+2017,Bakun,Snap Beans,373.52,3041.60,8.14
+2017,Bakun,Garden Peas,151.53,1079.02,7.12
+2017,Bakun,Sweet Pepper,165.09,1320.72,8
+2017,Bakun,White Potato,1580.79,31615.80,20
+2017,Bakun,Carrots,554.77,8864.34,15.98
+2017,Bokod,Cabbage,113.65,2273.00,20
+2017,Bokod,Chinese Cabbage,66.50,997.50,15
+2017,Bokod,Lettuce,25.00,250.00,10
+2017,Bokod,Cauliflower,33.00,396.00,12
+2017,Bokod,Snap Beans,78.00,624.00,8
+2017,Bokod,Garden Peas,59.00,236.00,4
+2017,Bokod,Sweet Pepper,45.00,360.00,8
+2017,Bokod,White Potato,74.00,1044.00,14.11
+2017,Bokod,Carrots,65.00,880.00,13.54
+2017,Buguias,Cabbage,2748.00,59320.50,21.59
+2017,Buguias,Chinese Cabbage,1350.50,26654.00,19.74
+2017,Buguias,Lettuce,268.30,2600.20,9.69
+2017,Buguias,Cauliflower,31.25,351.60,11.25
+2017,Buguias,Snap Beans,46.60,361.70,7.76
+2017,Buguias,Garden Peas,81.69,467.34,5.72
+2017,Buguias,Sweet Pepper,80.55,621.55,7.72
+2017,Buguias,White Potato,3894.50,65073.00,16.71
+2017,Buguias,Carrots,2964.60,12579.60,15.37
+2017,Itogon,Cabbage,61.00,640.00,10.49
+2017,Itogon,Chinese Cabbage,79.50,795.00,10
+2017,Itogon,Lettuce,13.00,117.00,9
+2017,Itogon,Cauliflower,30.00,300.00,10
+2017,Itogon,Snap Beans,44.00,308.00,7
+2017,Itogon,Garden Peas,30.00,105.00,3.5
+2017,Itogon,Sweet Pepper,20.00,120.00,6
+2017,Itogon,White Potato,20.00,200.00,10
+2017,Itogon,Carrots,20.00,200.00,10
+2017,Kabayan,Cabbage,669.00,13380.00,20
+2017,Kabayan,Chinese Cabbage,81.55,2038.75,25
+2017,Kabayan,Lettuce,19.50,117.00,6
+2017,Kabayan,Cauliflower,356.00,5310.00,14.92
+2017,Kabayan,Snap Beans,59.00,472.00,8
+2017,Kabayan,Garden Peas,48.00,240.00,5
+2017,Kabayan,Sweet Pepper,84.00,588.00,7
+2017,Kabayan,White Potato,204.00,4080.00,20
+2017,Kabayan,Carrots,815.00,14670.00,18
+2017,Kapangan,Cabbage,5.85,70.20,12
+2017,Kapangan,Chinese Cabbage,2.80,33.60,12
+2017,Kapangan,Lettuce,1.17,14.02,11.98
+2017,Kapangan,Cauliflower,1.35,13.50,10
+2017,Kapangan,Snap Beans,215.85,2626.20,12.17
+2017,Kapangan,Garden Peas,77.00,635.00,8.25
+2017,Kapangan,Sweet Pepper,301.25,3615.00,12
+2017,Kapangan,White Potato,0.03,0.03,10
+2017,Kapangan,Carrots,0.03,0.03,10
+2017,Kibungan,Cabbage,3175.00,63780.00,20.09
+2017,Kibungan,Chinese Cabbage,92.00,1441.00,15.66
+2017,Kibungan,Lettuce,55.50,549.00,9.89
+2017,Kibungan,Cauliflower,28.40,112.35,3.96
+2017,Kibungan,Snap Beans,102.55,1022.50,9.97
+2017,Kibungan,Garden Peas,45.45,406.10,8.94
+2017,Kibungan,Sweet Pepper,147.50,1334.00,9.04
+2017,Kibungan,White Potato,2347.50,46950.00,20
+2017,Kibungan,Carrots,262.50,4200.00,16
+2017,La Trinidad,Cabbage,57.04,920.58,16.14
+2017,La Trinidad,Chinese Cabbage,61.77,1021.49,16.54
+2017,La Trinidad,Lettuce,68.90,966.00,14.02
+2017,La Trinidad,Cauliflower,20.15,302.25,15
+2017,La Trinidad,Snap Beans,54.84,815.94,8.64
+2017,La Trinidad,Garden Peas,58.94,235.76,4
+2017,La Trinidad,Sweet Pepper,54.90,474.00,8.63
+2017,La Trinidad,White Potato,26.00,410.79,15.8
+2017,La Trinidad,Carrots,28.01,284.07,10.14
+2017,Mankayan,Cabbage,1294.02,34071.08,26.33
+2017,Mankayan,Chinese Cabbage,853.48,18240.39,21.37
+2017,Mankayan,Lettuce,195.00,2311.50,11.85
+2017,Mankayan,Cauliflower,177.00,1934.00,10.93
+2017,Mankayan,Snap Beans,340.63,2914.90,8.56
+2017,Mankayan,Garden Peas,167.00,960.00,5.75
+2017,Mankayan,Sweet Pepper,184.16,1223.69,6.64
+2017,Mankayan,White Potato,1750.24,40818.46,23.32
+2017,Mankayan,Carrots,511.80,8312.40,16.24
+2017,Sablan,Cabbage,0.00,0.00,0
+2017,Sablan,Chinese Cabbage,2.90,58.00,20
+2017,Sablan,Lettuce,0.00,0.00,0
+2017,Sablan,Cauliflower,0.00,0.00,0
+2017,Sablan,Snap Beans,243.24,2432.40,10
+2017,Sablan,Garden Peas,13.08,96.24,7.36
+2017,Sablan,Sweet Pepper,77.23,617.84,8
+2017,Sablan,White Potato,0.00,0.00,0
+2017,Sablan,Carrots,0.00,0.00,0
+2017,Tuba,Cabbage,17.00,306.00,18
+2017,Tuba,Chinese Cabbage,37.00,666.00,18
+2017,Tuba,Lettuce,9.50,35.23,3.71
+2017,Tuba,Cauliflower,0.00,0.00,0
+2017,Tuba,Snap Beans,153.75,1845.00,12
+2017,Tuba,Garden Peas,26.00,208.00,8
+2017,Tuba,Sweet Pepper,18.50,166.50,9
+2017,Tuba,White Potato,63.00,756.00,12
+2017,Tuba,Carrots,15.52,185.95,11.98
+2017,Tublay,Cabbage,6.70,87.00,12.99
+2017,Tublay,Chinese Cabbage,18.75,236.40,12.61
+2017,Tublay,Lettuce,23.10,202.25,8.76
+2017,Tublay,Cauliflower,11.15,107.00,9.6
+2017,Tublay,Snap Beans,97.65,773.70,7.92
+2017,Tublay,Garden Peas,24.19,95.49,3.95
+2017,Tublay,Sweet Pepper,124.80,790.45,6.33
+2017,Tublay,White Potato,16.37,231.38,14.13
+2017,Tublay,Carrots,12.95,138.40,10.69
+2017,Total,Cabbage,11025.48,230170.30,20.88
+2017,Total,Chinese Cabbage,3587.14,73133.77,20.39
+2017,Total,Lettuce,839.14,8704.52,10.37
+2017,Total,Cauliflower,715.09,9107.70,12.74
+2017,Total,Snap Beans,1895.33,17612.93,9.29
+2017,Total,Garden Peas,829.61,4976.60,6
+2017,Total,Sweet Pepper,1310.53,11283.39,8.61
+2017,Total,White Potato,11096.59,211322.64,19.04
+2017,Total,Carrots,5895.55,92990.38,15.77
+2018,Atok,Cabbage,936.57,15435.76,16.48
+2018,Atok,Chinese Cabbage,205.77,3679.90,17.88
+2018,Atok,Lettuce,73.58,560.16,7.61
+2018,Atok,Cauliflower,30.87,295.69,9.58
+2018,Atok,Snap Beans,82.91,701.24,8.46
+2018,Atok,Garden Peas,63.10,236.36,3.75
+2018,Atok,Sweet Pepper,19.22,120.01,6.24
+2018,Atok,White Potato,1045.50,18523.52,17.72
+2018,Atok,Carrots,826.45,13156.90,15.92
+2018,Bakun,Cabbage,1636.95,32739.06,20
+2018,Bakun,Chinese Cabbage,756.15,18903.75,25
+2018,Bakun,Lettuce,94.73,947.30,10
+2018,Bakun,Cauliflower,0.00,0.00,0
+2018,Bakun,Snap Beans,382.27,3437.40,8.99
+2018,Bakun,Garden Peas,198.39,1421.18,7.16
+2018,Bakun,Sweet Pepper,171.77,1374.16,8
+2018,Bakun,White Potato,1737.56,34753.20,20
+2018,Bakun,Carrots,494.20,7907.00,16
+2018,Bokod,Cabbage,107.87,2092.52,19.4
+2018,Bokod,Chinese Cabbage,63.57,953.55,15
+2018,Bokod,Lettuce,24.90,249.00,10
+2018,Bokod,Cauliflower,26.00,302.00,11.62
+2018,Bokod,Snap Beans,75.81,602.58,7.95
+2018,Bokod,Garden Peas,55.72,222.88,4
+2018,Bokod,Sweet Pepper,44.50,356.00,8
+2018,Bokod,White Potato,70.28,1014.36,14.43
+2018,Bokod,Carrots,63.92,856.80,13.4
+2018,Buguias,Cabbage,2124.00,43302.00,20.39
+2018,Buguias,Chinese Cabbage,1098.75,20522.00,18.68
+2018,Buguias,Lettuce,244.75,2194.25,8.97
+2018,Buguias,Cauliflower,29.35,317.20,10.81
+2018,Buguias,Snap Beans,44.70,339.50,7.6
+2018,Buguias,Garden Peas,75.70,420.40,5.55
+2018,Buguias,Sweet Pepper,75.60,558.90,7.39
+2018,Buguias,White Potato,3234.90,51396.20,15.89
+2018,Buguias,Carrots,2198.00,32898.50,14.97
+2018,Itogon,Cabbage,61.00,610.00,10
+2018,Itogon,Chinese Cabbage,72.50,725.00,10
+2018,Itogon,Lettuce,12.00,108.00,9
+2018,Itogon,Cauliflower,30.00,300.00,10
+2018,Itogon,Snap Beans,53.00,371.00,7
+2018,Itogon,Garden Peas,30.00,105.00,3.5
+2018,Itogon,Sweet Pepper,29.00,174.00,6
+2018,Itogon,White Potato,25.00,250.00,10
+2018,Itogon,Carrots,25.00,250.00,10
+2018,Kabayan,Cabbage,708.00,10780.00,15.23
+2018,Kabayan,Chinese Cabbage,90.55,1704.10,18.82
+2018,Kabayan,Lettuce,25.80,152.00,5.89
+2018,Kabayan,Cauliflower,390.00,4270.00,10.95
+2018,Kabayan,Snap Beans,100.00,760.00,7.6
+2018,Kabayan,Garden Peas,65.00,325.00,5
+2018,Kabayan,Sweet Pepper,100.00,468.00,4.68
+2018,Kabayan,White Potato,241.00,4525.00,18.78
+2018,Kabayan,Carrots,881.00,13458.00,15.28
+2018,Kapangan,Cabbage,2.88,30.96,10.75
+2018,Kapangan,Chinese Cabbage,1.25,13.75,11
+2018,Kapangan,Lettuce,1.27,14.74,11.62
+2018,Kapangan,Cauliflower,2.03,18.83,9.28
+2018,Kapangan,Snap Beans,92.99,1080.50,11.62
+2018,Kapangan,Garden Peas,74.00,604.00,8.16
+2018,Kapangan,Sweet Pepper,211.00,2436.00,11.55
+2018,Kapangan,White Potato,1.00,10.00,10
+2018,Kapangan,Carrots,0.05,0.20,4
+2018,Kibungan,Cabbage,2479.00,37230.00,15.02
+2018,Kibungan,Chinese Cabbage,126.50,1934.50,15.29
+2018,Kibungan,Lettuce,57.00,511.00,8.96
+2018,Kibungan,Cauliflower,6.85,26.60,3.88
+2018,Kibungan,Snap Beans,107.00,954.00,8.92
+2018,Kibungan,Garden Peas,44.10,349.00,7.91
+2018,Kibungan,Sweet Pepper,144.50,1028.00,7.11
+2018,Kibungan,White Potato,2326.00,46502.00,19.99
+2018,Kibungan,Carrots,260.00,3774.00,14.52
+2018,La Trinidad,Cabbage,53.24,759.96,14.27
+2018,La Trinidad,Chinese Cabbage,63.65,937.89,14.74
+2018,La Trinidad,Lettuce,71.00,863.69,12.16
+2018,La Trinidad,Cauliflower,18.27,219.18,12
+2018,La Trinidad,Snap Beans,94.66,740.54,7.82
+2018,La Trinidad,Garden Peas,49.09,175.76,3.58
+2018,La Trinidad,Sweet Pepper,57.40,390.50,6.8
+2018,La Trinidad,White Potato,28.10,404.28,14.39
+2018,La Trinidad,Carrots,27.87,243.27,8.73
+2018,Mankayan,Cabbage,1157.53,30414.56,26.28
+2018,Mankayan,Chinese Cabbage,812.81,17399.90,21.41
+2018,Mankayan,Lettuce,184.40,2151.34,11.69
+2018,Mankayan,Cauliflower,177.00,1934.00,10.93
+2018,Mankayan,Snap Beans,311.63,2665.93,8.55
+2018,Mankayan,Garden Peas,170.87,978.22,5.72
+2018,Mankayan,Sweet Pepper,168.87,1130.40,6.69
+2018,Mankayan,White Potato,1705.70,39977.90,23.44
+2018,Mankayan,Carrots,503.54,8163.63,16.21
+2018,Sablan,Cabbage,0.00,0.00,0
+2018,Sablan,Chinese Cabbage,2.90,58.00,20
+2018,Sablan,Lettuce,0.00,0.00,0
+2018,Sablan,Cauliflower,0.00,0.00,0
+2018,Sablan,Snap Beans,229.54,2295.40,10
+2018,Sablan,Garden Peas,12.99,95.16,7.33
+2018,Sablan,Sweet Pepper,67.01,536.08,8
+2018,Sablan,White Potato,0.00,0.00,0
+2018,Sablan,Carrots,0.00,0.00,0
+2018,Tuba,Cabbage,14.50,245.00,16.9
+2018,Tuba,Chinese Cabbage,31.63,545.25,17.24
+2018,Tuba,Lettuce,9.50,57.00,6
+2018,Tuba,Cauliflower,0.00,0.00,0
+2018,Tuba,Snap Beans,179.38,2152.50,12
+2018,Tuba,Garden Peas,23.00,184.00,8
+2018,Tuba,Sweet Pepper,16.50,148.50,9
+2018,Tuba,White Potato,55.00,660.00,12
+2018,Tuba,Carrots,27.44,329.24,12
+2018,Tublay,Cabbage,42.85,531.50,12.4
+2018,Tublay,Chinese Cabbage,18.99,281.66,14.83
+2018,Tublay,Lettuce,23.70,158.50,6.69
+2018,Tublay,Cauliflower,56.00,546.18,9.75
+2018,Tublay,Snap Beans,42.25,318.80,7.55
+2018,Tublay,Garden Peas,27.50,105.00,3.82
+2018,Tublay,Sweet Pepper,93.50,634.40,6.79
+2018,Tublay,White Potato,14.00,186.63,13.33
+2018,Tublay,Carrots,5.50,64.00,11.64
+2018,Total,Cabbage,9324.39,174171.32,18.68
+2018,Total,Chinese Cabbage,3345.02,67659.25,20.23
+2018,Total,Lettuce,822.27,7966.98,9.69
+2018,Total,Cauliflower,766.37,8229.68,10.74
+2018,Total,Snap Beans,1796.14,16419.39,9.14
+2018,Total,Garden Peas,889.46,5221.96,5.87
+2018,Total,Sweet Pepper,1198.87,9354.95,7.8
+2018,Total,White Potato,10484.04,198203.09,18.91
+2018,Total,Carrots,5312.96,81101.74,15.26
+2019,Atok,Cabbage,1647.76,29862.15,18.12
+2019,Atok,Chinese Cabbage,294.34,6246.27,21.22
+2019,Atok,Lettuce,332.70,2429.59,7.3
+2019,Atok,Cauliflower,44.93,430.43,9.58
+2019,Atok,Snap Beans,100.08,765.77,7.65
+2019,Atok,Garden Peas,62.68,316.71,5.05
+2019,Atok,Sweet Pepper,27.52,169.80,6.17
+2019,Atok,White Potato,1339.10,24900.49,18.59
+2019,Atok,Carrots,840.71,12058.34,14.34
+2019,Bakun,Cabbage,1658.51,33146.80,19.99
+2019,Bakun,Chinese Cabbage,768.23,17952.23,23.37
+2019,Bakun,Lettuce,93.91,949.10,10.11
+2019,Bakun,Cauliflower,0.00,0.00,0
+2019,Bakun,Snap Beans,390.58,3439.40,8.81
+2019,Bakun,Garden Peas,193.78,1393.12,7.19
+2019,Bakun,Sweet Pepper,186.22,1489.76,8
+2019,Bakun,White Potato,1744.20,34884.00,20
+2019,Bakun,Carrots,514.78,8236.48,16
+2019,Bokod,Cabbage,135.43,2708.60,20
+2019,Bokod,Chinese Cabbage,77.45,1161.75,15
+2019,Bokod,Lettuce,28.00,280.00,10
+2019,Bokod,Cauliflower,68.00,816.00,12
+2019,Bokod,Snap Beans,72.00,576.00,8
+2019,Bokod,Garden Peas,64.00,256.00,4
+2019,Bokod,Sweet Pepper,72.00,576.00,8
+2019,Bokod,White Potato,150.00,2184.00,14.56
+2019,Bokod,Carrots,115.00,1520.00,13.22
+2019,Buguias,Cabbage,2463.30,53112.60,21.56
+2019,Buguias,Chinese Cabbage,1193.20,23321.00,19.54
+2019,Buguias,Lettuce,287.25,2806.50,9.77
+2019,Buguias,Cauliflower,38.75,444.45,11.47
+2019,Buguias,Snap Beans,48.80,381.00,7.81
+2019,Buguias,Garden Peas,81.55,475.30,5.83
+2019,Buguias,Sweet Pepper,83.45,650.85,7.8
+2019,Buguias,White Potato,3541.00,65236.00,18.42
+2019,Buguias,Carrots,2346.00,36472.00,15.55
+2019,Itogon,Cabbage,41.00,410.00,10
+2019,Itogon,Chinese Cabbage,72.50,725.00,10
+2019,Itogon,Lettuce,16.00,144.00,9
+2019,Itogon,Cauliflower,34.00,340.00,10
+2019,Itogon,Snap Beans,56.00,392.00,7
+2019,Itogon,Garden Peas,30.00,105.00,3.5
+2019,Itogon,Sweet Pepper,29.00,174.00,6
+2019,Itogon,White Potato,35.00,350.00,10
+2019,Itogon,Carrots,35.00,350.00,10
+2019,Kabayan,Cabbage,725.00,14145.00,19.51
+2019,Kabayan,Chinese Cabbage,88.80,2159.00,24.31
+2019,Kabayan,Lettuce,21.00,118.00,5.62
+2019,Kabayan,Cauliflower,472.00,6969.00,14.76
+2019,Kabayan,Snap Beans,118.00,941.00,7.97
+2019,Kabayan,Garden Peas,83.00,415.00,5
+2019,Kabayan,Sweet Pepper,99.00,678.00,6.85
+2019,Kabayan,White Potato,258.00,5065.00,19.63
+2019,Kabayan,Carrots,1015.00,17820.00,17.56
+2019,Kapangan,Cabbage,5.90,63.50,10.76
+2019,Kapangan,Chinese Cabbage,2.92,33.90,11.61
+2019,Kapangan,Lettuce,3.04,34.87,11.47
+2019,Kapangan,Cauliflower,1.68,16.80,10
+2019,Kapangan,Snap Beans,104.50,1241.00,11.88
+2019,Kapangan,Garden Peas,74.90,361.00,4.82
+2019,Kapangan,Sweet Pepper,583.00,6378.50,10.94
+2019,Kapangan,White Potato,0.35,0.18,0.5
+2019,Kapangan,Carrots,0.06,0.14,2.25
+2019,Kibungan,Cabbage,2360.75,48635.40,20.6
+2019,Kibungan,Chinese Cabbage,90.00,1223.00,13.59
+2019,Kibungan,Lettuce,67.50,650.00,9.63
+2019,Kibungan,Cauliflower,4.30,16.40,3.81
+2019,Kibungan,Snap Beans,115.00,1126.00,9.79
+2019,Kibungan,Garden Peas,22.50,180.25,8.01
+2019,Kibungan,Sweet Pepper,79.00,754.00,9.54
+2019,Kibungan,White Potato,2303.00,45970.00,19.96
+2019,Kibungan,Carrots,332.00,5192.00,15.64
+2019,La Trinidad,Cabbage,57.00,969.00,17
+2019,La Trinidad,Chinese Cabbage,70.20,1193.40,17
+2019,La Trinidad,Lettuce,84.45,1182.30,14
+2019,La Trinidad,Cauliflower,19.30,289.50,15
+2019,La Trinidad,Snap Beans,67.00,603.00,9
+2019,La Trinidad,Garden Peas,50.00,200.00,4
+2019,La Trinidad,Sweet Pepper,72.00,648.00,9
+2019,La Trinidad,White Potato,105.57,1801.65,17.07
+2019,La Trinidad,Carrots,86.40,936.90,10.84
+2019,Mankayan,Cabbage,1680.00,44105.00,26.25
+2019,Mankayan,Chinese Cabbage,1180.00,25190.00,21.35
+2019,Mankayan,Lettuce,226.00,2666.00,11.8
+2019,Mankayan,Cauliflower,180.00,1970.00,10.94
+2019,Mankayan,Snap Beans,322.00,2748.90,8.54
+2019,Mankayan,Garden Peas,180.00,1035.00,5.75
+2019,Mankayan,Sweet Pepper,199.00,1313.00,6.6
+2019,Mankayan,White Potato,2250.00,52550.00,23.36
+2019,Mankayan,Carrots,571.80,9212.40,16.11
+2019,Sablan,Cabbage,0.00,0.00,0
+2019,Sablan,Chinese Cabbage,2.80,56.00,20
+2019,Sablan,Lettuce,0.00,0.00,0
+2019,Sablan,Cauliflower,0.00,0.00,0
+2019,Sablan,Snap Beans,213.77,2137.70,10
+2019,Sablan,Garden Peas,12.41,89.80,7.24
+2019,Sablan,Sweet Pepper,79.89,639.12,8
+2019,Sablan,White Potato,0.00,0.00,0
+2019,Sablan,Carrots,0.00,0.00,0
+2019,Tuba,Cabbage,10.00,180.00,18
+2019,Tuba,Chinese Cabbage,15.00,270.00,18
+2019,Tuba,Lettuce,3.50,20.94,5.98
+2019,Tuba,Cauliflower,0.00,0.00,0
+2019,Tuba,Snap Beans,110.00,1320.00,12
+2019,Tuba,Garden Peas,21.04,168.32,8
+2019,Tuba,Sweet Pepper,17.04,153.36,9
+2019,Tuba,White Potato,8.00,96.00,12
+2019,Tuba,Carrots,8.00,96.00,12
+2019,Tublay,Cabbage,41.50,410.50,9.89
+2019,Tublay,Chinese Cabbage,43.60,397.00,9.11
+2019,Tublay,Lettuce,72.60,284.50,3.92
+2019,Tublay,Cauliflower,75.05,630.40,8.4
+2019,Tublay,Snap Beans,74.90,571.75,7.63
+2019,Tublay,Garden Peas,52.00,71.90,1.38
+2019,Tublay,Sweet Pepper,130.30,830.65,6.37
+2019,Tublay,White Potato,18.50,275.50,14.89
+2019,Tublay,Carrots,8.60,102.70,11.94
+2019,Total,Cabbage,10826.15,227748.55,21.04
+2019,Total,Chinese Cabbage,3899.04,79928.55,20.5
+2019,Total,Lettuce,1235.95,11565.80,9.36
+2019,Total,Cauliflower,938.01,11922.98,12.71
+2019,Total,Snap Beans,1792.63,16243.52,9.06
+2019,Total,Garden Peas,927.86,5067.40,5.46
+2019,Total,Sweet Pepper,1657.42,14455.04,8.72
+2019,Total,White Potato,11752.72,233312.82,19.85
+2019,Total,Carrots,5873.35,91996.95,15.66
