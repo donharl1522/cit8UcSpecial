@@ -359,8 +359,7 @@
                 role="tabpanel"
                 aria-labelledby="all-tab-1"
               >
-                    <?php
-
+                <?php
                       function callLabel($callMun){
                         $yearSearchedFrom = $_POST['fromYear'];
                         $yearSearchedTo = $_POST['toYear'];
@@ -368,13 +367,12 @@
                         if($yearSearchedFrom == null or $yearSearchedTo==null or $cropSelected==null){
                           echo "Please Select Year and Crop";
                         }else{
-                          echo $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun;
+                          echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
                         }
                       }
                     ?>
 
-
-
+                    
                 <table class="table align-middle mb-0 bg-white">
 
                   <thead class="bg-light">
