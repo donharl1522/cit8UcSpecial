@@ -38,9 +38,11 @@
         <!-- Container wrapper -->
         <div class="container-fluid">
           <h6>Table Name</h6>
+        
 
           <div class="row ps-5">
             <div class="col">
+              <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
               <select class="form-select" name="fromYear" id="fromYear">
                 <option disabled selected>From</option>
                 <option value="2015">2015</option>
@@ -81,7 +83,7 @@
                     document.getElementById("to2018").disabled = false;
                     document.getElementById("to2019").disabled = false; 
 
-                    
+
                   } 
                   else if (this.value == '2017'){
                     document.getElementById("toYear").removeAttribute("disabled");
@@ -116,9 +118,7 @@
           <!-- Right links -->
           <ul class="navbar-nav ms-auto d-flex flex-row">
             <!-- Search form -->
-            <form class="d-none d-md-flex input-group w-auto my-auto">
-
-      
+        
               
               <select disabled 
                 class="form-select"
@@ -128,8 +128,15 @@
               >
 
                 <option disabled selected>Crops</option>
-                <option value="VEGETABLES">VEGETABLES</option>
-                <option value="VEGETABLES">VEGETABLES</option>
+                <option value="Cabbage">Cabbage</option>
+                <option value="Chinese Cabbage">Chinese Cabbage</option>
+                <option value="Lettuce">Lettuce</option>
+                <option value="Cauliflower">Cauliflower</option>
+                <option value="Snap Beans">Snap Beans</option>
+                <option value="Garden Peas">Garden Peas</option>
+                <option value="Sweet Pepper">Sweet Pepper</option>
+                <option value="White Potato">White Potato</option>
+                <option value="Carrots">Carrots</option>
                 <option value="other">Others</option>
               </select>
 
@@ -151,9 +158,10 @@
                 style="display: none"
                 id="ifYes"
               />
-              <span class="input-group-text border-0"
-                ><i class="fas fa-search"></i
-              ></span>
+              <button type="submit" name="search" class="btn  btn-color-primary btn-block btn-lg"
+                data-mdb-ripple-color="dark">Search
+              </button>
+
             </form>
           </ul>
         </div>
@@ -351,7 +359,71 @@
                 role="tabpanel"
                 aria-labelledby="all-tab-1"
               >
-                All content
+                    <?php
+
+                      function callLabel($callMun){
+                        $yearSearchedFrom = $_POST['fromYear'];
+                        $yearSearchedTo = $_POST['toYear'];
+                        $cropSelected = $_POST['cropNameSelect'];
+                        if($yearSearchedFrom == null or $yearSearchedTo==null or $cropSelected==null){
+                          echo "Please Select Year and Crop";
+                        }else{
+                          echo $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun;
+                        }
+                      }
+                    ?>
+
+
+
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <tr>
+                      <th>Year</th>
+                      <th>Crop Name</th>
+                      <th>Municipality</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                       callLabel("All Municipalities");
+                 
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                         <td>           
+                           <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
+                         </td>
+                         <td>
+                            <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -359,7 +431,49 @@
                 role="tabpanel"
                 aria-labelledby="atok-tab-1"
               >
-                Atok content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <tr>
+                      <th>Year</th>
+                      <th>Crop Name</th>
+                      <th>Municipality</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <br>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Atok");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%atok%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -367,7 +481,47 @@
                 role="tabpanel"
                 aria-labelledby="bakun-tab-2"
               >
-                Bakun content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Bakun");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%bakun%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -375,15 +529,96 @@
                 role="tabpanel"
                 aria-labelledby="bokod-tab-3"
               >
-                Bokod content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Bokod");
+                 
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%bokod%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
-                id="biguias-tabs-4"
+                id="buguias-tabs-4"
                 role="tabpanel"
-                aria-labelledby="biguias-tab-4"
+                aria-labelledby="buguias-tab-4"
               >
-                Biguuas content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Buguias");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%buguias%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -391,7 +626,47 @@
                 role="tabpanel"
                 aria-labelledby="itogon-tab-5"
               >
-                Itogon content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Itogon");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%itogon%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -399,7 +674,47 @@
                 role="tabpanel"
                 aria-labelledby="kabayan-tab-6"
               >
-                kabayan content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Kabayan");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%kabayan%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -407,7 +722,47 @@
                 role="tabpanel"
                 aria-labelledby="kabayan-tab-7"
               >
-                kapangan content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Kapangan");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%kapangan%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -415,7 +770,47 @@
                 role="tabpanel"
                 aria-labelledby="kibungan-tab-8"
               >
-                kibungan content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Kibungan");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%kibungan%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -423,7 +818,47 @@
                 role="tabpanel"
                 aria-labelledby="trinidad-tab-8"
               >
-                la trinidad content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("La Trinidad");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%la trinidad%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -431,7 +866,47 @@
                 role="tabpanel"
                 aria-labelledby="mankayan-tab-9"
               >
-                Mankayan content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Mankayan");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%mankayan%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -439,7 +914,47 @@
                 role="tabpanel"
                 aria-labelledby="sablan-tab-10"
               >
-                sablan content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Sablan");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%sablan%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -447,7 +962,47 @@
                 role="tabpanel"
                 aria-labelledby="tuba-tab-11"
               >
-                Tuba content
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Tuba");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%tuba%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
               <div
                 class="tab-pane fade"
@@ -455,8 +1010,48 @@
                 role="tabpanel"
                 name="tublayTab"
                 aria-labelledby="tublay-tab-12"
-              >
-                Tublay content
+                >
+                <table class="table align-middle mb-0 bg-white">
+
+                  <thead class="bg-light">
+                    <br>
+                    <tr>
+                      <th>Year</th>
+                      <th>Area Harvested (ha)</th>
+                      <th>Production (mt)</th>
+                      <th>Productivity (mt/ha)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if(isset($_POST['search'])){
+                      $yearSearchedFrom = $_POST['fromYear'];
+                      $yearSearchedTo = $_POST['toYear'];
+                      $cropSelected = $_POST['cropNameSelect'];
+                      callLabel("Tublay");
+        
+                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%tublay%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                      while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                          <td>
+                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                          </td>
+                          <td>
+                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                         </td>
+                         <td>
+                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                         </td>
+                        </tr>
+
+                    <?php endwhile?>
+                    <?php }?>
+                  </tbody>
+               </table>
               </div>
             </div>
             <!-- Tabs content -->
@@ -468,53 +1063,6 @@
 
     <!--END SORTING TABLE-->
 
-
-<div class="container my-5">
-  <div class="container-fluid">
-    <table class="table align-middle mb-0 bg-white">
-
-      <thead class="bg-light">
-        <tr>
-          <th>Year</th>
-          <th>Crop Name</th>
-          <th>Municipality</th>
-          <th>Area Harvested (ha)</th>
-          <th>Production (mt)</th>
-          <th>Productivity (mt/ha)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        $res=mysqli_query($link,"select * from historicaltable");
-        while($row=mysqli_fetch_array($res)):?>
-          <tr>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
-              <p class="text-muted mb-0">Benguet</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
-              <p class="text-muted mb-0">ha</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
-              <p class="text-muted mb-0">mt</p>
-            </td>
-            <td>
-              <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
-              <p class="text-muted mb-0">mt/ha</p>
-            </td>
-          </tr>
-        <?php endwhile?>
-      </tbody>
-    </table>
-  </div>
 
   <script>
     document.getElementById("ifYes").style.display = "none";
