@@ -94,7 +94,7 @@
 
                 <!--Location Input-->
                 <div class="form-outline mb-4">
-                  <input type="text" id="userLocation" class="form-control" />
+                  <input type="text" id="userLocation" class="form-control" name="userLocation" />
                   <label class="form-label" for="userLocation">Location</label>
                 </div>
 
