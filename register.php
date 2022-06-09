@@ -14,12 +14,14 @@ if (mysqli_connect_errno()) {
 // Now we check if the data was submitted, isset() function will check if the data exists.
 if (!isset($_POST['username'], $_POST['password'])) {
 	// Could not get the data that should have been sent.
-	exit('Please complete the registration form!');
+	echo '<script>alert("aaaaaaaa")</script>';
+
+
 }
 // Make sure the submitted registration values are not empty.
 if (empty($_POST['username']) || empty($_POST['password'])) {
 	// One or more values are empty.
-	exit('Please complete the registration form');
+	echo '<script>alert("Username and Password should not be empty")</script>';
 }
 
 
@@ -32,6 +34,8 @@ if ($stmt = $con->prepare('INSERT INTO user (userFirstName, userLastName, userAg
 	$stmt->bind_param('sssssss', $_POST['userFirstName'], $_POST['userLastName'], $_POST['userAge'], $_POST['userGender'], $_POST['userLocation'],$_POST['username'], $password);
 	$stmt->execute();
 	echo 'You have successfully registered, you can now login!';
+	echo '<script>alert("AAAAAAAAAAAAAAAAAA")</script>'; 
+	
 } else {
 	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 	echo 'Could not prepare statement!';

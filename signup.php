@@ -32,32 +32,27 @@
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
-                      <input type="text" id="userLastName" class="form-control" name="userLastName" />
+                      <input disabled type="text" id="userLastName" class="form-control" name="userLastName" />
                       <label class="form-label" for="userLastName">Last name</label>
                     </div>
                   </div>
                 </div>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" class="form-control" name="email"/>
-                  <label class="form-label" for="form3Example3">Email address</label>
-                </div>
 
                 <!--Username Input-->
                 <div class="form-outline mb-4">
-                  <input type="text" id="username" class="form-control" name="username"/>
+                  <input disabled type="text" id="username" class="form-control" name="username"/>
                   <label class="form-label" for="username">Username</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control" name="password"/>
+                  <input disabled type="password" id="password" class="form-control" name="password"/>
                   <label class="form-label" for="password">Password</label>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="retypepassword" class="form-control" />
+                  <input disabled type="password" id="retypepassword" class="form-control" />
                   <label class="form-label" for="retypepassword">Confirm Password</label>
                 </div>
 
@@ -95,7 +90,12 @@
                 <!--Location Input-->
                 <div class="form-outline mb-4">
                   <input type="text" id="userLocation" class="form-control" name="userLocation" />
-                  <label class="form-label" for="userLocation">Location</label>
+                  <label class="form-label" for="userLocation">Location (Optional)</label>
+                </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control" name="email"/>
+                  <label class="form-label" for="form3Example3">Email address (Optional)</label>
                 </div>
 
                 <!-- Gender age -->
@@ -104,7 +104,7 @@
                         <div class="form-outline">
                             <label class="form-label" for="userGender">Gender</label>
                             <select class="form-select"  name="userGender" id="userGender">
-                                <option selected disabled>Select Gender</option>
+                                <option selected disabled>Select Gender (Optional)</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
@@ -114,9 +114,9 @@
                         <div class="form-outline">
                             <label class="form-label" for="userAge">Age</label>
                             <select class="form-select"  name="userAge" id="userAge">
-                                <option selected disabled>Select Age</option>
+                                <option selected disabled>Select Age (Optional)</option>
                                 <?php
-                                for ($age_counter=1; $age_counter <=100 ; $age_counter++) { 
+                                for ($age_counter=18; $age_counter <=100 ; $age_counter++) { 
                                     echo "<option value='$age_counter'>$age_counter</option>";
                                 }
                                 ?>
@@ -126,8 +126,8 @@
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-color-primary btn-block mb-4">
-                  Sign up
+                <button disabled type="submit" name="regSubmit" id="regSubmit" class="btn btn-color-primary btn-block mb-4">
+                  Register
                 </button>
 
                 <!-- Register buttons -->
@@ -156,6 +156,40 @@
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    document.getElementById("userFirstName").onchange = function () {
+      document.getElementById("userLastName").setAttribute("disabled", "disabled");
+      if (this.value !== null){
+        document.getElementById("userLastName").removeAttribute("disabled");
+      }
+    }
+    document.getElementById("userLastName").onchange = function () {
+      document.getElementById("username").setAttribute("disabled", "disabled");
+        if (this.value !== null){
+      document.getElementById("username").removeAttribute("disabled");
+      }
+    }
+    document.getElementById("username").onchange = function () {
+      document.getElementById("password").setAttribute("disabled", "disabled");
+        if (this.value !== null){
+      document.getElementById("password").removeAttribute("disabled");
+      }
+    }
+    document.getElementById("password").onchange = function () {
+      document.getElementById("retypepassword").setAttribute("disabled", "disabled");
+        if (this.value !== null){
+      document.getElementById("retypepassword").removeAttribute("disabled");
+      }
+    }
+    document.getElementById("retypepassword").onchange = function () {
+      document.getElementById("regSubmit").setAttribute("disabled", "disabled");
+        if (this.value !== null){
+      document.getElementById("regSubmit").removeAttribute("disabled");
+      }
+    }
+  </script>
+
+
   <!-- Jumbotron -->
 </section>
 <!-- Section: Design Block -->
