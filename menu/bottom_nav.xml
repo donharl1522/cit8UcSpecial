@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/predictions"
+        android:icon="@drawable/ic_baseline_predict"
+        android:title="Predicitons"/>
+    <item
+        android:id="@+id/placeholder"
+        android:title=""/>
+    <item
+        android:id="@+id/cropInfo"
+        android:icon="@drawable/ic_baseline_cropcard"
+        android:title="Crop Info"/>
+</menu>
