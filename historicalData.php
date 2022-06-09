@@ -349,9 +349,22 @@
                 >
               </li>
             </ul>
+            
             <!-- Tabs navs -->
 
             <!-- Tabs content -->
+
+
+            <?php
+            function callLabel($callMun){
+              $yearSearchedFrom = $_POST['fromYear'];
+              $yearSearchedTo = $_POST['toYear'];
+              $cropSelected = $_POST['cropNameSelect'];
+              echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
+            }
+            
+            ?>
+
             <div class="tab-content" id="ex2-content" method="post">
               <div
                 class="tab-pane fade show active"
@@ -359,19 +372,6 @@
                 role="tabpanel"
                 aria-labelledby="all-tab-1"
               >
-                <?php
-                      function callLabel($callMun){
-                        $yearSearchedFrom = $_POST['fromYear'];
-                        $yearSearchedTo = $_POST['toYear'];
-                        $cropSelected = $_POST['cropNameSelect'];
-                        if($yearSearchedFrom == null or $yearSearchedTo==null or $cropSelected==null){
-                          echo "Please Select Year and Crop";
-                        }else{
-                          echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
-                        }
-                      }
-                    ?>
-
                     
                 <table class="table align-middle mb-0 bg-white">
 
@@ -388,38 +388,40 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
-                      $yearSearchedFrom = $_POST['fromYear'];
-                      $yearSearchedTo = $_POST['toYear'];
-                      $cropSelected = $_POST['cropNameSelect'];
-                       callLabel("All Municipalities");
-                 
-        
-                      $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
+                        $yearSearchedFrom = $_POST['fromYear'];
+                        $yearSearchedTo = $_POST['toYear'];
+                        $cropSelected = $_POST['cropNameSelect'];
+                        callLabel("All Municipalities");
                         
-                      while($row=mysqli_fetch_array($res)):?>
-                        <tr>
-                          <td>
-                          <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
-                          </td>
-                         <td>           
-                           <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
-                         </td>
-                         <td>
-                            <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
-                          </td>
-                          <td>
-                            <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
-                          </td>
-                          <td>
-                            <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
-                         </td>
-                         <td>
-                           <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
-                         </td>
-                        </tr>
-
-                    <?php endwhile?>
-                    <?php }?>
+                        $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+                        
+                        while($row=mysqli_fetch_array($res)):?>
+                          <tr>
+                            <td>
+                            <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
+                            </td>
+                           <td>           
+                             <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
+                           </td>
+                           <td>
+                              <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                            </td>
+                            <td>
+                              <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                           </td>
+                           <td>
+                             <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                           </td>
+                          </tr>
+  
+                      <?php endwhile?>
+                      <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -434,8 +436,6 @@
                   <thead class="bg-light">
                     <tr>
                       <th>Year</th>
-                      <th>Crop Name</th>
-                      <th>Municipality</th>
                       <th>Area Harvested (ha)</th>
                       <th>Production (mt)</th>
                       <th>Productivity (mt/ha)</th>
@@ -445,6 +445,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -469,7 +470,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -493,6 +496,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -517,7 +521,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -541,6 +547,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -566,7 +573,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -590,6 +599,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -614,7 +624,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -638,6 +650,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -662,7 +675,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -686,6 +701,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -710,7 +726,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -734,6 +752,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -758,7 +777,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -782,6 +803,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -806,7 +828,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -830,6 +854,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -854,7 +879,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -878,6 +905,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -902,7 +930,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -926,6 +956,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -950,7 +981,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -974,6 +1007,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -998,7 +1032,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
@@ -1023,6 +1059,7 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                       $yearSearchedFrom = $_POST['fromYear'];
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
@@ -1047,7 +1084,9 @@
                         </tr>
 
                     <?php endwhile?>
-                    <?php }?>
+                    <?php }else{
+                        echo "Please select Crop";
+                      }}?>
                   </tbody>
                </table>
               </div>
