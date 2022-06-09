@@ -181,172 +181,46 @@
             <!-- Tabs navs -->
             <ul class="nav nav-tabs mb-3" id="ex1" role="tablist" method ="post">
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="all-tab-1"
-                  data-mdb-toggle="tab"
-                  href="#all-tabs-1"
-                  role="tab"
-                  aria-controls="ex2-tabs-1"
-                  aria-selected="true"
-                  >All</a
-                >
+                <a class="nav-link" id="all-tab-1" data-mdb-toggle="tab" href="#all-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="true">All</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link active"
-                  id="atok-tab-1"
-                  data-mdb-toggle="tab"
-                  href="#atok-tabs-1"
-                  role="tab"
-                  aria-controls="ex2-tabs-1"
-                  aria-selected="false"
-                  >ATOK</a
-                >
+                <a class="nav-link active" id="atok-tab-1" data-mdb-toggle="tab" href="#atok-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="false">ATOK</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="bakun-tab-2"
-                  data-mdb-toggle="tab"
-                  href="#bakun-tabs-2"
-                  role="tab"
-                  aria-controls="ex2-tabs-2"
-                  aria-selected="false"
-                  >BAKUN</a
-                >
+                <a class="nav-link" id="bakun-tab-2" data-mdb-toggle="tab" href="#bakun-tabs-2" role="tab" aria-controls="ex2-tabs-2" aria-selected="false">BAKUN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="bokod-tab-3"
-                  data-mdb-toggle="tab"
-                  href="#bokod-tabs-3"
-                  role="tab"
-                  aria-controls="bokod-tabs-3"
-                  aria-selected="false"
-                  >BOKOD</a
-                >
+                <a class="nav-link" id="bokod-tab-3" data-mdb-toggle="tab" href="#bokod-tabs-3" role="tab" aria-controls="bokod-tabs-3" aria-selected="false">BOKOD</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="buguias-tab-4"
-                  data-mdb-toggle="tab"
-                  href="#buguias-tabs-4"
-                  role="tab"
-                  aria-controls="buguias-tabs-4"
-                  aria-selected="false"
-                  >BUGUIAS</a
-                >
+                <a class="nav-link" id="buguias-tab-4" data-mdb-toggle="tab" href="#buguias-tabs-4" role="tab" aria-controls="buguias-tabs-4" aria-selected="false">BUGUIAS</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="itogon-tab-5"
-                  data-mdb-toggle="tab"
-                  href="#itogon-tabs-5"
-                  role="tab"
-                  aria-controls="itogon-tabs-5"
-                  aria-selected="false"
-                  >ITOGON</a
-                >
+                <a class="nav-link" id="itogon-tab-5" data-mdb-toggle="tab" href="#itogon-tabs-5" role="tab" aria-controls="itogon-tabs-5" aria-selected="false">ITOGON</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="kabayan-tab-6"
-                  data-mdb-toggle="tab"
-                  href="#kabayan-tabs-6"
-                  role="tab"
-                  aria-controls="kabayan-tabs-6"
-                  aria-selected="false"
-                  >KABAYAN</a
-                >
+                <a class="nav-link" id="kabayan-tab-6" data-mdb-toggle="tab" href="#kabayan-tabs-6" role="tab" aria-controls="kabayan-tabs-6" aria-selected="false">KABAYAN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="kapangan-tab-7"
-                  data-mdb-toggle="tab"
-                  href="#kapangan-tabs-7"
-                  role="tab"
-                  aria-controls="kapangan-tabs-7"
-                  aria-selected="false"
-                  >KAPANGAN</a
-                >
+                <a class="nav-link" id="kapangan-tab-7" data-mdb-toggle="tab" href="#kapangan-tabs-7" role="tab" aria-controls="kapangan-tabs-7" aria-selected="false">KAPANGAN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="kibungan-tab-8"
-                  data-mdb-toggle="tab"
-                  href="#kibungan-tabs-8"
-                  role="tab"
-                  aria-controls="kibungan-tabs-8"
-                  aria-selected="false"
-                  >KIBUNGAN</a
-                >
+                <a class="nav-link" id="kibungan-tab-8" data-mdb-toggle="tab" href="#kibungan-tabs-8" role="tab" aria-controls="kibungan-tabs-8" aria-selected="false">KIBUNGAN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="trinidad-tab-8"
-                  data-mdb-toggle="tab"
-                  href="#trinidad-tabs-8"
-                  role="tab"
-                  aria-controls="trinidad-tabs-8"
-                  aria-selected="false"
-                  >LA TRINIDAD</a
-                >
+                <a class="nav-link" id="trinidad-tab-8" data-mdb-toggle="tab" href="#trinidad-tabs-8" role="tab" aria-controls="trinidad-tabs-8" aria-selected="false">LA TRINIDAD</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="mankayan-tab-9"
-                  data-mdb-toggle="tab"
-                  href="#mankayan-tabs-9"
-                  role="tab"
-                  aria-controls="mankayan-tabs-9"
-                  aria-selected="false"
-                  >MANKAYAN</a
-                >
+                <a class="nav-link" id="mankayan-tab-9" data-mdb-toggle="tab" href="#mankayan-tabs-9" role="tab" aria-controls="mankayan-tabs-9" aria-selected="false">MANKAYAN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="sablan-tab-10"
-                  data-mdb-toggle="tab"
-                  href="#sablan-tabs-10"
-                  role="tab"
-                  aria-controls="sablan-tabs-10"
-                  aria-selected="false"
-                  >SABLAN</a
-                >
+                <a class="nav-link" id="sablan-tab-10" data-mdb-toggle="tab" href="#sablan-tabs-10" role="tab" aria-controls="sablan-tabs-10" aria-selected="false">SABLAN</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="tuba-tab-11"
-                  data-mdb-toggle="tab"
-                  href="#tuba-tabs-11"
-                  role="tab"
-                  aria-controls="tuba-tabs-11"
-                  aria-selected="false"
-                  >TUBA</a
-                >
+                <a class="nav-link" id="tuba-tab-11" data-mdb-toggle="tab" href="#tuba-tabs-11" role="tab" aria-controls="tuba-tabs-11" aria-selected="false">TUBA</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a
-                  class="nav-link"
-                  id="tublay-tab-12"
-                  data-mdb-toggle="tab"
-                  href="#tublay-tabs-12"
-                  role="tab"
-                  aria-controls="tublay-tabs-12"
-                  aria-selected="false"
-                  >TUBLAY</a
-                >
+                <a class="nav-link" id="tublay-tab-12" data-mdb-toggle="tab" href="#tublay-tabs-12" role="tab" aria-controls="tublay-tabs-12" aria-selected="false">TUBLAY</a>
               </li>
             </ul>
             
@@ -366,19 +240,11 @@
             ?>
 
             <div class="tab-content" id="ex2-content" method="post">
-              <div
-                class="tab-pane fade show active"
-                id="all-tabs-1"
-                role="tabpanel"
-                aria-labelledby="all-tab-1"
-              >
-                    
+              <div class="tab-pane fade show active" id="all-tabs-1" role="tabpanel" aria-labelledby="all-tab-1">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <tr>
                       <th>Year</th>
-                      <th>Crop Name</th>
                       <th>Municipality</th>
                       <th>Area Harvested (ha)</th>
                       <th>Production (mt)</th>
@@ -393,7 +259,7 @@
                         $yearSearchedTo = $_POST['toYear'];
                         $cropSelected = $_POST['cropNameSelect'];
                         callLabel("All Municipalities");
-                        
+                      
                         $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
                         while($row=mysqli_fetch_array($res)):?>
@@ -401,9 +267,6 @@
                             <td>
                             <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
                             </td>
-                           <td>           
-                             <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
-                           </td>
                            <td>
                               <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
                             </td>
@@ -417,7 +280,6 @@
                              <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                            </td>
                           </tr>
-  
                       <?php endwhile?>
                       <?php }else{
                         echo "Please select Crop";
@@ -425,14 +287,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="atok-tabs-1"
-                role="tabpanel"
-                aria-labelledby="atok-tab-1"
-              >
+              <div class="tab-pane fade" id="atok-tabs-1" role="tabpanel" aria-labelledby="atok-tab-1">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <tr>
                       <th>Year</th>
@@ -468,7 +324,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -476,14 +331,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="bakun-tabs-2"
-                role="tabpanel"
-                aria-labelledby="bakun-tab-2"
-              >
+              <div class="tab-pane fade" id="bakun-tabs-2" role="tabpanel" aria-labelledby="bakun-tab-2">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -501,9 +350,9 @@
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
                       callLabel("Bakun");
-        
+
                       $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%bakun%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
-                        
+
                       while($row=mysqli_fetch_array($res)):?>
                         <tr>
                           <td>
@@ -519,7 +368,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -527,14 +375,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="bokod-tabs-3"
-                role="tabpanel"
-                aria-labelledby="bokod-tab-3"
-              >
+              <div class="tab-pane fade" id="bokod-tabs-3" role="tabpanel" aria-labelledby="bokod-tab-3">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -552,7 +394,6 @@
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
                       callLabel("Bokod");
-                 
         
                       $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%bokod%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
@@ -571,7 +412,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -579,14 +419,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="buguias-tabs-4"
-                role="tabpanel"
-                aria-labelledby="buguias-tab-4"
-              >
+              <div class="tab-pane fade" id="buguias-tabs-4" role="tabpanel" aria-labelledby="buguias-tab-4">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -622,7 +456,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -630,12 +463,7 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="itogon-tabs-5"
-                role="tabpanel"
-                aria-labelledby="itogon-tab-5"
-              >
+              <div class="tab-pane fade" id="itogon-tabs-5" role="tabpanel" aria-labelledby="itogon-tab-5">
                 <table class="table align-middle mb-0 bg-white">
 
                   <thead class="bg-light">
@@ -673,7 +501,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -681,14 +508,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="kabayan-tabs-6"
-                role="tabpanel"
-                aria-labelledby="kabayan-tab-6"
-              >
+              <div class="tab-pane fade" id="kabayan-tabs-6" role="tabpanel" aria-labelledby="kabayan-tab-6">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -724,7 +545,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -732,14 +552,9 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="kapangan-tabs-7"
-                role="tabpanel"
-                aria-labelledby="kabayan-tab-7"
+              <div class="tab-pane fade" id="kapangan-tabs-7" role="tabpanel" aria-labelledby="kabayan-tab-7"
               >
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -775,7 +590,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -783,14 +597,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="kibungan-tabs-8"
-                role="tabpanel"
-                aria-labelledby="kibungan-tab-8"
-              >
+              <div class="tab-pane fade" id="kibungan-tabs-8" role="tabpanel" aria-labelledby="kibungan-tab-8" >
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -834,14 +642,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="trinidad-tabs-8"
-                role="tabpanel"
-                aria-labelledby="trinidad-tab-8"
-              >
+              <div class="tab-pane fade" id="trinidad-tabs-8" role="tabpanel" aria-labelledby="trinidad-tab-8">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -885,14 +687,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="mankayan-tabs-9"
-                role="tabpanel"
-                aria-labelledby="mankayan-tab-9"
-              >
+              <div class="tab-pane fade" id="mankayan-tabs-9" role="tabpanel" aria-labelledby="mankayan-tab-9">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -936,14 +732,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="sablan-tabs-10"
-                role="tabpanel"
-                aria-labelledby="sablan-tab-10"
-              >
+              <div class="tab-pane fade" id="sablan-tabs-10" role="tabpanel" aria-labelledby="sablan-tab-10">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -979,7 +769,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -987,14 +776,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="tuba-tabs-11"
-                role="tabpanel"
-                aria-labelledby="tuba-tab-11"
-              >
+              <div class="tab-pane fade" id="tuba-tabs-11" role="tabpanel" aria-labelledby="tuba-tab-11">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -1030,7 +813,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -1038,15 +820,8 @@
                   </tbody>
                </table>
               </div>
-              <div
-                class="tab-pane fade"
-                id="tublay-tabs-12"
-                role="tabpanel"
-                name="tublayTab"
-                aria-labelledby="tublay-tab-12"
-                >
+              <div class="tab-pane fade" id="tublay-tabs-12" role="tabpanel" name="tublayTab" aria-labelledby="tublay-tab-12">
                 <table class="table align-middle mb-0 bg-white">
-
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -1082,7 +857,6 @@
                            <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
                          </td>
                         </tr>
-
                     <?php endwhile?>
                     <?php }else{
                         echo "Please select Crop";
@@ -1097,10 +871,7 @@
       </div>
     </div>
     <!--END NEW DATA SORTING-->
-
     <!--END SORTING TABLE-->
-
-
   <script>
     document.getElementById("ifYes").style.display = "none";
       function yesnoCheck(that) {
