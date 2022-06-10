@@ -125,6 +125,17 @@
                     </div>
                 </div>
 
+                <!--Type of Admin-->
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="userType">User Type</label>
+                  <select class="form-select"  name="userType" id="userType">
+                    <option selected disabled>Select User Type</option>
+                    <option value="Farmer">Farmer</option>
+                    <option value="Coop">Coop</option>
+                    <option value="Guest">Guest</option>
+                  </select>
+                </div>
+
                 <!-- Submit button -->
                 <button disabled type="submit" name="regSubmit" id="regSubmit" class="btn btn-color-primary btn-block mb-4">
                   Register

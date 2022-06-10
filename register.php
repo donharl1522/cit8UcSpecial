@@ -28,31 +28,36 @@ if (empty($_POST['username']) || empty($_POST['password'])) {
 
 
 // Username doesnt exists, insert new account
-if ($stmt = $con->prepare('INSERT INTO user (userFirstName, userLastName, userAge, userGender, userLocation, username, password) VALUES (?, ?, ?, ?, ?, ?, ?)')) {
-	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
-	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-	$stmt->bind_param('sssssss', $_POST['userFirstName'], $_POST['userLastName'], $_POST['userAge'], $_POST['userGender'], $_POST['userLocation'],$_POST['username'], $password);
+// We need to check if the account with that username exists.
+if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
+	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
-	echo 'You have successfully registered, you can now login!';
-	echo '<script>alert("AAAAAAAAAAAAAAAAAA")</script>'; 
-	
+	$stmt->store_result();
+	// Store the result so we can check if the account exists in the database.
+	if ($stmt->num_rows > 0) {
+		// Username already exists
+		header('Location: message/login-signup/user-exist.php');
+		
+	} else {
+		// Insert new account
+		if ($stmt = $con->prepare('INSERT INTO user (userFirstName, userLastName, userAge, userGender, userLocation, userType, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')) {
+			// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			$stmt->bind_param('ssssssss', $_POST['userFirstName'], $_POST['userLastName'], $_POST['userAge'], $_POST['userGender'], $_POST['userLocation'], $_POST['userType'],$_POST['username'], $password);
+			$stmt->execute();
+			echo 'You have successfully registered, you can now login!';
+			echo '<script>alert("AAAAAAAAAAAAAAAAAA")</script>'; 
+			
+		} else {
+			// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
+			echo 'Could not prepare statement!';
+		}		
+	}
+	$stmt->close();
 } else {
 	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 	echo 'Could not prepare statement!';
 }
 $con->close();
-
-/*
-`userID`, `userFirstName`, `userLastName`, `userAge`, `userGender`, `userLocation`, `username`, `password`
-INSERT INTO `user` (`userID`, `userFirstName`, `userLastName`, `userAge`, `userGender`, `userLocation`, `username`, `password`) VALUES ('1', 'ad', 'sdf', '3', 'M', '13', 'sdf', 'dsfsdf');
-
-<input type="text" placeholder="Username" name="username" /><br><br>
-        <input type="text" placeholder="First Name" name="userFirstName" /><br><br>
-        <input type="text" placeholder="Last Name" name="userLastName" /><br><br>
-        <input type="number" placeholder="Age" name="userAge" /><br><br>
-        <input type="text" placeholder="Gender" name="userGender" maxlength="1" /><br><br>
-        <input type="number" placeholder="Location" name="userLocation" /><br><br>
-        <input type="password" placeholder="password" name="password" /><br><br>
-        <input type="submit" value="Login" />
-*/
 ?>
