@@ -1,6 +1,5 @@
 <?php
 session_start();
-require 'controller/user.php';
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -14,7 +13,7 @@ if ( mysqli_connect_errno() ) {
 }
 
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare('SELECT userType,userID, password FROM user WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     
     $stmt->bind_param('s', $_POST['username']);
@@ -23,7 +22,7 @@ if ($stmt = $con->prepare('SELECT userType,userID, password FROM user WHERE user
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($userType,$id, $password);
+        $stmt->bind_result($id, $password);
         $stmt->fetch();
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
@@ -34,18 +33,14 @@ if ($stmt = $con->prepare('SELECT userType,userID, password FROM user WHERE user
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            //header('Location: homePage.php');
-            //header('Location: home.php');
-            userType($userType);
+            header('Location: homePage.php');
         } else {
-            // Incorrect password 
-            //echo 'Incorrect username and/or password!';
-            header('Location: message/login-signup/incorect-username-password.php');
+            // Incorrect password
+            echo 'Incorrect username and/or password!';
         }
     } else {
         // Incorrect username
-        //echo 'Incorrect username and/or password!';
-        header('Location: message/login-signup/incorect-username-password.php');
+        echo 'Incorrect username and/or password!';
     }
 
     $stmt->close();
