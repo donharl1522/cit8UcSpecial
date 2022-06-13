@@ -8,11 +8,7 @@
     <input type="text" name="farmerLocation" placeholder="Farmers Location"/><br>
     <input type="submit" name="insert_farmer" />
 </form>
-
-<?php
-    $res=mysqli_query($link,"SELECT * FROM farmers_table");
-    while($row=mysqli_fetch_array($res)):?>
-    <table>
+<table>
         <tr>
             <th>ID</th>
             <th>First Name</th>
@@ -20,6 +16,9 @@
             <th>Location</th>
             <th>Action</th>
         </tr>
+<?php
+    $res=mysqli_query($link,"SELECT * FROM farmers_table");
+    while($row=mysqli_fetch_array($res)):?>
         <tr>
             <td><?php echo $row["farmerID"]; ?></td>
             <td><?php echo $row["farmerName"]; ?></td>
@@ -27,8 +26,9 @@
             <td><?php echo $row["farmerLocation"]; ?></td>
             <td><a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>">Delete</a> - <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>">Update</a></td>
         </tr>
-    </table>
+    
 <?php endwhile ?>
+</table>
 
 <?php include '../template/footer.php'; ?>
 
