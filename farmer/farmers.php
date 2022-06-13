@@ -25,7 +25,7 @@
             <td><?php echo $row["farmerName"]; ?></td>
             <td><?php echo $row["farmerLName"]; ?></td>
             <td><?php echo $row["farmerLocation"]; ?></td>
-            <td><a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>">Delete</a> - <a href="#">Update</a></td>
+            <td><a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>">Delete</a> - <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>">Update</a></td>
         </tr>
     </table>
 <?php endwhile ?>
