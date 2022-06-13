@@ -112,7 +112,7 @@ if (!isset($_SESSION['loggedin'])) {
             <a class="dropdown-item" href="#">Settings</a>
           </li>
           <li>
-            <a class="dropdown-item" href="login.php">Logout</a>
+            <a class="dropdown-item" href="logout.php">Logout</a>
           </li>
         </ul>
       </li>
