@@ -204,5 +204,25 @@
   <!-- Jumbotron -->
 </section>
 <!-- Section: Design Block -->
+
+
+<?php 
+    //session_start();
+    
+    if(isset($_SESSION['account_login_status']))
+    {
+        ?>
+            <script>
+              Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['account_login_status']; ?>'
+            })
+            </script>
+        <?php 
+        unset($_SESSION['account_login_status']);
+    }
+
+?>
 <?php include 'template/footer.php'; ?>
 

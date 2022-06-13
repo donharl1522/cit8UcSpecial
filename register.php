@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -37,8 +38,9 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
 	// Store the result so we can check if the account exists in the database.
 	if ($stmt->num_rows > 0) {
 		// Username already exists
-		header('Location: message/login-signup/user-exist.php');
-		
+		//header('Location: message/login-signup/user-exist.php');
+		$_SESSION['account_login_status'] = "Username already exists!";
+        header('Location: login.php');
 	} else {
 		// Insert new account
 		if ($stmt = $con->prepare('INSERT INTO user (userFirstName, userLastName, userAge, userGender, userLocation, userType, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?)')) {
@@ -46,9 +48,10 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 			$stmt->bind_param('ssssssss', $_POST['userFirstName'], $_POST['userLastName'], $_POST['userAge'], $_POST['userGender'], $_POST['userLocation'], $_POST['userType'],$_POST['username'], $password);
 			$stmt->execute();
-			echo 'You have successfully registered, you can now login!';
-			echo '<script>alert("AAAAAAAAAAAAAAAAAA")</script>'; 
-			
+			//echo 'You have successfully registered, you can now login!';
+			$_SESSION['account_login_status'] = "You have successfully registered, you can now login!";
+        	header('Location: login.php');
+	
 		} else {
 			// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
 			echo 'Could not prepare statement!';
