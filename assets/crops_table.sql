@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2022 at 05:00 AM
+-- Generation Time: Jun 13, 2022 at 09:26 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -33,7 +33,7 @@ CREATE TABLE `crops_table` (
   `cropName` varchar(20) NOT NULL,
   `cropStart` varchar(20) NOT NULL,
   `cropMaturity` varchar(20) NOT NULL,
-  `cropHarvest` datetime(6) NOT NULL,
+  `cropHarvest` varchar(20) NOT NULL,
   `cropSeason` varchar(20) NOT NULL,
   `cropLocation` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
