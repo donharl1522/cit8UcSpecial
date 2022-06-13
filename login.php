@@ -22,8 +22,8 @@
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="username" class="form-control form-control-lg" name="username"/>
-                    <label class="form-label" for="username">Email address</label>
+                    <input type="text" id="username" class="form-control form-control-lg" name="username"/>
+                    <label class="form-label" for="username">Username</label>
                   </div>
 
                   <div class="form-outline mb-4">
@@ -50,4 +50,23 @@
     </div>
   </div>
 </section>
+
+<?php 
+    session_start();
+    
+    if(isset($_SESSION['account_login_status']))
+    {
+        ?>
+            <script>
+              Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: '<?= $_SESSION['account_login_status']; ?>'
+            })
+            </script>
+        <?php 
+        unset($_SESSION['account_login_status']);
+    }
+
+?>
 <?php include 'template/footer.php'; ?>

@@ -36,11 +36,15 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
             header('Location: homePage.php');
         } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+            //echo 'Incorrect username and/or password!';
+            $_SESSION['account_login_status'] = "Incorrect password!";
+            header('Location: login.php');
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        //echo 'Incorrect username and/or password!';
+        $_SESSION['account_login_status'] = "Incorrect username!";
+        header('Location: login.php');
     }
 
     $stmt->close();
