@@ -15,14 +15,47 @@
     }
 ?>
 <?php include '../template/header.php'; ?>
-<h1>Farmers DATA</h1>
-<form action="" method="POST">
-    <input type="text" name="farmerFName" placeholder="Farmers First Name" value="<?php echo $farmerFName; ?>"/><br>
-    <input type="text" name="farmerLName" placeholder="Farmers Last Name" value="<?php echo $farmerLName; ?>"/><br>
-    <input type="text" name="farmerLocation" placeholder="Farmers Location" value="<?php echo $farmerLocation; ?>"/><br>
-    <input type="submit" name="update_farmer" />
-</form>
+<div class="container my-5">
+  <div class="container-fluid">
+    <h2>Update Farmers Data</h2>
+    <form action=""  method="POST">
+      <div class="card">
+        <div class="card-body">
+          <div class="form-outline mb-4">
+            <input type="text" id="farmerFName" class="form-control" name="farmerFName" value="<?php echo $farmerFName; ?>"/>
+            <label class="form-label" for="farmerFName">First Name</label>
+          </div>
+          <div class="form-outline mb-4">
+            <input type="text" id="farmerLName" class="form-control" name="farmerLName" value="<?php echo $farmerLName; ?>" />
+            <label class="form-label" for="farmerLName">Last Name</label>
+          </div>
 
+          <div class="mb-4 form-outline">
+                  <select class="form-select"  name="farmerLocation">
+                     <option disabled>Choose Municipality</option>
+                     <option value="<?php echo $farmerLocation; ?>"><?php echo $farmerLocation; ?></option>
+                     <option value="Baguio">Atok</option>
+                     <option value="Bakun">Bakun</option>
+                     <option value="Bokod">Bokod</option>
+                     <option value="Buguias">Buguias</option>
+                     <option value="Itogon">Itogon</option>
+                     <option value="Kabayan">Kabayan</option>
+                     <option value="Kapangan">Kapangan</option>
+                     <option value="Kibungan">Kibungan</option>
+                     <option value="La Trinidad">La Trinidad</option>
+                     <option value="Mankayan">Mankayan</option>
+                     <option value="Sablan">Sablan</option>
+                     <option value="Tuba">Tuba</option>
+                     <option value="Tublay">Tublay</option>
+                  </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary float-end" name="update_farmer">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <?php include '../template/footer.php'; ?>
 
