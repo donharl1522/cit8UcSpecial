@@ -323,7 +323,7 @@
                               <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
                            </td>
                            <td>
-                             <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?></p>
+                             <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?></p>
                            </td>
                           </tr>
                       <?php endwhile?>
