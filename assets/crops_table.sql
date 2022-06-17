@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2022 at 09:26 AM
+-- Generation Time: Jun 17, 2022 at 05:15 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `crops_table` (
-  `cropID` int(10) NOT NULL,
+  `cropID` int(11) NOT NULL,
   `cropName` varchar(20) NOT NULL,
   `cropStart` varchar(20) NOT NULL,
   `cropMaturity` varchar(20) NOT NULL,
@@ -37,6 +37,33 @@ CREATE TABLE `crops_table` (
   `cropSeason` varchar(20) NOT NULL,
   `cropLocation` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `crops_table`
+--
+
+INSERT INTO `crops_table` (`cropID`, `cropName`, `cropStart`, `cropMaturity`, `cropHarvest`, `cropSeason`, `cropLocation`) VALUES
+(1, 'Kent', '2022-06-17', 'iuoiuo', '2022-06-24', 'oio', 'Bakun');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `crops_table`
+--
+ALTER TABLE `crops_table`
+  ADD PRIMARY KEY (`cropID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `crops_table`
+--
+ALTER TABLE `crops_table`
+  MODIFY `cropID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
