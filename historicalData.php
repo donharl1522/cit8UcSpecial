@@ -182,40 +182,93 @@
       <div class="row">
         <div class="col-2">
           <div class="list-group list-group-light" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active px-3 border-0" id="list-home-list"
-              data-mdb-toggle="list" href="#list-home" role="tab" aria-controls="list-home">All</a>
-            <a class="list-group-item list-group-item-action px-3 border-0" id="list-profile-list"
-              data-mdb-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Atok</a>
-            <a class="list-group-item list-group-item-action px-3 border-0" id="list-messages-list"
-              data-mdb-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Bakun</a>
-            <a class="list-group-item list-group-item-action px-3 border-0" id="list-settings-list"
-              data-mdb-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Bokod</a>
+            <a class="list-group-item list-group-item-action active px-3 border-0" id="list-all-list"
+              data-mdb-toggle="list" href="#list-all" role="tab" aria-controls="list-all">All Municipalities</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-atok-list"
+              data-mdb-toggle="list" href="#list-atok" role="tab" aria-controls="list-atok">ATOK</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-bakun-list"
+              data-mdb-toggle="list" href="#list-bakun" role="tab" aria-controls="list-bakun">BAKUN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-bokod-list"
+              data-mdb-toggle="list" href="#list-bokod" role="tab" aria-controls="list-bokod">BOKOD</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-buguias-list"
+              data-mdb-toggle="list" href="#list-buguias" role="tab" aria-controls="list-buguias">BUGUIAS</a> 
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-itogon-list"
+              data-mdb-toggle="list" href="#list-itogon" role="tab" aria-controls="list-itogon">ITOGON</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-kabayan-list"
+              data-mdb-toggle="list" href="#list-kabayan" role="tab" aria-controls="list-kabayan">KABAYAN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-kapangan-list"
+              data-mdb-toggle="list" href="#list-kapangan" role="tab" aria-controls="list-kapangan">KAPANGAN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-kibungan-list"
+              data-mdb-toggle="list" href="#list-kibungan" role="tab" aria-controls="list-kibungan">KIBUNGAN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-latrinidad-list"
+              data-mdb-toggle="list" href="#list-latrinidad" role="tab" aria-controls="list-latrinidad">LA TRINIDAD</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-mankayan-list"
+              data-mdb-toggle="list" href="#list-mankayan" role="tab" aria-controls="list-mankayan">MANKAYAN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-sablan-list"
+              data-mdb-toggle="list" href="#list-sablan" role="tab" aria-controls="list-sablan">SABLAN</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-tuba-list"
+              data-mdb-toggle="list" href="#list-tuba" role="tab" aria-controls="list-tuba">TUBA</a>
+
+            <a class="list-group-item list-group-item-action px-3 border-0" id="list-tublay-list"
+              data-mdb-toggle="list" href="#list-tublay" role="tab" aria-controls="list-tublay">TUBLAY</a> 
           </div>
         </div>
         <div class="col-8">
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="list-home" role="tabpanel"
-              aria-labelledby="list-home-list">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              impedit quibusdam exercitationem eligendi voluptate doloribus
-              non pariatur libero quod nobis mollitia odio dolore eos debitis
-              iure, autem quisquam ullam beatae.
+            <div class="tab-pane fade show active" id="list-all" role="tabpanel"
+              aria-labelledby="list-all-list">
+              All Municipalities
             </div>
-            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-              Ea eos asperiores deserunt reprehenderit voluptatem deleniti
-              dolor iure eum consectetur commodi.
+            <div class="tab-pane fade" id="list-atok" role="tabpanel" aria-labelledby="list-atok-list">
+              ATOK
             </div>
-            <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-              Et perspiciatis facilis labore natus at necessitatibus. Sequi
-              earum qui illum reiciendis? Excepturi, dicta consequuntur,
-              voluptas aspernatur, quis laboriosam exercitationem quasi
-              officia tempore iste assumenda aliquam.
+            <div class="tab-pane fade" id="list-bakun" role="tabpanel" aria-labelledby="list-bakun-list">
+              Bakun
             </div>
-            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-              Praesentium asperiores nemo ratione quas atque excepturi odio
-              aliquid libero, architecto aspernatur expedita, corrupti, rem
-              odit quos exercitationem maxime at. Ex, eveniet rerum laborum
-              accusamus delectus magnam maxime!
+            <div class="tab-pane fade" id="list-bokod" role="tabpanel" aria-labelledby="list-bokod-list">
+              Bokod
+            </div>
+            <div class="tab-pane fade" id="list-buguias" role="tabpanel" aria-labelledby="list-buguias-list">
+              BUGUIAS
+            </div>
+            <div class="tab-pane fade" id="list-itogon" role="tabpanel" aria-labelledby="list-itogon-list">
+              ITOGON
+            </div>
+            <div class="tab-pane fade" id="list-kabayan" role="tabpanel" aria-labelledby="list-kabayan-list">
+              KABAYAN
+            </div>
+            <div class="tab-pane fade" id="list-kapangan" role="tabpanel" aria-labelledby="list-kapangan-list">
+              KAPANGAN
+            </div>
+            <div class="tab-pane fade" id="list-kibungan" role="tabpanel" aria-labelledby="list-kibungan-list">
+              KIBUNGAN
+            </div>
+            <div class="tab-pane fade" id="list-latrinidad" role="tabpanel" aria-labelledby="list-latrinidad-list">
+              LA TRINIDAD
+            </div>
+            <div class="tab-pane fade" id="list-mankayan" role="tabpanel" aria-labelledby="list-mankayan-list">
+              MANKAYAN
+            </div>
+            <div class="tab-pane fade" id="list-sablan" role="tabpanel" aria-labelledby="list-sablan-list">
+              SABLAN
+            </div>
+            <div class="tab-pane fade" id="list-tuba" role="tabpanel" aria-labelledby="list-tuba-list">
+              TUBA
+            </div>
+            <div class="tab-pane fade" id="list-tublay" role="tabpanel" aria-labelledby="list-tublay-list">
+              TUBLAY
             </div>
           </div>
         </div>
