@@ -229,118 +229,7 @@
           <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="list-all" role="tabpanel"
               aria-labelledby="list-all-list">
-              All Municipalities
-            </div>
-            <div class="tab-pane fade" id="list-atok" role="tabpanel" aria-labelledby="list-atok-list">
-              ATOK
-            </div>
-            <div class="tab-pane fade" id="list-bakun" role="tabpanel" aria-labelledby="list-bakun-list">
-              Bakun
-            </div>
-            <div class="tab-pane fade" id="list-bokod" role="tabpanel" aria-labelledby="list-bokod-list">
-              Bokod
-            </div>
-            <div class="tab-pane fade" id="list-buguias" role="tabpanel" aria-labelledby="list-buguias-list">
-              BUGUIAS
-            </div>
-            <div class="tab-pane fade" id="list-itogon" role="tabpanel" aria-labelledby="list-itogon-list">
-              ITOGON
-            </div>
-            <div class="tab-pane fade" id="list-kabayan" role="tabpanel" aria-labelledby="list-kabayan-list">
-              KABAYAN
-            </div>
-            <div class="tab-pane fade" id="list-kapangan" role="tabpanel" aria-labelledby="list-kapangan-list">
-              KAPANGAN
-            </div>
-            <div class="tab-pane fade" id="list-kibungan" role="tabpanel" aria-labelledby="list-kibungan-list">
-              KIBUNGAN
-            </div>
-            <div class="tab-pane fade" id="list-latrinidad" role="tabpanel" aria-labelledby="list-latrinidad-list">
-              LA TRINIDAD
-            </div>
-            <div class="tab-pane fade" id="list-mankayan" role="tabpanel" aria-labelledby="list-mankayan-list">
-              MANKAYAN
-            </div>
-            <div class="tab-pane fade" id="list-sablan" role="tabpanel" aria-labelledby="list-sablan-list">
-              SABLAN
-            </div>
-            <div class="tab-pane fade" id="list-tuba" role="tabpanel" aria-labelledby="list-tuba-list">
-              TUBA
-            </div>
-            <div class="tab-pane fade" id="list-tublay" role="tabpanel" aria-labelledby="list-tublay-list">
-              TUBLAY
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End Side Tabbed Sample-->
-
-        <div class="card">
-          <div class="card-body">
-            <!-- Tabs navs -->
-            <ul class="nav nav-tabs mb-3" id="ex1" role="tablist" method ="post">
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="all-tab-1" data-mdb-toggle="tab" href="#all-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="true">All</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="atok-tab-1" data-mdb-toggle="tab" href="#atok-tabs-1" role="tab" aria-controls="ex2-tabs-1" aria-selected="false">ATOK</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="bakun-tab-2" data-mdb-toggle="tab" href="#bakun-tabs-2" role="tab" aria-controls="ex2-tabs-2" aria-selected="false">BAKUN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="bokod-tab-3" data-mdb-toggle="tab" href="#bokod-tabs-3" role="tab" aria-controls="bokod-tabs-3" aria-selected="false">BOKOD</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="buguias-tab-4" data-mdb-toggle="tab" href="#buguias-tabs-4" role="tab" aria-controls="buguias-tabs-4" aria-selected="false">BUGUIAS</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="itogon-tab-5" data-mdb-toggle="tab" href="#itogon-tabs-5" role="tab" aria-controls="itogon-tabs-5" aria-selected="false">ITOGON</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="kabayan-tab-6" data-mdb-toggle="tab" href="#kabayan-tabs-6" role="tab" aria-controls="kabayan-tabs-6" aria-selected="false">KABAYAN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="kapangan-tab-7" data-mdb-toggle="tab" href="#kapangan-tabs-7" role="tab" aria-controls="kapangan-tabs-7" aria-selected="false">KAPANGAN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="kibungan-tab-8" data-mdb-toggle="tab" href="#kibungan-tabs-8" role="tab" aria-controls="kibungan-tabs-8" aria-selected="false">KIBUNGAN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="trinidad-tab-8" data-mdb-toggle="tab" href="#trinidad-tabs-8" role="tab" aria-controls="trinidad-tabs-8" aria-selected="false">LA TRINIDAD</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="mankayan-tab-9" data-mdb-toggle="tab" href="#mankayan-tabs-9" role="tab" aria-controls="mankayan-tabs-9" aria-selected="false">MANKAYAN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="sablan-tab-10" data-mdb-toggle="tab" href="#sablan-tabs-10" role="tab" aria-controls="sablan-tabs-10" aria-selected="false">SABLAN</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="tuba-tab-11" data-mdb-toggle="tab" href="#tuba-tabs-11" role="tab" aria-controls="tuba-tabs-11" aria-selected="false">TUBA</a>
-              </li>
-              <li class="nav-item" role="presentation">
-                <a class="nav-link" id="tublay-tab-12" data-mdb-toggle="tab" href="#tublay-tabs-12" role="tab" aria-controls="tublay-tabs-12" aria-selected="false">TUBLAY</a>
-              </li>
-            </ul>
-            
-            <!-- Tabs navs -->
-
-            <!-- Tabs content -->
-
-
-            <?php
-            function callLabel($callMun){
-              $yearSearchedFrom = $_POST['fromYear'];
-              $yearSearchedTo = $_POST['toYear'];
-              $cropSelected = $_POST['cropNameSelect'];
-              echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
-            }
-            
-            ?>
-
-            <div class="tab-content" id="ex2-content" method="post">
-              <div class="tab-pane fade show active" id="all-tabs-1" role="tabpanel" aria-labelledby="all-tab-1">
-                <table class="table align-middle mb-0 bg-white">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <tr>
                       <th>Year</th>
@@ -384,10 +273,11 @@
                         echo "Please select Crop";
                       }}?>
                   </tbody>
+
                </table>
-              </div>
-              <div class="tab-pane fade" id="atok-tabs-1" role="tabpanel" aria-labelledby="atok-tab-1">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-atok" role="tabpanel" aria-labelledby="list-atok-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <tr>
                       <th>Year</th>
@@ -429,9 +319,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="bakun-tabs-2" role="tabpanel" aria-labelledby="bakun-tab-2">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-bakun" role="tabpanel" aria-labelledby="list-bakun-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -473,9 +363,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="bokod-tabs-3" role="tabpanel" aria-labelledby="bokod-tab-3">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-bokod" role="tabpanel" aria-labelledby="list-bokod-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -517,9 +407,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="buguias-tabs-4" role="tabpanel" aria-labelledby="buguias-tab-4">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-buguias" role="tabpanel" aria-labelledby="list-buguias-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -561,9 +451,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="itogon-tabs-5" role="tabpanel" aria-labelledby="itogon-tab-5">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-itogon" role="tabpanel" aria-labelledby="list-itogon-list">
+              <table class="table align-middle mb-0 bg-white">
 
                   <thead class="bg-light">
                     <br>
@@ -606,9 +496,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="kabayan-tabs-6" role="tabpanel" aria-labelledby="kabayan-tab-6">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-kabayan" role="tabpanel" aria-labelledby="list-kabayan-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -650,10 +540,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="kapangan-tabs-7" role="tabpanel" aria-labelledby="kabayan-tab-7"
-              >
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-kapangan" role="tabpanel" aria-labelledby="list-kapangan-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -695,9 +584,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="kibungan-tabs-8" role="tabpanel" aria-labelledby="kibungan-tab-8" >
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-kibungan" role="tabpanel" aria-labelledby="list-kibungan-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -740,9 +629,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="trinidad-tabs-8" role="tabpanel" aria-labelledby="trinidad-tab-8">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-latrinidad" role="tabpanel" aria-labelledby="list-latrinidad-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -785,9 +674,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="mankayan-tabs-9" role="tabpanel" aria-labelledby="mankayan-tab-9">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-mankayan" role="tabpanel" aria-labelledby="list-mankayan-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -830,9 +719,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="sablan-tabs-10" role="tabpanel" aria-labelledby="sablan-tab-10">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-sablan" role="tabpanel" aria-labelledby="list-sablan-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -874,9 +763,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="tuba-tabs-11" role="tabpanel" aria-labelledby="tuba-tab-11">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-tuba" role="tabpanel" aria-labelledby="list-tuba-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -918,9 +807,9 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
-              <div class="tab-pane fade" id="tublay-tabs-12" role="tabpanel" name="tublayTab" aria-labelledby="tublay-tab-12">
-                <table class="table align-middle mb-0 bg-white">
+            </div>
+            <div class="tab-pane fade" id="list-tublay" role="tabpanel" aria-labelledby="list-tublay-list">
+              <table class="table align-middle mb-0 bg-white">
                   <thead class="bg-light">
                     <br>
                     <tr>
@@ -962,15 +851,12 @@
                       }}?>
                   </tbody>
                </table>
-              </div>
             </div>
-            <!-- Tabs content -->
           </div>
         </div>
       </div>
-    </div>
-    <!--END NEW DATA SORTING-->
-    <!--END SORTING TABLE-->
+      <!--End Side Tabbed Sample-->
+
   <script>
     document.getElementById("ifYes").style.display = "none";
       function yesnoCheck(that) {
@@ -982,6 +868,16 @@
         }
       }
     </script>
+
+    <?php
+            function callLabel($callMun){
+              $yearSearchedFrom = $_POST['fromYear'];
+              $yearSearchedTo = $_POST['toYear'];
+              $cropSelected = $_POST['cropNameSelect'];
+              echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
+            }
+            
+            ?>
     
 </div>
 <?php include 'template/footer.php'; ?>

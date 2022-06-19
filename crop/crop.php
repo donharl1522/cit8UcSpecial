@@ -38,17 +38,22 @@
               </div>
             </div>
 
-            <!-- Crop cropSeason input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="cropSeason" class="form-control"  name="cropSeason"/>
-              <label class="form-label" for="cropSeason">Crop Season</label>
-            </div>
-
             <!-- Crop Maturity input -->
             <div class="form-outline mb-4">
               <input type="text" id="cropMaturity" class="form-control" name="cropMaturity"/>
               <label class="form-label" for="cropMaturity">Crop Maturity</label>
             </div>
+
+            <!-- Crop cropSeason input -->
+            <div class="form-outline mb-4">
+            
+              <select class="form-select"  name="cropSeason">
+                      <option value="">Crop Season</option>
+                      <option value="dry">Dry</option>
+                      <option value="wet">wet</option>
+              </select>
+            </div>
+
 
             <!-- Crop location input -->
             <div class="form-outline mb-4">
