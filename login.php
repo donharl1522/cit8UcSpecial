@@ -59,7 +59,7 @@
         ?>
             <script>
               Swal.fire({
-              icon: 'error',
+              icon: '<?= $_SESSION['account_login_icon']; ?>',
               title: 'Oops...',
               text: '<?= $_SESSION['account_login_status']; ?>'
             })

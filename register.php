@@ -40,6 +40,7 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
 		// Username already exists
 		//header('Location: message/login-signup/user-exist.php');
 		$_SESSION['account_login_status'] = "Username already exists!";
+		$_SESSION['account_login_icon'] = "warning";
         header('Location: login.php');
 	} else {
 		// Insert new account
@@ -50,6 +51,7 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
 			$stmt->execute();
 			//echo 'You have successfully registered, you can now login!';
 			$_SESSION['account_login_status'] = "You have successfully registered, you can now login!";
+			$_SESSION['account_login_icon'] = "success";
         	header('Location: login.php');
 	
 		} else {
