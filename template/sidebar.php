@@ -44,7 +44,11 @@
 
       <div class="text-center" style="height: 100px;">
         <hr class="mb-4 mt-0">
-        <p>Sign out</p>
+        
+        <a class="btn btn-lg btn-color-accent text-white" href="logout.php" role="button">
+          <i class="fas fa-sign-out-alt"></i>
+          Sign out
+        </a>
       </div>
     </div>
   </nav>
