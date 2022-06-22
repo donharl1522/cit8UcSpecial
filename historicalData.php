@@ -181,7 +181,7 @@
       <!--Side Tabbed Sample-->
       <div class="row">
         <div class="col-2">
-          <div class="list-group list-group-light" id="list-tab" role="tablist">
+          <div class="list-group list-group-light sticky-top" id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active px-3 border-0" id="list-all-list"
               data-mdb-toggle="list" href="#list-all" role="tab" aria-controls="list-all">All Municipalities</a>
 
