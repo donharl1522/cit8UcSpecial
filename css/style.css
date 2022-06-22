@@ -27,6 +27,10 @@ call variable in CSS var(--variableName)
   color: var(--background);
 }
 
+.btn-color-accent {
+  background-color: var(--colorAccent);
+}
+
 /* select starting stylings ------------------------------*/
 .select {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
