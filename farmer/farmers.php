@@ -12,7 +12,114 @@
                   <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD Farmer</button>
                </div>
             </div>
-            <table class="table align-middle mb-0 bg-white">
+            <!-- Tabs navs -->
+            <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+               <a
+                  class="nav-link active"
+                  id="ex3-tab-1"
+                  data-mdb-toggle="tab"
+                  href="#ex3-tabs-1"
+                  role="tab"
+                  aria-controls="ex3-tabs-1"
+                  aria-selected="true"
+                  >Last Name</a
+               >
+            </li>
+            <li class="nav-item" role="presentation">
+               <a
+                  class="nav-link"
+                  id="ex3-tab-2"
+                  data-mdb-toggle="tab"
+                  href="#ex3-tabs-2"
+                  role="tab"
+                  aria-controls="ex3-tabs-2"
+                  aria-selected="false"
+                  >Municipality</a
+               >
+            </li>
+            </ul>
+            <!-- Tabs navs -->
+
+            <!-- Tabs content -->
+            <div class="tab-content" id="ex2-content">
+            <div
+               class="tab-pane fade show active"
+               id="ex3-tabs-1"
+               role="tabpanel"
+               aria-labelledby="ex3-tab-1"
+            >
+               <!--Last Name-->
+               <table class="table align-middle mb-0 bg-white">
+                  <thead class="bg-light">
+                     <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Action</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <?php
+                        $res=mysqli_query($link,"SELECT * FROM farmers_table ORDER BY farmerLName ASC");
+                        while($row=mysqli_fetch_array($res)):?>
+                     <tr>
+                        <td><?php echo $row["farmerName"]; ?></td>
+                        <td class="fw-bold"><?php echo $row["farmerLName"]; ?></td>
+                        <td><?php echo $row["farmerLocation"]; ?></td>
+                        <td>
+                           <a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                           <i class="fas fa-times"></i>
+                           </a>
+                           <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                           <i class="fas fa-check"></i>
+                           </a>
+                        </td>
+                     </tr>
+                     <?php endwhile ?>
+                  </tbody>
+               </table>
+            </div>
+            <div
+               class="tab-pane fade"
+               id="ex3-tabs-2"
+               role="tabpanel"
+               aria-labelledby="ex3-tab-2"
+            >
+                  <!--Muniicipality-->
+                  <table class="table align-middle mb-0 bg-white">
+                     <thead class="bg-light">
+                        <tr>
+                           <th scope="col">First Name</th>
+                           <th scope="col">Last Name</th>
+                           <th scope="col">Location</th>
+                           <th scope="col">Action</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <?php
+                           $res=mysqli_query($link,"SELECT * FROM farmers_table ORDER BY farmerLocation ASC");
+                           while($row=mysqli_fetch_array($res)):?>
+                        <tr>
+                           <td><?php echo $row["farmerName"]; ?></td>
+                           <td><?php echo $row["farmerLName"]; ?></td>
+                           <td class="fw-bold"><?php echo $row["farmerLocation"]; ?></td>
+                           <td>
+                              <a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                              <i class="fas fa-times"></i>
+                              </a>
+                              <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                              <i class="fas fa-check"></i>
+                              </a>
+                           </td>
+                        </tr>
+                        <?php endwhile ?>
+                     </tbody>
+                  </table>
+            </div>
+            </div>
+            <!-- Tabs content -->
+            <!--<table class="table align-middle mb-0 bg-white">
                <thead class="bg-light">
                   <tr>
                      <th scope="col">First Name</th>
@@ -40,7 +147,7 @@
                   </tr>
                   <?php endwhile ?>
                </tbody>
-            </table>
+            </table>-->
          </div>
       </div>
    </div>
@@ -63,10 +170,14 @@
                   <input type="text" id="lastname" class="form-control" name="farmerLName"/>
                   <label class="form-label" for="lastname">Last Name</label>
                </div>
+               <div class="form-outline mb-4">
+                  <input type="number" id="lastname" class="form-control" name="contact_number"/>
+                  <label class="form-label" for="lastname">Contact Number</label>
+               </div>
                <div class="mb-4 form-outline">
                   <select class="form-select"  name="farmerLocation">
                      <option value="">Choose Municipality</option>
-                     <option value="Baguio">Atok</option>
+                     <option value="Atok">Atok</option>
                      <option value="Bakun">Bakun</option>
                      <option value="Bokod">Bokod</option>
                      <option value="Buguias">Buguias</option>
@@ -141,7 +252,7 @@
    try{
      if(isset($_POST['insert_farmer']))
      {
-       mysqli_query($link, "INSERT INTO farmers_table values( NULL,'$_POST[farmerFName]', '$_POST[farmerLName]', '$_POST[farmerLocation]' )");
+       mysqli_query($link, "INSERT INTO farmers_table values(null,'$_POST[farmerFName]', '$_POST[farmerLName]','$_POST[contact_number]', '$_POST[farmerLocation]' )");
        
 ?>      
 <script type="text/javascript">
