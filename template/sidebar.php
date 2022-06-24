@@ -4,7 +4,7 @@
    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse background-color-primary">
       <div class="position-sticky">
          <div class="list-group list-group-flush mx-2 mt-2">
-            <div id="header-content" class="pl-3">
+            <div id="header-content" class="pl-3 text-center">
                <img
                   src="https://mdbootstrap.com/img/Photos/Avatars/img%20(23).jpg"
                   alt="avatar"
@@ -40,13 +40,13 @@
                id="management"
                class="collapse list-group list-group-flush"
                >
-               <li class="list-group-item py-2 background-color-accent">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Crop </a>
                </li>
-               <li class="list-group-item py-2">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Farmer</a>
                </li>
-               <li class="list-group-item py-2">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Crop Production</a>
                </li>
             </ul>
@@ -67,10 +67,10 @@
                id="historical"
                class="collapse list-group list-group-flush"
                >
-               <li class="list-group-item py-2 background-color-accent">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Agricultural </a>
                </li>
-               <li class="list-group-item py-2">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Climatological</a>
                </li>
             </ul>
@@ -97,13 +97,13 @@
                id="community"
                class="collapse list-group list-group-flush"
                >
-               <li class="list-group-item py-2 background-color-accent">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Farmers experience</a>
                </li>
-               <li class="list-group-item py-2">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Practices</a>
                </li>
-               <li class="list-group-item py-2">
+               <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Concerns & Issues</a>
                </li>
             </ul>
