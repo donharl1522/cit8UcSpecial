@@ -14,7 +14,7 @@
         </div>
         <div class="col">
           <div class="container my-5">
-            <p class="h1">Historical Data </p>
+            <p class="h1">Agricultural Data </p>
             <p class="lead">This website is meant as a prototype</p>
 
             <a class="btn btn-color-primary" href="homePage.php?id=">Home</a>
