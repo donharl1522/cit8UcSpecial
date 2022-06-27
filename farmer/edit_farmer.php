@@ -4,6 +4,7 @@
 
     $farmerFName="";
     $farmerLName="";
+    $farmerContact="";
     $farmerLocation="";
 
   
@@ -11,6 +12,7 @@
     while($row=mysqli_fetch_array($res)){
         $farmerFName=$row["farmerName"];
         $farmerLName=$row["farmerLName"];
+        $farmerContact=$row["farmer_contact_number"];
         $farmerLocation=$row["farmerLocation"];
     }
 ?>
@@ -28,6 +30,11 @@
           <div class="form-outline mb-4">
             <input type="text" id="farmerLName" class="form-control" name="farmerLName" value="<?php echo $farmerLName; ?>" />
             <label class="form-label" for="farmerLName">Last Name</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input type="text" id="farmerContact" class="form-control" name="farmerContact" value="<?php echo $farmerContact; ?>" />
+            <label class="form-label" for="farmerContact">Contact Number</label>
           </div>
 
           <div class="mb-4 form-outline">
@@ -62,12 +69,8 @@
 <?php
   if(isset($_POST["update_farmer"]))
   {
-    mysqli_query($link, "UPDATE farmers_table SET farmerName='$_POST[farmerFName]', farmerLName='$_POST[farmerLName]', farmerLocation='$_POST[farmerLocation]' WHERE farmerID=$farmerID");
-    ?>
-    <script type="text/javascript">
-      window.location="farmers.php";
-    </script>
-    <?php
+    mysqli_query($link, "UPDATE farmers_table SET farmerName='$_POST[farmerFName]', farmerLName='$_POST[farmerLName]', farmer_contact_number='$_POST[farmerContact]', farmerLocation='$_POST[farmerLocation]' WHERE farmerID=$farmerID");
+    header('Location: ../farmer');
   }
 
 ?>
