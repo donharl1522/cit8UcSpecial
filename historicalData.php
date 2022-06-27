@@ -25,6 +25,7 @@
   </div>
 </section>
 
+
 <!--******SORTING TABLE STARTS HERE-->
 
     <!--END SORTING TABLE STARTS HERE-->
@@ -242,11 +243,20 @@
                   <tbody>
                     <?php
                     if(isset($_POST['search'])){
+
                       if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                         $yearSearchedFrom = $_POST['fromYear'];
                         $yearSearchedTo = $_POST['toYear'];
                         $cropSelected = $_POST['cropNameSelect'];
                         callLabel("All Municipalities");
+
+                        $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'";
+                        $res1=mysqli_query($link, $query);
+                        $topCropData = mysqli_fetch_array( $res1);
+                        echo "The highest crop production from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in All Municipalities is ".$topCropData['topCrop']."mt/ha";
+
+                        
+
                       
                         $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
@@ -870,6 +880,7 @@
     </script>
 
     <?php
+
             function callLabel($callMun){
               $yearSearchedFrom = $_POST['fromYear'];
               $yearSearchedTo = $_POST['toYear'];
