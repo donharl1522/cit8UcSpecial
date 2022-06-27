@@ -83,7 +83,7 @@
                     <div class="mb-4 pb-2">
                       <select class="form-select"  name="munName" id="munName">
                         <option value="">Choose Municipality</option>
-                        <option value="Baguio">Atok</option>
+                        <option value="Atok">Atok</option>
                         <option value="Bakun">Bakun</option>
                         <option value="Bokod">Bokod</option>
                         <option value="Buguias">Buguias</option>

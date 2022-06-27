@@ -88,10 +88,32 @@
                 </div>
 
                 <!--Location Input-->
-                <div class="form-outline mb-4">
+                <!--<div class="form-outline mb-4">
                   <input type="text" id="userLocation" class="form-control" name="userLocation" />
                   <label class="form-label" for="userLocation">Location (Optional)</label>
-                </div>
+                </div>-->
+
+                <!--Type of Admin-->
+                <!--Type of Admin-->
+               
+                  <select class="form-select mb-4"  name="userLocation" id="userLocation">
+                    <option selected disabled>Choose Municipality</option>
+                    <option value="Atok">Atok</option>
+                    <option value="Bakun">Bakun</option>
+                    <option value="Bokod">Bokod</option>
+                    <option value="Buguias">Buguias</option>
+                    <option value="Itogon">Itogon</option>
+                    <option value="Kabayan">Kabayan</option>
+                    <option value="Kapangan">Kapangan</option>
+                    <option value="Kibungan">Kibungan</option>
+                    <option value="La Trinidad">La Trinidad</option>
+                    <option value="Mankayan">Mankayan</option>
+                    <option value="Sablan">Sablan</option>
+                    <option value="Tuba">Tuba</option>
+                    <option value="Tublay">Tublay</option>
+                  </select>
+      
+
                 <!-- Email input -->
                 <div class="form-outline mb-4">
                   <input type="email" id="form3Example3" class="form-control" name="email"/>
