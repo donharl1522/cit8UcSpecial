@@ -251,13 +251,17 @@
                         callLabel("All Municipalities");
 
                         $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'";
-                        $res1=mysqli_query($link, $query);
-                        $topCropData = mysqli_fetch_array( $res1);
-                        echo "The highest crop production from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in All Municipalities is ".$topCropData['topCrop']."mt/ha";
+                        $topCropResult=mysqli_query($link, $query);
+                        $topCropData = mysqli_fetch_array( $topCropResult);
 
-                        
+                        $topCropDataRes = $topCropData['topCrop'];
 
-                      
+                        $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
+
+                        $prodRateRow=mysqli_fetch_array($topProdRateResult);
+
+                        echo "The Highest Crop Productivity from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in All Municipalities is ".$topCropData['topCrop']."mt/ha Specifically in ".$prodRateRow["munName"];
+
                         $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
                         while($row=mysqli_fetch_array($res)):?>
@@ -305,6 +309,8 @@
                       $yearSearchedTo = $_POST['toYear'];
                       $cropSelected = $_POST['cropNameSelect'];
                       callLabel("Atok");
+
+                      echo "The Highest Crop Productivity from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in ".callLabel("Atok")." is ".$topCropData['topCrop']."mt/ha";
         
                       $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%atok%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
