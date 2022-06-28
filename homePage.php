@@ -17,8 +17,8 @@
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">CRUD</h1>
-          <h4 class="mb-3">Subheading</h4>
+          <h1 class="mb-3">CROP DATA</h1>
+          <!--<h4 class="mb-3">Subheading</h4>-->
           <a class="btn btn-outline-light btn-lg" href="create.php?id=" role="button"
           >GO TO CRUD</a
           >
@@ -76,6 +76,61 @@
     </div>
   </section>
 
+
+  <!--Crop Management-->
+  <section class="vh-100 background-color-primary">
+    <!-- Background image -->
+    <div
+      class="bg-image"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1511735643442-503bb3bd348a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3JvcHxlbnwwfHwwfHw%3D&w=1000&q=80');
+        height: 100vh;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+        <div class="container py-5 h-100 h-100">
+          <br><br><br><br><br><br><br>
+          <!--Text Content Here-->
+          <h1 class="display-1 text-white">CROP MANAGEMENT</h1>
+              <p class="lead text-white">
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+                non commodo luctus.
+              </p>
+              <a class="btn btn-outline-light" data-mdb-ripple-color="dark" href="crop/">
+                <i class="fas fa-angle-double-right pe-2"></i>
+                Proceed
+              </a>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </section>
+  <!--Crop Management-->
+ 
+  <!--Farmer Management-->
+  <section class="vh-100  background-color-secondary">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-6 col-lg-5 d-none d-md-block">
+          <!--Text Content Here-->
+          <h1 class="display-1 custom-text-primary text-white">FARMER MANAGEMENT</h1>
+          <p class="lead text-white">
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est
+            non commodo luctus.
+          </p>
+          <a class="btn btn-color-primary" href="farmer/">
+            <i class="fas fa-angle-double-right pe-2"></i>
+            Proceed
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+          <!--Graphics Content Here-->
+          <img src="https://cdn-icons-png.flaticon.com/512/921/921114.png" class="img-fluid" alt="Wild Landscape" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--farmer Management-->
   <!--Community-->
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
