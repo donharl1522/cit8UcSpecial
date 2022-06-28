@@ -22,7 +22,7 @@
                class="list-group-item list-group-item-action py-3 ripple active bg-transparent"
                aria-current="true"
                >
-            <img class="img-fluid" src="images/navbar-icons/dashboard.png" alt="" style="width:60px;"><span>Dashboard</span>
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/dashboard.png" alt="" style="width:60px;"><span>Dashboard</span>
             </a>
             <!-- Management -->
             <a
@@ -33,7 +33,7 @@
                aria-expanded="true"
                aria-controls="management"
                >
-            <img class="img-fluid" src="images/navbar-icons/plant.png" alt="" style="width:60px;"><span>Management</span>
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/plant.png" alt="" style="width:60px;"><span>Management</span>
             </a>
             <!-- Management Collapsed content -->
             <ul
@@ -41,10 +41,10 @@
                class="collapse list-group list-group-flush"
                >
                <li class="list-group-item py-3 ps-5">
-                  <a href="" class="text-reset">Crop </a>
+                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/crop/" class="text-reset">Crop </a>
                </li>
                <li class="list-group-item py-3 ps-5">
-                  <a href="" class="text-reset">Farmer</a>
+                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/farmer/" class="text-reset">Farmer</a>
                </li>
                <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Crop Production</a>
@@ -60,7 +60,7 @@
                aria-expanded="true"
                aria-controls="historical"
                >
-            <img class="img-fluid" src="images/navbar-icons/archive.png" alt="" style="width:60px;"><span>Historical Data</span>
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/archive.png" alt="" style="width:60px;"><span>Historical Data</span>
             </a>
             <!-- Historical Collapsed content -->
             <ul
@@ -76,10 +76,10 @@
             </ul>
             <!-- Historical Collapsed Collapse -->
             <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white"
-               ><img class="img-fluid" src="images/navbar-icons/prediction.png" alt="" style="width:60px;"><span>Predictions</span></a
+               ><img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/prediction.png" alt="" style="width:60px;"><span>Predictions</span></a
                >
             <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white">
-            <img class="img-fluid" src="images/navbar-icons/news.png" alt="" style="width:60px;"><span>News</span>
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/news.png" alt="" style="width:60px;"><span>News</span>
             </a>
             <!-- Community -->
             <a
@@ -90,7 +90,7 @@
                aria-expanded="true"
                aria-controls="community"
                >
-            <img class="img-fluid" src="images/navbar-icons/community.png" alt="" style="width:60px;"><span>Community</span>
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/community.png" alt="" style="width:60px;"><span>Community</span>
             </a>
             <!-- Community Collapsed content -->
             <ul
@@ -111,7 +111,7 @@
          </div>
          <div class="text-center" style="height: 100px;">
             <hr class="mb-4 mt-0">
-            <a class="btn btn-lg btn-color-accent text-white" href="logout.php" role="button">
+            <a class="btn btn-lg btn-color-accent text-white" href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/logout.php " role="button">
             <i class="fas fa-sign-out-alt"></i>
             Sign out
             </a>
