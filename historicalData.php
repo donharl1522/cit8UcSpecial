@@ -244,7 +244,7 @@
                     <?php
                     if(isset($_POST['search'])){
 
-                      if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
+                       if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['cropNameSelect'])){
                         $yearSearchedFrom = $_POST['fromYear'];
                         $yearSearchedTo = $_POST['toYear'];
                         $cropSelected = $_POST['cropNameSelect'];
@@ -262,6 +262,7 @@
 
                         echo "The Highest Crop Productivity from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in All Municipalities is ".$topCropData['topCrop']."mt/ha Specifically in ".$prodRateRow["munName"];
 
+                      
                         $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
                         while($row=mysqli_fetch_array($res)):?>
@@ -310,7 +311,6 @@
                       $cropSelected = $_POST['cropNameSelect'];
                       callLabel("Atok");
 
-                      echo "The Highest Crop Productivity from ".$yearSearchedFrom." to ".$yearSearchedTo." for ".$cropSelected." in ".callLabel("Atok")." is ".$topCropData['topCrop']."mt/ha";
         
                       $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and munName like '%atok%' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
                         
@@ -873,6 +873,131 @@
       </div>
       <!--End Side Tabbed Sample-->
 
+      <!--Top Crop Production-->
+      <?php echo "Top Crop Producers" ?>
+
+      <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
+      <select  class="form-select" name="topCropSelect" id="topCropSelect">
+        <option disabled selected>Choose Crop</option>
+        <option value="Cabbage">Cabbage</option>
+        <option value="Chinese Cabbage">Chinese Cabbage</option>
+        <option value="Lettuce">Lettuce</option>
+        <option value="Cauliflower">Cauliflower</option>
+        <option value="Snap Beans">Snap Beans</option>
+        <option value="Garden Peas">Garden Peas</option>
+        <option value="Sweet Pepper">Sweet Pepper</option>
+        <option value="White Potato">White Potato</option>
+        <option value="Carrots">Carrots</option>
+        <option value="other">Others</option>
+      </select>
+
+      
+        <select class="form-select" name="fromYearTopCrop" id="fromYearTopCrop">
+          <option disabled selected>From</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+        </select>
+
+      
+          <select disabled class="form-select"  name="toYearTopCrop" id="toYearTopCrop">
+            <option disabled selected>To</option>
+            <option id="to2015TopCrop" value="2015">2015</option>
+            <option id="to2016TopCrop" value="2016">2016</option>
+            <option id="to2017TopCrop" value="2017">2017</option>
+            <option id="to2018TopCrop" value="2018">2018</option>
+            <option id="to2019TopCrop" value="2019">2019</option>
+          </select>
+
+      <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
+        data-mdb-ripple-color="dark">Search
+      </button>
+    </form>
+
+      <?php 
+        if(isset($_POST['topCropSubmitBtn'])){
+
+          if(isset($_POST['fromYearTopCrop']) && isset($_POST['toYearTopCrop']) && isset($_POST['topCropSelect'])){
+            $yearSearchedFromTop = $_POST['fromYearTopCrop'];
+            $yearSearchedToTop = $_POST['toYearTopCrop'];
+            $cropSelectedTop = $_POST['topCropSelect'];
+
+            $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelectedTop' and harvestYear between '$yearSearchedFromTop' and '$yearSearchedToTop'";
+            $topCropResult=mysqli_query($link, $query);
+            $topCropData = mysqli_fetch_array( $topCropResult);
+
+            $topCropDataRes = $topCropData['topCrop'];
+
+            $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelectedTop' and harvestYear between '$yearSearchedFromTop' and '$yearSearchedToTop'");
+
+              $prodRateRow=mysqli_fetch_array($topProdRateResult);
+
+
+              echo $prodRateRow["munName"]." is the Top Producer of ". $cropSelectedTop. " During " .$yearSearchedFromTop." to ".$yearSearchedToTop;
+
+          }else{
+          echo "yaaa";
+          }
+        }
+       ?>
+
+
+
+      <script type="text/javascript">
+                document.getElementById("fromYearTopCrop").onchange = function () {
+                  document.getElementById("toYearTopCrop").setAttribute("disabled", "disabled");
+                  if (this.value == '2015'){
+                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
+                    document.getElementById("to2015TopCrop").disabled = false; 
+                    document.getElementById("to2016TopCrop").disabled = false; 
+                    document.getElementById("to2017TopCrop").disabled = false; 
+                    document.getElementById("to2018TopCrop").disabled = false;
+                    document.getElementById("to2019TopCrop").disabled = false;
+
+                  }
+                  else if (this.value == '2016'){
+                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
+                    document.getElementById("to2015TopCrop").disabled = true; 
+                    document.getElementById("to2016TopCrop").disabled = false; 
+                    document.getElementById("to2017TopCrop").disabled = false; 
+                    document.getElementById("to2018TopCrop").disabled = false;
+                    document.getElementById("to2019TopCrop").disabled = false; 
+
+
+                  } 
+                  else if (this.value == '2017'){
+                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
+                    document.getElementById("to2015TopCrop").disabled = true;
+                    document.getElementById("to2016TopCrop").disabled = true;
+                    document.getElementById("to2017TopCrop").disabled = false; 
+                    document.getElementById("to2018TopCrop").disabled = false;
+                    document.getElementById("to2019TopCrop").disabled = false; 
+                  }
+                  else if (this.value == '2018'){
+                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
+                    document.getElementById("to2015TopCrop").disabled = true;
+                    document.getElementById("to2016TopCrop").disabled = true;
+                    document.getElementById("to2017TopCrop").disabled = true;
+                    document.getElementById("to2018TopCrop").disabled = false;
+                    document.getElementById("to2019TopCrop").disabled = false; 
+                  }
+                  else if (this.value == '2019'){
+                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
+                    document.getElementById("to2015TopCrop").disabled = true;
+                    document.getElementById("to2016TopCrop").disabled = true;
+                    document.getElementById("to2017TopCrop").disabled = true;    
+                    document.getElementById("to2018TopCrop").disabled = true;
+                    document.getElementById("to2019TopCrop").disabled = false;               
+                  }
+                };
+              </script>
+
+
+      <!--End of Top Crop Production-->
+
+
   <script>
     document.getElementById("ifYes").style.display = "none";
       function yesnoCheck(that) {
@@ -886,15 +1011,17 @@
     </script>
 
     <?php
-
-            function callLabel($callMun){
-              $yearSearchedFrom = $_POST['fromYear'];
-              $yearSearchedTo = $_POST['toYear'];
-              $cropSelected = $_POST['cropNameSelect'];
-              echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
-            }
+      function callLabel($callMun){
+        $yearSearchedFrom = $_POST['fromYear'];
+        $yearSearchedTo = $_POST['toYear'];
+        $cropSelected = $_POST['cropNameSelect'];
+        echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
+      }
             
-            ?>
+    ?>
+
+
+
     
 </div>
 <?php include 'template/footer.php'; ?>
