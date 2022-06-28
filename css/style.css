@@ -16,6 +16,9 @@ call variable in CSS var(--variableName)
 .background-color-primary {
   background-color: var(--primary);
 }
+.background-color-secondary {
+  background-color: var(--secondary);
+}
 .custom-text-primary {
   color: var(--secondary);
 }
@@ -141,7 +144,6 @@ call variable in CSS var(--variableName)
   opacity: 0.5;
 }
 
-
 @media (min-width: 991.98px) {
   main {
     padding-left: 240px;
@@ -178,4 +180,3 @@ call variable in CSS var(--variableName)
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
-
