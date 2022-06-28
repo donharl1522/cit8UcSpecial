@@ -20,7 +20,7 @@
                 <form>
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <img class="img-fluid" src="images/logo/logob2.png" alt="" style="width:28%;">
                     <span class="h1 fw-bold mb-0">PASYA</span>
                   </div>
 
