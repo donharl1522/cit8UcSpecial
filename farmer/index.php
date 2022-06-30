@@ -1,16 +1,35 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: ../');
+	exit;
+	//blah blah blah
+}
+?>
 <?php require "../config/connection.php"; ?>
 <?php include '../template/header.php'; ?>
-<div class="container my-5">
+<?php include '../template/sidebar.php'; ?>
+
+<!--Main layout-->
+<main style="margin-top: 28px;">
+  <div class="container pt-4">
+  <div class="container">
    <div class="conatiner-fluid">
       <div class="card">
          <div class="card-body">
             <div class="d-flex mb-3">
                <div class="p-2">
-                  <h1>Farmer</h1>
+                  <h1>Farmer Management</h1>
                </div>
-               <div class="ms-auto p-2">
+               <!--<div class="ms-auto p-2">
                   <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD Farmer</button>
-               </div>
+               </div>-->
+            </div>
+            <div class="form-group files">
+                <label>Upload Your File </label>
+                <input type="file" class="form-control" multiple="" accept=".csv">
             </div>
             <!-- Tabs navs -->
             <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
@@ -206,7 +225,7 @@
    </form>
 </div>
 <!--Sample Card-->
-<div class="container">
+<!--<div class="container">
    <div class="container-fluid">
       <div class="row">
          <div class="col-xl-6 mb-4">
@@ -250,7 +269,11 @@
          </div>
       </div>
    </div>
-</div>
+</div>-->
+  </div>
+</main>
+<!--Main layout-->
+
 <?php include '../template/footer.php'; ?>
 <?php
    try{
