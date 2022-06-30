@@ -1,21 +1,11 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
-session_start();
-// If the user is not logged in redirect to the login page...
-if (!isset($_SESSION['loggedin'])) {
-	header('Location: index.php');
-	exit;
-	//blah blah blah
-}?>
-<?php require "config/connection.php"; ?>
+  require "config/connection.php";
+?>
 
 
 <?php include 'template/header.php'; ?>
-<?php include 'template/sidebar.php'; ?>
-<!--Main layout-->
-<main style="margin-top: 58px;">
-  <div class="container pt-4">
-  <section>
+
+<section>
   <div class="container my-5">
     <div class="container-fluid">
       <div class="row">
@@ -48,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
       >
         <!-- Container wrapper -->
         <div class="container-fluid">
-          <h6>Crop Year</h6>
+          <h6>Table Name</h6>
         
 
           <div class="row ps-5">
@@ -1034,7 +1024,4 @@ if (!isset($_SESSION['loggedin'])) {
 
     
 </div>
-  </div>
-</main>
-<!--Main layout-->
 <?php include 'template/footer.php'; ?>

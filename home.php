@@ -16,12 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
 <!--Main layout-->
 <main style="margin-top: 58px;">
   <div class="container pt-4">
-	<div class="text-center">
-		<img class="img-fluid" src="images/logo/logob2.png" alt="">
-		<h1 class="display-5">A Decision Support System</h1>
-		<span class="small text-muted text-uppercase mb-0">TagLine</span>
-	</div>
-  <!--<nav class="navtop">
+  <nav class="navtop">
 			<div>
 				<h1>Website Title</h1>
 				<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
@@ -31,7 +26,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
-		</div>-->
+		</div>
   </div>
 </main>
 <!--Main layout-->
