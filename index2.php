@@ -28,11 +28,11 @@
 
 
                   <div class="pt-1 mb-4">
-                    <a href="homePage.php" class="btn btn-color-primary btn-lg btn-block" >Enter as Guest</a>
+                    <a href="homePage.php" class="btn btn-color-primary btn-lg btn-block" >Guest Management</a>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <a href="login.php" class="btn btn-color-primary btn-lg btn-block">Sign In</a>
+                    <a href="login.php" class="btn btn-color-primary btn-lg btn-block">Proceed to Login</a>
                   </div>
 
                   <div class="pt-1 mb-4">
