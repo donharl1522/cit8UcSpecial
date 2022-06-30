@@ -1,12 +1,22 @@
 <?php
-  require "config/connection.php";
-?>
-
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.php');
+	exit;
+	//blah blah blah
+}?>
+<?php require "config/connection.php";?>
 <?php include 'template/header.php'; ?>
+<?php include 'template/sidebar.php'; ?>
 
 
-<!--New design-->
-<section class="h-100 h-custom background-color-light">
+<!--Main layout-->
+<main style="margin-top: 58px;">
+  <div class="container">
+  <!--New design-->
+<section class="h-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -153,6 +163,9 @@
     </div>
   </div>
 </section>
+  </div>
+</main>
+<!--Main layout-->
 </body>
 
 <?php
