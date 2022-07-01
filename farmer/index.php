@@ -228,7 +228,7 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div class="modal-footer">
                <button type="button" class="btn btn-color-colorAccent ripple-surface-dark" data-mdb-dismiss="modal">Back</button>
-               <button type="submit" class="btn btn-color-primary ripple-surface-dark"  name="insert_farmer">UPLOAD NOW</button>
+               <button type="submit" class="btn btn-color-primary ripple-surface-dark"  name="csvfile">UPLOAD NOW</button>
             </div>
          </div>
       </div>
@@ -287,6 +287,43 @@ if (!isset($_SESSION['loggedin'])) {
 <?php include '../template/footer.php'; ?>
 <?php
    try{
+      if(isset($_POST['insert_farmer'])){
+         //do action
+         if($link){
+            $file = $_FILES['csvfile']['tmp_name'];
+            $handle = fopen($file, "r");
+            $i = 0;
+            while( ($cont=fgetcsv($handle, 1000, ",")) !== false ){
+                $table = rtrim( $_FILES['csvfile']['name'], ".csv"); //file name of csv
+                if($i==0){
+                  //column and create table if table is not exists
+                  $harvestYear = $cont[0];
+                  $munName  = $cont[1];
+                  $cropName = $cont[2];
+                  $prodArea = $cont[3];
+                  $cropProd = $cont[4];
+                  $prodRate = $cont[5];
+                  $query = "CREATE TABLE $table ($harvestYear INT(5), $munName VARCHAR(50), $cropName VARCHAR(50), $prodArea FLOAT(50), $cropProd FLOAT(50), $prodRate FLOAT(50))";
+                  mysqli_query($link, $query);
+                  echo $query,"<br>";
+                }else{
+                    //insert data if exist
+                    $query = "INSERT INTO $table ($harvestYear , $munName , $cropName , $prodArea , $cropProd , $prodRate) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5])";
+                    echo $query,"<br>";
+                    mysqli_query($link, $query);
+                }
+                $i++;
+            }
+        }
+      }
+   }
+   catch (Exception $e) {
+      echo $e->getMessage();
+   }
+   catch (InvalidArgumentException $e) {
+      echo $e->getMessage();
+   }
+  /* try{
      if(isset($_POST['insert_farmer']))
      {
        mysqli_query($link, "INSERT INTO farmers_table values(null,'$_POST[farmerFName]', '$_POST[farmerLName]','$_POST[contact_number]', '$_POST[farmerLocation]' )");
@@ -303,4 +340,4 @@ if (!isset($_SESSION['loggedin'])) {
    catch (InvalidArgumentException $e) {
      echo $e->getMessage();
    }
-?>
+*/?>
