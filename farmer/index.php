@@ -287,7 +287,7 @@ if (!isset($_SESSION['loggedin'])) {
 <?php include '../template/footer.php'; ?>
 <?php
    try{
-      if(isset($_POST['insert_farmer'])){
+      if(isset($_POST['csvfile'])){
          //do action
          if($link){
             $file = $_FILES['csvfile']['tmp_name'];
@@ -297,18 +297,16 @@ if (!isset($_SESSION['loggedin'])) {
                 $table = rtrim( $_FILES['csvfile']['name'], ".csv"); //file name of csv
                 if($i==0){
                   //column and create table if table is not exists
-                  $harvestYear = $cont[0];
-                  $munName  = $cont[1];
-                  $cropName = $cont[2];
-                  $prodArea = $cont[3];
-                  $cropProd = $cont[4];
-                  $prodRate = $cont[5];
-                  $query = "CREATE TABLE $table ($harvestYear INT(5), $munName VARCHAR(50), $cropName VARCHAR(50), $prodArea FLOAT(50), $cropProd FLOAT(50), $prodRate FLOAT(50))";
+                  $farmerID = $cont[0];
+                  $farmerFName  = $cont[1];
+                  $farmerLName = $cont[2];
+                  $farmerLocation = $cont[3];
+                  $query = "CREATE TABLE $table ($farmerID INT(10), $farmerFName VARCHAR(20), $farmerLName VARCHAR(20), $farmerLocation VARCHAR(20))";
                   mysqli_query($link, $query);
                   echo $query,"<br>";
                 }else{
                     //insert data if exist
-                    $query = "INSERT INTO $table ($harvestYear , $munName , $cropName , $prodArea , $cropProd , $prodRate) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5])";
+                    $query = "INSERT INTO $table (null , $farmerFName , $farmerLName , $farmerLocation) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3])";
                     echo $query,"<br>";
                     mysqli_query($link, $query);
                 }

@@ -27,7 +27,7 @@
                            <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD CROP</button>
                         </div>
                      </div>
-                     <!--<form action="" method="POST">
+                     <form action="" method="POST">
                         <div class="row">
                           <div class="col">
                             <div class="form-outline mb-4">
@@ -83,7 +83,9 @@
                           </select>
                         </div>
                         <button type="submit" class="btn btn-primary float-end" name="insert_crop">Add Crop</button>
-                        </form>-->
+                        </form>
+
+                        <br><br><br> <h1 style="text-align: center;">OR</h1> <br>
                      <div class="form-group files">
                         <label>Upload CSV File </label>
                         <input type="file" class="form-control" multiple="" accept=".csv">
@@ -189,7 +191,7 @@
 <?php include '../template/footer.php'; ?>
 <?php
 try{
-    if(isset($_POST['insert_farmer'])){
+    if(isset($_POST['csvfile'])){
        //do action
        if($link){
           $file = $_FILES['csvfile']['tmp_name'];
@@ -198,23 +200,24 @@ try{
           while( ($cont=fgetcsv($handle, 1000, ",")) !== false ){
               $table = rtrim( $_FILES['csvfile']['name'], ".csv"); //file name of csv
               if($i==0){
-                //column and create table if table is not exists
-                $harvestYear = $cont[0];
-                $munName  = $cont[1];
-                $cropName = $cont[2];
-                $prodArea = $cont[3];
-                $cropProd = $cont[4];
-                $prodRate = $cont[5];
-                $query = "CREATE TABLE $table ($harvestYear INT(5), $munName VARCHAR(50), $cropName VARCHAR(50), $prodArea FLOAT(50), $cropProd FLOAT(50), $prodRate FLOAT(50))";
-                mysqli_query($link, $query);
-                echo $query,"<br>";
-              }else{
-                  //insert data if exist
-                  $query = "INSERT INTO $table ($harvestYear , $munName , $cropName , $prodArea , $cropProd , $prodRate) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5])";
-                  echo $query,"<br>";
+                  //column and create table if table is not exists
+                  $cropID = $cont[0];
+                  $cropName  = $cont[1];
+                  $cropStart = $cont[2];
+                  $cropMaturity = $cont[3];
+                  $cropHarvest = $cont[4];
+                  $cropSeason = $cont[5];
+                  $cropLocation = $cont[6];
+                  $query = "CREATE TABLE $table ($cropID INT(10), $cropName VARCHAR(20), $cropStart date(format), $cropMaturity int(5), $cropHarvest date(format), $cropSeason VARCHAR(3), $cropLocation VARCHAR(20))";
                   mysqli_query($link, $query);
-              }
-              $i++;
+                  echo $query,"<br>";
+                }else{
+                    //insert data if exist
+                    $query = "INSERT INTO $table (null , $cropName , $cropStart , $cropMaturity , $cropHarvest , $cropSeason, $cropLocation) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5], $cont[6])";
+                    echo $query,"<br>";
+                    mysqli_query($link, $query);
+                }
+                $i++;
           }
       }
     }
@@ -225,7 +228,7 @@ try{
  catch (InvalidArgumentException $e) {
     echo $e->getMessage();
  }
-   /*try{
+   try{
      if(isset($_POST['insert_crop']))
      {
        mysqli_query($link, "INSERT INTO crops_table values(NULL, '$_POST[cropName]', '$_POST[cropStart]', '$_POST[cropMaturity]', '$_POST[cropHarvest]', '$_POST[cropSeason]', '$_POST[cropLocation]' )");
@@ -241,5 +244,5 @@ try{
    }
    catch (InvalidArgumentException $e) {
      echo $e->getMessage();
-   }*/
+   }
    ?>
