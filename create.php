@@ -1,12 +1,22 @@
 <?php
-  require "config/connection.php";
-?>
-
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.php');
+	exit;
+	//blah blah blah
+}?>
+<?php require "config/connection.php";?>
 <?php include 'template/header.php'; ?>
+<?php include 'template/sidebar.php'; ?>
 
 
-<!--New design-->
-<section class="h-100 h-custom background-color-light">
+<!--Main layout-->
+<main style="margin-top: 58px;">
+  <div class="container">
+  <!--New design-->
+<section class="h-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -26,11 +36,11 @@
                   $res=mysqli_query($link,"select * from maintable");
                   while($row=mysqli_fetch_array($res)):?>
                   <div class="row mb-4 d-flex justify-content-between align-items-center">
-                    <div class="col-md-2 col-lg-2 col-xl-2">
+                    <!--<div class="col-md-2 col-lg-2 col-xl-2">
                       <img
                         src="https://media.istockphoto.com/vectors/wheat-ears-icon-in-flat-design-style-oats-harvest-crop-symbol-vector-id1281246050?k=20&m=1281246050&s=170667a&w=0&h=XR7P4GBMnwqHZx75mExrM-_2tJCyaOKBpx4K6TepDPM="
                         class="img-fluid rounded-3">
-                    </div>
+                    </div>-->
                     <div class="col-md-2 col-lg-2 col-xl-2">
                       <h6 class="text-muted"><?php echo " Harvest Year"; ?></h6>
                       <h6 class="text-black mb-0"><?php echo $row["harvestYear"]; ?></h6>
@@ -43,17 +53,17 @@
                       <h6 class="text-muted"><?php echo "Municipality"; ?></h6>
                       <h6 class="text-black mb-0"><?php echo $row["munName"]; ?></h6>
                     </div>
-                    <div class="col-md-1 col-lg-1 col-xl-1 d-flex">
+                    <div class="col-md-2 col-lg-1 col-xl-2">
                       <h6 class="text-muted"><?php echo "Area"; ?></h6>
-                      <h6 class="mb-0"><?php echo $row["prodArea"]; ?> (ha)</h6>
+                      <h6 class="text-black mb-0"><?php echo $row["prodArea"]; ?>(ha)</h6>
                     </div>
-                    <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
+                    <div class="col-md-3 col-lg-2 col-xl-2">
                       <h6 class="text-muted"><?php echo "Production"; ?></h6>
-                      <h6 class="mb-0"><?php echo $row["cropProd"]; ?> (mt)</h6>
+                      <h6 class="text-black mb-0"><?php echo $row["cropProd"]; ?>(mt)</h6>
                     </div>
-                    <div class="col-md-3 col-lg-1 col-xl-1 d-flex">
+                    <div class="col-md-3 col-lg-2 col-xl-2">
                       <h6 class="text-muted"><?php echo "Productivity"; ?></h6>
-                      <h6 class="mb-0"><?php echo $row["prodRate"]; ?> (mt/ha)  </h6>
+                      <h6 class="text-black mb-0"><?php echo $row["prodRate"]; ?>(mt/ha)</h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="edit.php?id=<?php echo $row["id"]; ?>" class="text-muted"><i class="far fa-edit"></i></a>
@@ -83,7 +93,7 @@
                     <div class="mb-4 pb-2">
                       <select class="form-select"  name="munName" id="munName">
                         <option value="">Choose Municipality</option>
-                        <option value="Baguio">Atok</option>
+                        <option value="Atok">Atok</option>
                         <option value="Bakun">Bakun</option>
                         <option value="Bokod">Bokod</option>
                         <option value="Buguias">Buguias</option>
@@ -153,6 +163,9 @@
     </div>
   </div>
 </section>
+  </div>
+</main>
+<!--Main layout-->
 </body>
 
 <?php

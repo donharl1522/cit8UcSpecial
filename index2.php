@@ -20,7 +20,7 @@
                 <form>
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <img class="img-fluid" src="images/logo/logob2.png" alt="" style="width:28%;">
                     <span class="h1 fw-bold mb-0">PASYA</span>
                   </div>
 
@@ -28,11 +28,11 @@
 
 
                   <div class="pt-1 mb-4">
-                    <a href="homePage.php" class="btn btn-color-primary btn-lg btn-block" >Enter as Guest</a>
+                    <a href="homePage.php" class="btn btn-color-primary btn-lg btn-block" >Guest Management</a>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <a href="login.php" class="btn btn-color-primary btn-lg btn-block">Sign In</a>
+                    <a href="login.php" class="btn btn-color-primary btn-lg btn-block">Proceed to Login</a>
                   </div>
 
                   <div class="pt-1 mb-4">
