@@ -23,14 +23,19 @@ if (!isset($_SESSION['loggedin'])) {
                <div class="p-2">
                   <h1>Farmer Management</h1>
                </div>
-               <!--<div class="ms-auto p-2">
-                  <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD Farmer</button>
-               </div>-->
+               <div class="ms-auto p-2">
+                  <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#exampleModal">ADD Farmer</button>
+               </div>
             </div>
-            <div class="form-group files">
-                <label>Upload Your File </label>
-                <input type="file" class="form-control" multiple="" accept=".csv">
-            </div>
+            <!--<div class="form-group files">
+               <form action="" method="POST" enctype="multipart/form-data">
+                  <label>Upload Your File </label>
+                  <input type="file" class="form-control" multiple="" accept=".csv" name="farmer_csv_file">
+                  <div class="d-flex flex-row-reverse my-3">
+                     <button class="btn btn-color-primary btn-lg ripple-surface-dark" type="submit" name="upload_farmer_csv">INSERT FARMER DATA</button>
+                  </div>
+               </form>
+            </div>-->
             <!-- Tabs navs -->
             <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
             <li class="nav-item" role="presentation">
@@ -177,7 +182,7 @@ if (!isset($_SESSION['loggedin'])) {
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <form action="" method="POST">
+   <form action="" method="POST" enctype="multipart/form-data">
       <div class="modal-dialog">
          <div class="modal-content">
             <div class="modal-header">
@@ -185,7 +190,7 @@ if (!isset($_SESSION['loggedin'])) {
                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-               <div class="form-outline mb-4">
+               <!--<div class="form-outline mb-4">
                   <input type="text" id="firstname" class="form-control" name="farmerFName"/>
                   <label class="form-label" for="firstname">First name</label>
                </div>
@@ -214,11 +219,16 @@ if (!isset($_SESSION['loggedin'])) {
                      <option value="Tuba">Tuba</option>
                      <option value="Tublay">Tublay</option>
                   </select>
+               </div>-->
+
+               <div class="form-group files">
+                     <label>Upload Your File </label>
+                     <input type="file" class="form-control" multiple="" accept=".csv" name="farmer_csv_file">
                </div>
             </div>
             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-               <button type="submit" class="btn btn-primary"  name="insert_farmer">Save changes</button>
+               <button type="button" class="btn btn-color-colorAccent ripple-surface-dark" data-mdb-dismiss="modal">Back</button>
+               <button type="submit" class="btn btn-color-primary ripple-surface-dark"  name="insert_farmer">UPLOAD NOW</button>
             </div>
          </div>
       </div>
