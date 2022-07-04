@@ -907,6 +907,7 @@
                     Swal.fire({
                     icon: 'success',
                     title: 'Says',
+                    confirmButtonColor: '#0e2f36',
                     text: '<?php echo $prodRateRow["munName"]." is the Top Producer of ". $cropSelectedTop. " During " .$yearSearchedFromTop." to ".$yearSearchedToTop; ?>'
                     })
                 </script>
