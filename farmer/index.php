@@ -21,44 +21,36 @@
                   <div class="card-body">
                      <div class="d-flex mb-3">
                         <div class="p-2">
-                           <h1>Crop Management</h1>
+                           <h1>Farmer Management</h1>
                         </div>
                         <div class="ms-auto p-2">
-                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#csvModal">INSERT CROP CSV</button>
-                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#insertCropModal">INSERT CROP MANUALY</button>
+                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#csvModal">INSERT FARMER DATA CSV</button>
+                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#insertCropModal">INSERT FARMER DATA MANUALY</button>
                         </div>
                      </div>
 
                      <table class="table align-middle mb-0 bg-white my-5">
                         <thead class="bg-light">
                            <tr>
-                              <th>ID</th>
-                              <th>Crop Name</th>
-                              <th>Crop Start</th>
-                              <th>Crop Maturity</th>
-                              <th>Crop Harvest</th>
-                              <th>Crop Season</th>
-                              <th>Crop Location</th>
-                              <th>Action</th>
+                              <th scope="col">First Name</th>
+                              <th scope="col">Last Name</th>
+                              <th scope="col">Location</th>
+                              <th scope="col">Action</th>
                            </tr>
                         </thead>
                         <tbody>
                            <?php
-                              $res=mysqli_query($link,"SELECT * FROM crops_table");
+                              $res=mysqli_query($link,"SELECT * FROM farmers_table ORDER BY farmerLocation ASC");
                               while($row=mysqli_fetch_array($res)):?>
                            <tr>
-                              <td><?php echo $row["cropID"]; ?></td>
-                              <td><?php echo $row["cropName"]; ?></td>
-                              <td><?php echo $row["cropStart"]; ?></td>
-                              <td><?php echo $row["cropMaturity"]; ?></td>
-                              <td><?php echo $row["cropHarvest"]; ?></td>
-                              <td><?php echo $row["cropSeason"]; ?></td>
-                              <td><?php echo $row["cropLocation"]; ?></td>
+                              <td><?php echo $row["farmerFName"]; ?></td>
+                              <td><?php echo $row["farmerLName"]; ?></td>
+                              <td class="fw-bold"><?php echo $row["farmerLocation"]; ?></td>
                               <td>
-                                 <a href="delete_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                                 <a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
                                  <i class="fas fa-times"></i>
                                  </a>
-                                 <a href="edit_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                                 <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
                                  <i class="fas fa-check"></i>
                                  </a>
                               </td>
@@ -78,7 +70,7 @@
          <div class="modal-dialog">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="csvModalLabel">Add Crop Data</h5>
+                  <h5 class="modal-title" id="csvModalLabel">Add Farmer Data</h5>
                   <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
@@ -98,48 +90,29 @@
    <!-- Modal crop manual insert-->
    <div class="modal fade" id="insertCropModal" tabindex="-1" aria-labelledby="insertcropModalLabel" aria-hidden="true">
       <form action="" method="POST" enctype="multipart/form-data">
-         <div class="modal-dialog modal-lg">
+         <div class="modal-dialog">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="insertcropModalLabel">Add Crop Data</h5>
+                  <h5 class="modal-title" id="insertcropModalLabel">Add Farmer Data</h5>
                   <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
-                  <div class="row">
-                     <div class="col">
-                        <div class="form-outline mb-4">
-                           <input type="text" id="cropName" class="form-control" name="cropName"/>
-                           <label class="form-label" for="cropName">Crop Name</label>
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div class="form-outline mb-4">
-                           <input type="date" id="cropStart" class="form-control" name="cropStart"/>
-                           <label class="form-label" for="cropStart">Crop Start</label>
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div class="form-outline mb-4">
-                           <input type="date" id="cropHarvest" class="form-control" name="cropHarvest"/>
-                           <label class="form-label" for="cropHarvest">Crop Harvest</label>
-                        </div>
-                     </div>
+                  <div class="form-outline mb-4">
+                     <input type="text" id="firstname" class="form-control" name="farmerFName"/>
+                     <label class="form-label" for="firstname">First name</label>
                   </div>
                   <div class="form-outline mb-4">
-                     <input type="text" id="cropMaturity" class="form-control" name="cropMaturity"/>
-                     <label class="form-label" for="cropMaturity">Crop Maturity</label>
+                     <input type="text" id="lastname" class="form-control" name="farmerLName"/>
+                     <label class="form-label" for="lastname">Last Name</label>
                   </div>
                   <div class="form-outline mb-4">
-                     <select class="form-select"  name="cropSeason">
-                        <option value="">Crop Season</option>
-                        <option value="dry">Dry</option>
-                        <option value="wet">Wet</option>
-                     </select>
+                     <input type="number" id="lastname" class="form-control" name="contact_number"/>
+                     <label class="form-label" for="lastname">Contact Number</label>
                   </div>
-                  <div class="form-outline mb-4">
-                     <select class="form-select"  name="cropLocation">
-                        <option value="">Crop Location</option>
-                        <option value="Baguio">Atok</option>
+                  <div class="mb-4 form-outline">
+                     <select class="form-select"  name="farmerLocation">
+                        <option value="">Choose Municipality</option>
+                        <option value="Atok">Atok</option>
                         <option value="Bakun">Bakun</option>
                         <option value="Bokod">Bokod</option>
                         <option value="Buguias">Buguias</option>
@@ -157,7 +130,7 @@
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-color-colorAccent ripple-surface-dark" data-mdb-dismiss="modal">Back</button>
-                  <button type="submit" class="btn btn-color-primary ripple-surface-dark"  name="insert_crop">Insert</button>
+                  <button type="submit" class="btn btn-color-primary ripple-surface-dark"  name="insert_farmer">Insert</button>
                </div>
             </div>
          </div>
@@ -206,9 +179,9 @@
        echo $e->getMessage();
     }
       try{
-        if(isset($_POST['insert_crop']))
-        {
-          mysqli_query($link, "INSERT INTO crops_table values(NULL, '$_POST[cropName]', '$_POST[cropStart]', '$_POST[cropMaturity]', '$_POST[cropHarvest]', '$_POST[cropSeason]', '$_POST[cropLocation]' )");
+         if(isset($_POST['insert_farmer']))
+      {
+         mysqli_query($link, "INSERT INTO farmers_table values(NULL,'$_POST[farmerFName]', '$_POST[farmerLName]','$_POST[contact_number]', '$_POST[farmerLocation]' )");
           
       ?>      
 <script type="text/javascript">
