@@ -139,6 +139,43 @@
          <!--Side Tabbed Sample-->
          <div class="row">
             <div class="col-2">
+            <div class="alert alert-success" role="alert" data-mdb-color="success">
+                    <span class="alert-link">Show Crop Producers</span>
+                    <form method="post">
+                        <select  class="form-select mb-4" name="topCropSelect" id="topCropSelect">
+                        <option disabled selected>Choose Crop</option>
+                        <option value="Cabbage">Cabbage</option>
+                        <option value="Chinese Cabbage">Chinese Cabbage</option>
+                        <option value="Lettuce">Lettuce</option>
+                        <option value="Cauliflower">Cauliflower</option>
+                        <option value="Snap Beans">Snap Beans</option>
+                        <option value="Garden Peas">Garden Peas</option>
+                        <option value="Sweet Pepper">Sweet Pepper</option>
+                        <option value="White Potato">White Potato</option>
+                        <option value="Carrots">Carrots</option>
+                        <option value="other">Others</option>
+                        </select>
+                        <select class="form-select mb-4" name="fromYearTopCrop" id="fromYearTopCrop">
+                        <option disabled selected>From</option>
+                        <?php
+                            for ($year=2015; $year <= date('Y'); $year++) { 
+                                echo "<option value='$year'>" . $year . "</option>";
+                            }
+                            ?>
+                        </select>
+                        <select disabled class="form-select mb-4"  name="toYearTopCrop" id="toYearTopCrop">
+                        <option disabled selected>To</option>
+                        <?php
+                            for ($year=2015; $year <= date('Y'); $year++) { 
+                                echo "<option id='TopCropto$year' value='$year'>" . $year . "</option>";
+                            }
+                            ?>
+                        </select>
+                        <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
+                        data-mdb-ripple-color="dark">Search
+                        </button>
+                    </form>
+                </div>
                <div class="list-group list-group-light sticky-top" id="list-tab" role="tablist">
                   <a class="list-group-item list-group-item-action active px-3 border-0" id="list-all-list"
                      data-mdb-toggle="list" href="#list-all" role="tab" aria-controls="list-all">All Municipalities</a>
@@ -812,7 +849,7 @@
          </div>
          <!--End Side Tabbed Sample-->
          <!--Top Crop Production-->
-         <?php echo "Top Crop Producers" ?>
+         <!--<?php echo "Top Crop Producers" ?>
          <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
             <select  class="form-select" name="topCropSelect" id="topCropSelect">
                <option disabled selected>Choose Crop</option>
@@ -846,7 +883,7 @@
             <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
                data-mdb-ripple-color="dark">Search
             </button>
-         </form>
+         </form>-->
          <?php 
             if(isset($_POST['topCropSubmitBtn'])){
             
@@ -863,12 +900,17 @@
             
                 $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelectedTop' and harvestYear between '$yearSearchedFromTop' and '$yearSearchedToTop'");
             
-                  $prodRateRow=mysqli_fetch_array($topProdRateResult);
+                $prodRateRow=mysqli_fetch_array($topProdRateResult);?>
             
-            
-                  echo $prodRateRow["munName"]." is the Top Producer of ". $cropSelectedTop. " During " .$yearSearchedFromTop." to ".$yearSearchedToTop;
-            
-              }else{
+
+                <script>
+                    Swal.fire({
+                    icon: 'success',
+                    title: 'Says',
+                    text: '<?php echo $prodRateRow["munName"]." is the Top Producer of ". $cropSelectedTop. " During " .$yearSearchedFromTop." to ".$yearSearchedToTop; ?>'
+                    })
+                </script>
+            <?php  }else{
               echo "yaaa";
               }
             }
@@ -906,6 +948,7 @@
               $yearSearchedTo = $_POST['toYear'];
               $cropSelected = $_POST['cropNameSelect'];
               echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$callMun . "</p>";
+            
             }
                   
             ?>
