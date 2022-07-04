@@ -68,7 +68,7 @@
                class="collapse list-group list-group-flush"
                >
                <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/historicalData.php" class="text-reset">Agricultural </a>
+                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/historicaldata/agricultural/" class="text-reset">Agricultural </a>
                </li>
                <li class="list-group-item py-3 ps-5">
                   <a href="" class="text-reset">Climatological</a>
