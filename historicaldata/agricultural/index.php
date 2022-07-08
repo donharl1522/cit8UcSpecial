@@ -139,43 +139,6 @@
          <!--Side Tabbed Sample-->
          <div class="row">
             <div class="col-2">
-            <div class="alert alert-success" role="alert" data-mdb-color="success">
-                    <span class="alert-link">Show Crop Producers</span>
-                    <form method="post">
-                        <select  class="form-select mb-4" name="topCropSelect" id="topCropSelect">
-                        <option disabled selected>Choose Crop</option>
-                        <option value="Cabbage">Cabbage</option>
-                        <option value="Chinese Cabbage">Chinese Cabbage</option>
-                        <option value="Lettuce">Lettuce</option>
-                        <option value="Cauliflower">Cauliflower</option>
-                        <option value="Snap Beans">Snap Beans</option>
-                        <option value="Garden Peas">Garden Peas</option>
-                        <option value="Sweet Pepper">Sweet Pepper</option>
-                        <option value="White Potato">White Potato</option>
-                        <option value="Carrots">Carrots</option>
-                        <option value="other">Others</option>
-                        </select>
-                        <select class="form-select mb-4" name="fromYearTopCrop" id="fromYearTopCrop">
-                        <option disabled selected>From</option>
-                        <?php
-                            for ($year=2015; $year <= date('Y'); $year++) { 
-                                echo "<option value='$year'>" . $year . "</option>";
-                            }
-                            ?>
-                        </select>
-                        <select disabled class="form-select mb-4"  name="toYearTopCrop" id="toYearTopCrop">
-                        <option disabled selected>To</option>
-                        <?php
-                            for ($year=2015; $year <= date('Y'); $year++) { 
-                                echo "<option id='TopCropto$year' value='$year'>" . $year . "</option>";
-                            }
-                            ?>
-                        </select>
-                        <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Search
-                        </button>
-                    </form>
-                </div>
                <div class="list-group list-group-light sticky-top" id="list-tab" role="tablist">
                   <a class="list-group-item list-group-item-action active px-3 border-0" id="list-all-list"
                      data-mdb-toggle="list" href="#list-all" role="tab" aria-controls="list-all">All Municipalities</a>
@@ -845,6 +808,46 @@
                      </table>
                   </div>
                </div>
+            </div>
+
+            <div class="col-2">
+            <div class="alert alert-success" role="alert" data-mdb-color="success">
+                    <span class="alert-link">Show Crop Producers</span>
+                    <form method="post">
+                        <select  class="form-select mb-4" name="topCropSelect" id="topCropSelect">
+                        <option disabled selected>Choose Crop</option>
+                        <option value="Cabbage">Cabbage</option>
+                        <option value="Chinese Cabbage">Chinese Cabbage</option>
+                        <option value="Lettuce">Lettuce</option>
+                        <option value="Cauliflower">Cauliflower</option>
+                        <option value="Snap Beans">Snap Beans</option>
+                        <option value="Garden Peas">Garden Peas</option>
+                        <option value="Sweet Pepper">Sweet Pepper</option>
+                        <option value="White Potato">White Potato</option>
+                        <option value="Carrots">Carrots</option>
+                        <option value="other">Others</option>
+                        </select>
+                        <select class="form-select mb-4" name="fromYearTopCrop" id="fromYearTopCrop">
+                        <option disabled selected>From</option>
+                        <?php
+                            for ($year=2015; $year <= date('Y'); $year++) { 
+                                echo "<option value='$year'>" . $year . "</option>";
+                            }
+                            ?>
+                        </select>
+                        <select disabled class="form-select mb-4"  name="toYearTopCrop" id="toYearTopCrop">
+                        <option disabled selected>To</option>
+                        <?php
+                            for ($year=2015; $year <= date('Y'); $year++) { 
+                                echo "<option id='TopCropto$year' value='$year'>" . $year . "</option>";
+                            }
+                            ?>
+                        </select>
+                        <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
+                        data-mdb-ripple-color="dark">Search
+                        </button>
+                    </form>
+                </div>
             </div>
          </div>
          <!--End Side Tabbed Sample-->
