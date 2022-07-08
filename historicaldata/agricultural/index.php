@@ -26,7 +26,6 @@
                   <div class="container my-5">
                      <p class="h1">Agricultural Data </p>
                      <p class="lead">This website is meant as a prototype</p>
-                     <a class="btn btn-color-primary" href="homePage.php?id=">Home</a>
                   </div>
                </div>
             </div>
@@ -812,7 +811,7 @@
 
             <div class="col-2">
             <div class="alert alert-success" role="alert" data-mdb-color="success">
-                    <span class="alert-link">Show Crop Producers</span>
+                    <span class="alert-link">Show Top Crop Producer</span>
                     <form method="post">
                         <select  class="form-select mb-4" name="topCropSelect" id="topCropSelect">
                         <option disabled selected>Choose Crop</option>
