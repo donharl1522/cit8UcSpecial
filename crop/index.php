@@ -139,7 +139,7 @@
                   <div class="form-outline mb-4">
                      <select class="form-select"  name="cropLocation">
                         <option value="">Crop Location</option>
-                        <option value="Baguio">Atok</option>
+                        <option value="Atok">Atok</option>
                         <option value="Bakun">Bakun</option>
                         <option value="Bokod">Bokod</option>
                         <option value="Buguias">Buguias</option>
