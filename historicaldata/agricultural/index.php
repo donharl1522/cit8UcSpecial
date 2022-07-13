@@ -19,9 +19,9 @@
       <div class="container my-5">
          <div class="container-fluid">
             <div class="row">
-               <div class="col">
+               <!--<div class="col">
                   <img class="img-fluid" src="../../images/Homepage-HeroImage-DataEcosystem1.png" />
-               </div>
+               </div>-->
                <div class="col">
                   <div class="container my-5">
                      <p class="h1">Agricultural Data </p>
