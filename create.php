@@ -15,6 +15,73 @@ if (!isset($_SESSION['loggedin'])) {
 <!--Main layout-->
 <main style="margin-top: 58px;">
   <div class="container">
+    <div class="p-2">
+      <h1>Crop Production Data</h1>
+    </div>
+
+    <div class="card">
+          <div class="card-body">
+          <table class="table align-middle mb-0 bg-white">
+            <thead class="bg-light">
+              <tr>
+                <th>Harvest Year</th>
+                <th>Crop Name</th>
+                <th>Municipality</th>
+                <th>Area</th>
+                <th>Production</th>
+                <th>Productivity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--crop list-->
+              <?php
+                  $res=mysqli_query($link,"select * from maintable");
+                  while($row=mysqli_fetch_array($res)):?>
+              <tr>
+                <td>
+                  <?php echo $row["harvestYear"]; ?>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1"><?php echo $row["cropName"]; ?></p>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?> <span class="text-muted mb-0">ha</span></p>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?> <span class="text-muted mb-0">mt</span></p>
+                </td>
+                <td>
+                  <p class="fw-normal mb-1"><?php echo $row["prodRate"]; ?> <span class="text-muted mb-0">(mt/ha)</span></p>
+                </td>
+                <td>
+                  <a
+                    href="delete.php?id=<?php echo $row["id"]; ?>"
+                          type="button"
+                          class="btn btn-danger btn-rounded btn-sm fw-bold"
+                          data-mdb-ripple-color="dark"
+                          >
+                    Delete
+                  </a>
+                  <a
+                    href="edit.php?id=<?php echo $row["id"]; ?>"
+                          type="button"
+                          class="btn btn-color-accent btn-rounded text-white btn-sm fw-bold"
+                          data-mdb-ripple-color="dark"
+                          >
+                    Edit
+                  </a>
+                </td>
+              </tr>
+              <?php endwhile ?>
+              <!--end crop list-->
+            </tbody>
+          </table>
+          </div>
+        </div>
   <!--New design-->
 <section class="h-custom">
   <div class="container py-5 h-100">
@@ -26,7 +93,7 @@ if (!isset($_SESSION['loggedin'])) {
               <div class="col-lg-8">
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h1 class="fw-bold mb-0 text-black">List Crop Data</h1>
+                    <h1 class="fw-bold mb-0 text-black">List Crop Production Data</h1>
                     <h6 class="mb-0 text-muted"># Crops</h6>
                   </div>
                   <hr class="my-4">
@@ -85,7 +152,7 @@ if (!isset($_SESSION['loggedin'])) {
                 <!--form-->
                 <form action="" name="form1" method="post">
                   <div class="p-5">
-                    <h3 class="fw-bold mb-5 mt-2 pt-1">Add Crop Data</h3>
+                    <h3 class="fw-bold mb-5 mt-2 pt-1">Add Crop Production Data</h3>
                     <hr class="my-4">
 
                     <h5 class="text-uppercase mb-3">Municipality</h5>
