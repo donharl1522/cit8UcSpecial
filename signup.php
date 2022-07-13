@@ -27,13 +27,13 @@
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
                       <input type="text" id="userFirstName" class="form-control" name="userFirstName"/>
-                      <label class="form-label" for="userFirstName">First name</label>
+                      <label class="form-label" for="userFirstName">First name <span class="text-danger">*</span></label>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
                       <input disabled type="text" id="userLastName" class="form-control" name="userLastName" />
-                      <label class="form-label" for="userLastName">Last name</label>
+                      <label class="form-label" for="userLastName">Last name <span class="text-danger">*</span></label>
                     </div>
                   </div>
                 </div>
@@ -42,34 +42,8 @@
                 <!--Username Input-->
                 <div class="form-outline mb-4">
                   <input disabled type="text" id="username" class="form-control" name="username"/>
-                  <label class="form-label" for="username">Username</label>
+                  <label class="form-label" for="username">Username <span class="text-danger">*</span></label>
                 </div>
-
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input disabled type="password" id="password" class="form-control" name="password"/>
-                  <label class="form-label" for="password">Password</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input disabled type="password" id="retypepassword" class="form-control" />
-                  <label class="form-label" for="retypepassword">Confirm Password</label>
-                </div>
-
-                <!--<div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="form-outline mb-4">
-                            <input type="password" id="form3Example4" class="form-control" />
-                            <label class="form-label" for="form3Example4">Password</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="form-outline mb-4">
-                            <input type="password" id="retypepassword" class="form-control" />
-                            <label class="form-label" for="retypepassword">Confirm Password</label>
-                        </div>
-                    </div>
-                </div>-->
 
                 <div class="registrationFormAlert"  id="CheckPasswordMatch">
                     <script>
@@ -86,18 +60,31 @@
                     });
                     </script>
                 </div>
+                
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input disabled type="password" id="password" class="form-control" name="password"/>
+                  <label class="form-label" for="password">Password <span class="text-danger">*</span></label>
+                </div>
 
-                <!--Location Input-->
-                <!--<div class="form-outline mb-4">
-                  <input type="text" id="userLocation" class="form-control" name="userLocation" />
-                  <label class="form-label" for="userLocation">Location (Optional)</label>
-                </div>-->
+                <div class="form-outline mb-4">
+                  <input disabled type="password" id="retypepassword" class="form-control" />
+                  <label class="form-label" for="retypepassword">Confirm Password <span class="text-danger">*</span></label>
+                </div>
 
                 <!--Type of Admin-->
-                <!--Type of Admin-->
-               
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="userType">User Type <span class="text-danger">*</span></label>
+                  <select class="form-select"  name="userType" id="userType">
+                    <option selected disabled>Select User Type</option>
+                    <option value="administrator">Administrator</option>
+                    <option value="management">Management</option>
+                    <option value="Farmer">Farmer</option>
+                  </select>
+                </div>
+
                   <select class="form-select mb-4"  name="userLocation" id="userLocation">
-                    <option selected disabled>Choose Municipality</option>
+                    <option selected disabled>Choose Municipality <span class="text-danger">*</span></option>
                     <option value="Atok">Atok</option>
                     <option value="Bakun">Bakun</option>
                     <option value="Bokod">Bokod</option>
@@ -145,17 +132,6 @@
                             </select>
                         </div>
                     </div>
-                </div>
-
-                <!--Type of Admin-->
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="userType">User Type</label>
-                  <select class="form-select"  name="userType" id="userType">
-                    <option selected disabled>Select User Type</option>
-                    <option value="Farmer">Farmer</option>
-                    <option value="Coop">Coop</option>
-                    <option value="Guest">Guest</option>
-                  </select>
                 </div>
 
                 <!-- Submit button -->
