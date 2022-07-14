@@ -16,14 +16,14 @@
 <main style="margin-top: 58px;">
    <div class="container pt-4">
    <section>
-      <div class="container my-5">
+      <div class="container">
          <div class="container-fluid">
             <div class="row">
                <!--<div class="col">
                   <img class="img-fluid" src="../../images/Homepage-HeroImage-DataEcosystem1.png" />
                </div>-->
                <div class="col">
-                  <div class="container my-5">
+                  <div class="container">
                      <p class="h1">Agricultural Data </p>
                      <p class="lead">This website is meant as a prototype</p>
                   </div>
