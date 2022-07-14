@@ -47,7 +47,7 @@
                   <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/farmer/" class="text-reset">Farmer</a>
                </li>
                <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/create.php" class="text-reset">Crop Production</a>
+                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/crop-production/" class="text-reset">Crop Production</a>
                </li>
             </ul>
             <!-- Management Collapsed Collapse -->
