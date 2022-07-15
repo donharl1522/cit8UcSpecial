@@ -37,7 +37,6 @@
    <!--Navigation-->
    <div class="container my-5">
       <nav
-         id="main-navbar"
          class="navbar navbar-expand-lg navbar-light bg-white"
          >
          <!-- Container wrapper -->
@@ -169,7 +168,7 @@
                      data-mdb-toggle="list" href="#list-tublay" role="tab" aria-controls="list-tublay">TUBLAY</a> 
                </div>
             </div>
-            <div class="col-8">
+            <div class="col">
                <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="list-all" role="tabpanel"
                      aria-labelledby="list-all-list">
@@ -809,7 +808,7 @@
                </div>
             </div>
 
-            <div class="col-2">
+            <!--<div class="col-2">
             <div class="alert alert-success" role="alert" data-mdb-color="success">
                     <span class="alert-link">Show Top Crop Producer</span>
                     <form method="post">
@@ -847,11 +846,11 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div>-->
          </div>
          <!--End Side Tabbed Sample-->
          <!--Top Crop Production-->
-         <!--<?php echo "Top Crop Producers" ?>
+         <?php echo "Top Crop Producers" ?>
          <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
             <select  class="form-select" name="topCropSelect" id="topCropSelect">
                <option disabled selected>Choose Crop</option>
@@ -885,7 +884,7 @@
             <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
                data-mdb-ripple-color="dark">Search
             </button>
-         </form>-->
+         </form>
          <?php 
             if(isset($_POST['topCropSubmitBtn'])){
             
