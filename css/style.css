@@ -244,3 +244,13 @@ call variable in CSS var(--variableName)
   text-transform: capitalize;
   text-align: center;
 }
+
+/*Mobile Navbar*/
+#main-navbar {
+  display: none;
+}
+@media only screen and (max-width: 987px) {
+  #main-navbar {
+    display: block;
+  }
+}
