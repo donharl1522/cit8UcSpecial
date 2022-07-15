@@ -55,11 +55,11 @@
                               <td><?php echo $row["cropSeason"]; ?></td>
                               <td><?php echo $row["cropLocation"]; ?></td>
                               <td>
-                                 <a href="delete_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
-                                 <i class="fas fa-times"></i>
+                                 <a href="delete_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-danger btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                                   Delete
                                  </a>
-                                 <a href="edit_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
-                                 <i class="fas fa-check"></i>
+                                 <a href="edit_crop.php?cropID=<?php echo $row["cropID"]; ?>" class="btn btn-color-accent btn-rounded text-white btn-sm fw-bold" data-ripple-color="dark">
+                                    Edit
                                  </a>
                               </td>
                            </tr>
