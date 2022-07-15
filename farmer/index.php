@@ -24,8 +24,8 @@
                            <h1>Farmer Management</h1>
                         </div>
                         <div class="ms-auto p-2">
-                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#csvModal">INSERT FARMER DATA CSV</button>
-                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#insertCropModal">INSERT FARMER DATA MANUALY</button>
+                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark mb-2" data-mdb-toggle="modal" data-mdb-target="#csvModal">INSERT FARMER DATA CSV</button>
+                           <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark mb-2" data-mdb-toggle="modal" data-mdb-target="#insertCropModal">INSERT FARMER DATA MANUALY</button>
                         </div>
                      </div>
 
@@ -34,6 +34,7 @@
                            <tr>
                               <th scope="col">First Name</th>
                               <th scope="col">Last Name</th>
+                              <th scope="col">Phone Number</th>
                               <th scope="col">Location</th>
                               <th scope="col">Action</th>
                            </tr>
@@ -45,13 +46,14 @@
                            <tr>
                               <td><?php echo $row["farmerFName"]; ?></td>
                               <td><?php echo $row["farmerLName"]; ?></td>
+                              <td><?php echo $row["farmer_contact_number"]; ?></td>
                               <td class="fw-bold"><?php echo $row["farmerLocation"]; ?></td>
                               <td>
-                                 <a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
-                                 <i class="fas fa-times"></i>
+                                 <a href="delete_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-danger btn-rounded btn-sm fw-bold" data-ripple-color="dark">
+                                    Delete
                                  </a>
-                                 <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-link btn-rounded btn-sm fw-bold" data-ripple-color="dark">
-                                 <i class="fas fa-check"></i>
+                                 <a href="edit_farmer.php?farmerID=<?php echo $row["farmerID"]; ?>" class="btn btn-color-accent btn-rounded text-white btn-sm fw-bold" data-ripple-color="dark">
+                                    Edit
                                  </a>
                               </td>
                            </tr>
@@ -181,7 +183,7 @@
       try{
          if(isset($_POST['insert_farmer']))
       {
-         mysqli_query($link, "INSERT INTO farmers_table values(NULL,'$_POST[farmerFName]', '$_POST[farmerLName]','$_POST[contact_number]', '$_POST[farmerLocation]' )");
+         mysqli_query($link, "INSERT INTO farmers_table values(NULL, UPPER('$_POST[farmerFName]'),  UPPER('$_POST[farmerLName]'),'$_POST[contact_number]',  UPPER('$_POST[farmerLocation]'))");
           
       ?>      
 <script type="text/javascript">
