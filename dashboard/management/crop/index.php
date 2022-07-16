@@ -168,15 +168,18 @@
 <?php include '../../../template/footer.php'; ?>
 <?php
    try{
-       if(isset($_POST['csvfile_btn'])){
-          //do action
-          if($link){
+      if(isset($_POST['csvfile_btn'])){
+         //do action
+         if($link){
              $file = $_FILES['crop_csv_file']['tmp_name'];
-             $handle = fopen($file, "r");
-             $i = 0;
-             while( ($cont=fgetcsv($handle, 1000, ",")) !== false ){
-                 $table = rtrim( $_FILES['crop_csv_file']['name'], ".csv"); //file name of csv
-                 if($i==0){
+            if($file == null){
+               ?> <p style="text-align: center;">Please Insert CSV File</p><?php
+            }else{
+               $handle = fopen($file, "r");
+               $i = 0;
+               while( ($cont=fgetcsv($handle, 1000, ",")) !== false ){
+                  $table = rtrim( $_FILES['crop_csv_file']['name'], ".csv"); //file name of csv
+                  if($i==0){
                      //column and create table if table is not exists
                      $cropID = $cont[0];
                      $cropName  = $cont[1];
@@ -185,26 +188,27 @@
                      $cropHarvest = $cont[4];
                      $cropSeason = $cont[5];
                      $cropLocation = $cont[6];
-                     $query = "CREATE TABLE $table ($cropID INT(10), $cropName VARCHAR(20), $cropStart date(format), $cropMaturity int(5), $cropHarvest date(format), $cropSeason VARCHAR(3), $cropLocation VARCHAR(20))";
+                     $query = "CREATE TABLE $table ($cropID INT(10), $cropName VARCHAR$cropStart date(format), $cropMaturity int(5), $cropHarvest date(format), $cropSeason VARCHAR(3), $cropLocation VARCHAR(20))";
                      mysqli_query($link, $query);
                      echo $query,"<br>";
-                   }else{
-                       //insert data if exist
-                       $query = "INSERT INTO $table (null , $cropName , $cropStart , $cropMaturity , $cropHarvest , $cropSeason, $cropLocation) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5], $cont[6])";
-                       echo $query,"<br>";
-                       mysqli_query($link, $query);
-                   }
-                   $i++;
-             }
+                  }else{
+                     //insert data if exist
+                     $query = "INSERT INTO $table (null , $cropName , $cropStart , $cropMaturity , $cropHarvest , $cropSeason, $cropLocation) VALUES('$cont[0]', '$cont[1]', '$cont[2]', $cont[3], $cont[4], $cont[5], $cont[6])";
+                     echo $query,"<br>";
+                     mysqli_query($link, $query);
+                  }
+                  $i++;
+               }
+            }
          }
-       }
-    }
-    catch (Exception $e) {
-       echo $e->getMessage();
-    }
-    catch (InvalidArgumentException $e) {
-       echo $e->getMessage();
-    }
+      }
+   }
+   catch (Exception $e) {
+      ?> <p style="text-align: center;">Invalid CSV file</p><?php
+   }
+   catch (InvalidArgumentException $e) {
+      ?> <p style="text-align: center;">Invalid CSV file</p><?php
+   }
       try{
         if(isset($_POST['insert_crop']))
         {
@@ -222,4 +226,4 @@
    catch (InvalidArgumentException $e) {
      echo $e->getMessage();
    }
-   ?>
+?>
