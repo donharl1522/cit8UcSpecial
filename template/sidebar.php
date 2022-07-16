@@ -17,8 +17,9 @@
                <p class="text-white">test@gmail.com</p>
             </div>
             <hr class="mb-2 background-white" />
+            <!--Dashboard-->
             <a
-               href="#"
+               href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/"
                class="list-group-item list-group-item-action py-3 ripple active bg-transparent"
                aria-current="true"
                >
@@ -27,38 +28,14 @@
             <!-- Management -->
             <a
                class="list-group-item list-group-item-action py-2 ripple bg-transparent text-white"
-               aria-current="true"
-               data-mdb-toggle="collapse"
-               href="#management"
-               aria-expanded="true"
-               aria-controls="management"
+               href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/management/"
                >
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/plant.png" alt="" style="width:60px;"><span>Management</span>
             </a>
-            <!-- Management Collapsed content -->
-            <ul
-               id="management"
-               class="collapse list-group list-group-flush"
-               >
-               <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/crop/" class="text-reset">Crop </a>
-               </li>
-               <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/farmer/" class="text-reset">Farmer</a>
-               </li>
-               <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/crop-production/" class="text-reset">Crop Production</a>
-               </li>
-            </ul>
-            <!-- Management Collapsed Collapse -->
             <!-- Historical -->
             <a
                class="list-group-item list-group-item-action py-2 ripple bg-transparent text-white"
-               aria-current="true"
-               data-mdb-toggle="collapse"
-               href="#historical"
-               aria-expanded="true"
-               aria-controls="historical"
+               href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/historical-data/"
                >
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/archive.png" alt="" style="width:60px;"><span>Historical Data</span>
             </a>
@@ -122,31 +99,29 @@
    <!-- Navbar -->
    <nav id="main-navbar" class="navbar navbar-expand-lg background-color-primary fixed-top test">
       <div class="container-fluid mx-2 mt-2">
-        <button
-          class="navbar-toggler text-white"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#sidebarMenu"
-          aria-controls="sidebarMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-      
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-          <img
+         <button
+            class="navbar-toggler text-white"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+         <i class="fas fa-bars"></i>
+         </button>
+         <!-- Brand -->
+         <a class="navbar-brand" href="#">
+         <img
             src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/logo/logob2.png"
             height="25"
             alt="Pasya"
             loading="lazy"
-          />
-        </a>
-    
+            />
+         </a>
       </div>
       <!-- Container wrapper -->
-      </nav>
+   </nav>
    <!-- Navbar -->
 </header>
 <!--Main Navigation-->
