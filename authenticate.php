@@ -34,7 +34,7 @@ if ($stmt = $con->prepare('SELECT userID, password FROM user WHERE username = ?'
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             //header('Location: homePage.php');
-            header('Location: home.php');
+            header('Location: dashboard/');
         } else {
             // Incorrect password
             //echo 'Incorrect username and/or password!';
