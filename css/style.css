@@ -7,6 +7,7 @@ call variable in CSS var(--variableName)
   --primary: #0a1f26;
   --secondary: #0e2f36;
   --colorAccent: #3f5d53;
+  --alt: #9894b4;
   --background: #e8f5e2;
 }
 
@@ -19,6 +20,13 @@ call variable in CSS var(--variableName)
 .background-color-secondary {
   background-color: var(--secondary);
 }
+.background-color-accent {
+  background-color: var(--colorAccent);
+}
+.background-color-alt {
+  background-color: var(--alt);
+}
+
 .custom-text-primary {
   color: var(--secondary);
 }
@@ -253,4 +261,26 @@ call variable in CSS var(--variableName)
   #main-navbar {
     display: block;
   }
+}
+
+/*hr*/
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.25em;
 }
