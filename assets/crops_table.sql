@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2022 at 05:15 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jul 16, 2022 at 09:56 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -29,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `crops_table` (
-  `cropID` int(11) NOT NULL,
+  `cropID` int(10) NOT NULL,
   `cropName` varchar(20) NOT NULL,
-  `cropStart` varchar(20) NOT NULL,
-  `cropMaturity` varchar(20) NOT NULL,
-  `cropHarvest` varchar(20) NOT NULL,
-  `cropSeason` varchar(20) NOT NULL,
+  `cropStart` date NOT NULL,
+  `cropMaturity` int(2) NOT NULL,
+  `cropHarvest` date NOT NULL,
+  `cropSeason` varchar(3) NOT NULL,
   `cropLocation` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -43,7 +42,9 @@ CREATE TABLE `crops_table` (
 --
 
 INSERT INTO `crops_table` (`cropID`, `cropName`, `cropStart`, `cropMaturity`, `cropHarvest`, `cropSeason`, `cropLocation`) VALUES
-(1, 'Kent', '2022-06-17', 'iuoiuo', '2022-06-24', 'oio', 'Bakun');
+(3, 'adasfd', '0000-00-00', 0, '0000-00-00', '', ''),
+(4, 'new crop', '2022-07-07', 0, '2022-07-14', 'dry', 'Bakun'),
+(5, 'adfadf', '2022-06-28', 34, '2022-07-26', 'dry', 'Buguias');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +54,8 @@ INSERT INTO `crops_table` (`cropID`, `cropName`, `cropStart`, `cropMaturity`, `c
 -- Indexes for table `crops_table`
 --
 ALTER TABLE `crops_table`
-  ADD PRIMARY KEY (`cropID`);
+  ADD PRIMARY KEY (`cropID`),
+  ADD UNIQUE KEY `cropLocation` (`cropLocation`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -63,7 +65,7 @@ ALTER TABLE `crops_table`
 -- AUTO_INCREMENT for table `crops_table`
 --
 ALTER TABLE `crops_table`
-  MODIFY `cropID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cropID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
