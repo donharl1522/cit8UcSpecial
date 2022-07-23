@@ -24,7 +24,7 @@
                <button type="button" class="btn btn-color-primary btn-lg ripple-surface-dark" data-mdb-toggle="modal" data-mdb-target="#insertCropModal">INSERT CROP PRODUCTION DATA</button>
             </div>
          </div>
-         <table class="table align-middle mb-0 bg-white">
+         <table id="example" class="table align-middle mb-0 bg-white">
             <thead class="bg-light">
                <tr>
                   <th>Harvest Year</th>

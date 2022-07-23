@@ -29,7 +29,7 @@
                         </div>
                      </div>
 
-                     <table class="table align-middle mb-0 bg-white my-5">
+                     <table id="example" class="table align-middle mb-0 bg-white my-5">
                         <thead class="bg-light">
                            <tr>
                               <th scope="col">First Name</th>
