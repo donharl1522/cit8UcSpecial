@@ -39,21 +39,8 @@
                >
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/archive.png" alt="" style="width:60px;"><span>Historical Data</span>
             </a>
-            <!-- Historical Collapsed content -->
-            <ul
-               id="historical"
-               class="collapse list-group list-group-flush"
-               >
-               <li class="list-group-item py-3 ps-5">
-                  <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/historicaldata/agricultural/" class="text-reset">Agricultural </a>
-               </li>
-               <li class="list-group-item py-3 ps-5">
-                  <a href="" class="text-reset">Climatological</a>
-               </li>
-            </ul>
-            <!-- Historical Collapsed Collapse -->
             <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white"
-               ><img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/prediction.png" alt="" style="width:60px;"><span>Predictions</span></a
+               ><img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/trends.png" alt="" style="width:60px;"><span>Predictions</span></a
                >
             <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white">
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/news.png" alt="" style="width:60px;"><span>News</span>
