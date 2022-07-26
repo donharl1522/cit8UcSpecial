@@ -16,8 +16,9 @@ if (!isset($_SESSION['loggedin'])) {
 <!--Main layout-->
 <main style="margin-top: 58px;">
   <div class="container pt-4">
+    <h1 class="mb-3">Dashboard</h1>
 	<div class="row container">
-	<iframe class="mb-3" title="Dashboard1Sample" style="width:100%;height:912px" src="https://app.powerbi.com/view?r=eyJrIjoiZDJmOTlmNzUtMzM1NS00YzkzLThiZmMtMTFhYTNmNWNiNjQxIiwidCI6ImE1MTVlN2M0LThjZjctNGY5Ny1iMjNiLTk2NDkxNjQ1ZjdmMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+	<iframe class="mb-3" title="TemporaryMultiLinear"  style="width:100%;height:650px" src="https://app.powerbi.com/view?r=eyJrIjoiNTZjZGZhMzAtNzhlNS00NmJhLWJkYWYtNGU4NmQxM2I3ZTUwIiwidCI6ImE1MTVlN2M0LThjZjctNGY5Ny1iMjNiLTk2NDkxNjQ1ZjdmMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection258e4a3870979cc2ae80" frameborder="0" allowFullScreen="true"></iframe>
 
 		<!--Main Content-->
 		<div class="col-md-8 mb-2">
@@ -75,7 +76,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<h1 class="mt-5">Historical Data</h1>
 			<div class="card">
 				<div class="card-body w-100">
-				<iframe title="Dashboard1Sample" style="width:100%;height:500px;"  src="https://app.powerbi.com/view?r=eyJrIjoiZDJmOTlmNzUtMzM1NS00YzkzLThiZmMtMTFhYTNmNWNiNjQxIiwidCI6ImE1MTVlN2M0LThjZjctNGY5Ny1iMjNiLTk2NDkxNjQ1ZjdmMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+				<iframe title="Dashboard1Sample" width=100% height="1000" src="https://app.powerbi.com/view?r=eyJrIjoiZDJmOTlmNzUtMzM1NS00YzkzLThiZmMtMTFhYTNmNWNiNjQxIiwidCI6ImE1MTVlN2M0LThjZjctNGY5Ny1iMjNiLTk2NDkxNjQ1ZjdmMCIsImMiOjEwfQ%3D%3D&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
 				</div>
 			</div>
 
