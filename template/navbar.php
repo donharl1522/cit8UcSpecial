@@ -1,60 +1,41 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark  background-color-primary py-3">
-  <!-- Container wrapper -->
-  <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        height="16"
-        alt="Logo"
-        loading="lazy"
-        style="margin-top: -1px;"
-      />
-    </a>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
+      <a href="index.html" class="logo d-flex align-items-center custom-text-primary">
+        <h1>PASYA</h1>
+      </a>
 
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!--<li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>-->
-      </ul>
-      <!-- Left links -->
-
-      <div class="d-flex align-items-center">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Crop Data</a></li>
+          <li><a class="nav-link scrollto" href="#services">Community</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Historical Data</a></li>
+          <li><a class="nav-link scrollto" href="#team">Crop</a></li>
+          <li><a href="#testimonials">Farmer</a></li>
+          <!--<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>-->
+          <li><a class="nav-link scrollto" href="#recent-blog-posts">News</a></li>
+          <li><a class="getstarted scrollto" href="login.php">Login</a></li>
         </ul>
-      </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+  </header><!-- End Header -->
