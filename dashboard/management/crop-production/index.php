@@ -140,6 +140,26 @@
    </div>
 </main>
 <!--Main layout-->
+
+<!--DataTable-->
+<script>
+    $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        lengthChange: false,
+        buttons: [
+            { extend: 'excel', text: 'Export as excel', className: 'background-color-alt',
+                exportOptions: {
+                    columns: [ 0, 1, 2, 3, 4, 5 ]
+                }},
+            //{ extend: 'colvis', text: 'Column Visibility', className: 'background-color-alt' },
+        ]
+        //buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+    } );
+ 
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
+</script>
 <?php include '../../../template/footer.php'; ?>
 <?php
    try{
