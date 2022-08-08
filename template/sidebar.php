@@ -39,24 +39,30 @@
                >
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/archive.png" alt="" style="width:60px;"><span>Historical Data</span>
             </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white"
+
+            <!--Predictions-->
+            <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/predictions/" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white"
                ><img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/trends.png" alt="" style="width:60px;"><span>Predictions</span></a
                >
-            <a href="#" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white">
+            <!--News-->
+            <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/news/" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white">
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/news.png" alt="" style="width:60px;"><span>News</span>
             </a>
+
             <!-- Community -->
-            <a
+            <a href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/community/" class="list-group-item list-group-item-action py-3 ripple bg-transparent text-white">
+            <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/community.png" alt="" style="width:60px;"><span>Community</span>
+            </a>
+            <!--<a
                class="list-group-item list-group-item-action py-2 ripple bg-transparent text-white"
                aria-current="true"
                data-mdb-toggle="collapse"
-               href="#community"
-               aria-expanded="true"
-               aria-controls="community"
+               href="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/dashboard/community/"
                >
             <img class="img-fluid" src="http://<?php echo $_SERVER['HTTP_HOST']  ?>/cit8UcSpecial-master/images/navbar-icons/community.png" alt="" style="width:60px;"><span>Community</span>
             </a>
-            <!-- Community Collapsed content -->
+
+            <!- - Community Collapsed content - ->
             <ul
                id="community"
                class="collapse list-group list-group-flush"
@@ -71,7 +77,7 @@
                   <a href="" class="text-reset">Concerns & Issues</a>
                </li>
             </ul>
-            <!-- Community Collapsed Collapse -->
+            <!- - Community Collapsed Collapse -->
          </div>
          <div class="text-center" style="height: 100px;">
             <hr class="mb-4 mt-0">
