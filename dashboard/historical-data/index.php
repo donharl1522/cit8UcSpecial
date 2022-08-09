@@ -25,7 +25,7 @@
                                 <img class="img-fluid" src="../../images/icons/agricultural.png">
 							</div>
 							<div class="col-sm-5 float-right my-auto text-white">
-                                <h1 class="card-title">Agricultural</h1>
+                                <h2 class="card-title">Agricultural</h2>
 								<a class="btn btn-light btn-rounded btn-lg" href="agricultural/">Proceed</a>
 							</div>
 						</div>
@@ -41,8 +41,8 @@
                                 <img class="img-fluid" src="../../images/icons/climatological.png">
 							</div>
 							<div class="col-sm-5 float-right my-auto text-white">
-                                <h2 class="card-title">Climatological</h2>
-								<a class="btn btn-light btn-rounded btn-lg" href="#">Proceed</a>
+                                <h3 class="card-title">Climatological</h3>
+								<a class="btn btn-light btn-rounded btn-lg" href="climatological/">Proceed</a>
 							</div>
 						</div>
 					</div>
