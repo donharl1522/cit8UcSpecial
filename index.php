@@ -1,484 +1,756 @@
-<?php
-   // We need to use sessions, so you should always start sessions using the below code.
-   session_start();
-   // If the user is not logged in redirect to the login page...
-   if (!isset($_SESSION['loggedin'])) {
-   	header('Location: ../../');
-   	exit;
-   	//blah blah blah
-   }
-   ?>
-<?php require "../../config/connection.php"; ?>
-<?php include '../../template/header.php'; ?>
-<?php include '../../template/sidebar.php'; ?>
-<!--Main layout-->
-<main style="margin-top: 58px;">
-  <div class="container pt-4">
-  <section>
-  <div class="container my-5">
-    <div class="container-fluid">
+<?php include 'template/guest-page-header.php'; ?>
+<?php include 'template/navbar.php'; ?>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
       <div class="row">
-        <div class="col">
-          <img class="img-fluid" src="images/Homepage-HeroImage-DataEcosystem1.png" />
-        </div>
-        <div class="col">
-          <div class="container my-5">
-            <p class="h1">Agricultural Data </p>
-            <p class="lead">This website is meant as a prototype</p>
-
-            <a class="btn btn-color-primary" href="homePage.php?id=">Home</a>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <!--<h1 data-aos="fade-up">PASYA</h1>-->
+          <h2 data-aos="fade-up" data-aos-delay="400">Harvest the Power of Smart Farming</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
           </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="images/logo/logob2.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
-  </div>
-</section>
 
+  </section><!-- End Hero -->
 
-<!--******SORTING TABLE STARTS HERE-->
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
 
-    <!--END SORTING TABLE STARTS HERE-->
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
 
-    <!--Navigation-->
-    <div class="container my-5">
-      <nav
-        id="main-navbar"
-        class="navbar navbar-expand-lg navbar-light bg-white"
-      >
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-          <h6>Crop Year</h6>
-        
-
-          <div class="row ps-5">
-            <div class="col">
-              <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
-              <select class="form-select" name="fromYear" id="fromYear">
-                <option disabled selected>From</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-              </select>
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3><!--Test--></h3>
+              <h2>Crop Data</h2>
+              <p>
+                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Proceed to Crop Data</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
+          </div>
 
-            <div class="col">
-              <select disabled class="form-select"  name="toYear" id="toYear">
-                <option disabled selected>To</option>
-                <option id="to2015" value="2015">2015</option>
-                <option id="to2016" value="2016">2016</option>
-                <option id="to2017" value="2017">2017</option>
-                <option id="to2018" value="2018">2018</option>
-                <option id="to2019" value="2019">2019</option>
-              </select>
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
 
-              <script type="text/javascript">
-                document.getElementById("fromYear").onchange = function () {
-                  document.getElementById("toYear").setAttribute("disabled", "disabled");
-                  if (this.value == '2015'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = false; 
-                    document.getElementById("to2016").disabled = false; 
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false;
+        </div>
+      </div>
 
-                  }
-                  else if (this.value == '2016'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true; 
-                    document.getElementById("to2016").disabled = false; 
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
+    </section><!-- End About Section -->
+
+   
+
+  
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Community</h2>
+          <p>Veritatis et dolores facere numquam et praesentium</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box blue">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Nesciunt Mete</h3>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box orange">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Eosle Commodi</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box green">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Ledo Markt</h3>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box red">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Asperiores Commodi</h3>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box purple">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Velit Doloremque.</h3>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-box pink">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Dolori Architecto</h3>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
 
 
-                  } 
-                  else if (this.value == '2017'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = false; 
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
-                  }
-                  else if (this.value == '2018'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = true;
-                    document.getElementById("to2018").disabled = false;
-                    document.getElementById("to2019").disabled = false; 
-                  }
-                  else if (this.value == '2019'){
-                    document.getElementById("toYear").removeAttribute("disabled");
-                    document.getElementById("to2015").disabled = true;
-                    document.getElementById("to2016").disabled = true;
-                    document.getElementById("to2017").disabled = true;    
-                    document.getElementById("to2018").disabled = true;
-                    document.getElementById("to2019").disabled = false;               
-                  }
-                };
-              </script>
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
 
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>F.A.Q</h2>
+          <p>Frequently Asked Questions</p>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- F.A.Q List 1-->
+            <div class="accordion accordion-flush" id="faqlist1">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    Non consectetur a erat nam at lectus urna duis?
+                  </button>
+                </h2>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                  </button>
+                </h2>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                  </button>
+                </h2>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                  <div class="accordion-body">
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  </div>
+                </div>
+              </div>
 
             </div>
           </div>
-          <div>
 
-          <select disabled class="form-select" name="munSelect" id="munSelect">
-            <option disabled selected>Choose Municipality</option>
-            <option value="allMun">All Municipalities</option>
-            <option value="Atok">Atok</option>
-            <option value="Bakun">Bakun</option>
-            <option value="Bokod">Bokod</option>
-            <option value="Buguias">Buguias</option>
-            <option value="Itogon">Itogon</option>
-            <option value="Kabayan">Kabayan</option>
-            <option value="Kapangan">Kapangan</option>
-            <option value="Kibungan">Kibungan</option>
-            <option value="La Trinidad">La Trinidad</option>
-            <option value="Mankayan">Mankayan</option>
-            <option value="Sablan">Sablan</option>
-            <option value="Tuba">Tuba</option>
-            <option value="Tublay">Tublay</option>
-          </select>
+          <div class="col-lg-6">
+
+            <!-- F.A.Q List 2-->
+            <div class="accordion accordion-flush" id="faqlist2">
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                  </button>
+                </h2>
+                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                  </button>
+                </h2>
+                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+                    Varius vel pharetra vel turpis nunc eget lorem dolor?
+                  </button>
+                </h2>
+                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                  <div class="accordion-body">
+                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <script type="text/javascript">
-            document.getElementById("toYear").onchange = function () {
-              document.getElementById("munSelect").setAttribute("disabled", "disabled");
-                if (this.value !== null){
-                  document.getElementById("munSelect").removeAttribute("disabled");
-                }
-              };
-          </script>
+        </div>
 
+      </div>
 
+    </section><!-- End F.A.Q Section -->
 
-          <!-- Right links -->
-          <ul class="navbar-nav ms-auto d-flex flex-row">
-            <!-- Search form -->
-        
-              
-              <select disabled 
-                class="form-select"
-                name="cropNameSelect"
-                id="cropNameSelect"
-                onchange="yesnoCheck(this)"
-              >
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
 
-                <option disabled selected>Crops</option>
-                <option value="Cabbage">Cabbage</option>
-                <option value="Chinese Cabbage">Chinese Cabbage</option>
-                <option value="Lettuce">Lettuce</option>
-                <option value="Cauliflower">Cauliflower</option>
-                <option value="Snap Beans">Snap Beans</option>
-                <option value="Garden Peas">Garden Peas</option>
-                <option value="Sweet Pepper">Sweet Pepper</option>
-                <option value="White Potato">White Potato</option>
-                <option value="Carrots">Carrots</option>
-                <option value="other">Others</option>
-              </select>
+      <div class="container" data-aos="fade-up">
 
-              <script type="text/javascript">
-                document.getElementById("munSelect").onchange = function () {
-                  document.getElementById("cropNameSelect").setAttribute("disabled", "disabled");
-                  if (this.value !== null){
-                    document.getElementById("cropNameSelect").removeAttribute("disabled");
-                  }
-                };
-              </script>
+        <header class="section-header">
+          <h2>Historical Data</h2>
+          <p>Check the Data</p>
+        </header>
 
-              <input
-                autocomplete="off"
-                type="search"
-                class="form-control rounded"
-                placeholder="Search"
-                style="min-width: 225px"
-                style="display: none"
-                id="ifYes"
-              />
-              <button type="submit" name="search" class="btn  btn-color-primary btn-block btn-lg"
-                data-mdb-ripple-color="dark">Search
-              </button>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <!--<div class="portfolio-wrap">
+              <img src="img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>-->
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <!--<img src="img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Farmer Management</h2>
+          <p>What they are saying about us</p>
+        </header>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Crop Management</h2>
+          <p>Our hard working team</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Team Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Our Clients</h2>
+          <p>Temporibus omnis officia</p>
+        </header>
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>News</h2>
+          <p>Recent posts form our Blog</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Tue, September 15</span>
+              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Fri, August 28</span>
+              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+              <span class="post-date">Mon, July 11</span>
+              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Recent Blog Posts Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <!--<section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Address</h3>
+                  <p>A108 Adam Street,<br>New York, NY 535022</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
             </form>
-          </ul>
-        </div>
-        <!-- Container wrapper -->
-      </nav>
-    </div>
 
-    <div class="container my-5">
-      <div class="container-fluid">
-
-              <table class="table align-middle mb-0 bg-white">
-                  <tbody>
-                    <?php
-                    if(isset($_POST['search'])){
-
-                       if(isset($_POST['fromYear']) && isset($_POST['toYear']) && isset($_POST['munSelect']) && isset($_POST['cropNameSelect'])){
-                        $yearSearchedFrom = $_POST['fromYear'];
-                        $yearSearchedTo = $_POST['toYear'];
-                        $munSelect = $_POST['munSelect'];
-                        $cropSelected = $_POST['cropNameSelect'];
-
-                        if ($munSelect == "allMun") {
-
-                          ?>
-
-                          <thead class="bg-light">
-                            <tr>
-                              <th>Year</th>
-                              <th>Municipality</th>
-                              <th>Area Harvested (ha)</th>
-                              <th>Production (mt)</th>
-                              <th>Productivity (mt/ha)</th>
-                            </tr>
-                          </thead>
-
-                        <?php
-                          
-                        echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in all Municipalities". "</p>";
-
-                        $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'";
-                        $topCropResult=mysqli_query($link, $query);
-                        $topCropData = mysqli_fetch_array( $topCropResult);
-
-                        $topCropDataRes = $topCropData['topCrop'];
-
-                        $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
-
-                        $prodRateRow=mysqli_fetch_array($topProdRateResult);
-
-                      
-                        $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
-                        
-                        while($row=mysqli_fetch_array($res)):?>
-                          <tr>
-                            <td>
-                            <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
-                            </td>
-                           <td>
-                              <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
-                           </td>
-                           <td>
-                             <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?></p>
-                           </td>
-                          </tr>
-                      <?php endwhile?>
-                      <?php }
-
-
-                      elseif ($munSelect != null and $munSelect != "allMun") {
-
-                        ?>
-
-                          <thead class="bg-light">
-                            <tr>
-                              <th>Year</th>
-                              <th>Area Harvested (ha)</th>
-                              <th>Production (mt)</th>
-                              <th>Productivity (mt/ha)</th>
-                            </tr>
-                          </thead>
-
-                        <?php
-
-                        echo "<p class='container text-center blockquote pb-2'><i class='far fa-lightbulb pe-2'></i> " . $cropSelected." production from ".$yearSearchedFrom." to ".$yearSearchedTo. " in ".$munSelect . "</p>";
-
-                        $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelected' and munName = '$munSelect' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'";
-                        $topCropResult=mysqli_query($link, $query);
-                        $topCropData = mysqli_fetch_array( $topCropResult);
-
-                        $topCropDataRes = $topCropData['topCrop'];
-
-                        $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
-
-                        $prodRateRow=mysqli_fetch_array($topProdRateResult);
-
-                      
-                        $res=mysqli_query($link,"SELECT * FROM historicaldataset WHERE munName = '$munSelect' and cropName = '$cropSelected' and harvestYear between '$yearSearchedFrom' and '$yearSearchedTo'");
-                        
-                        while($row=mysqli_fetch_array($res)):?>
-                          <tr>
-                            <td>
-                            <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
-                           </td>
-                           <td>
-                             <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?></p>
-                           </td>
-                          </tr>
-                      <?php endwhile?>
-                      <?php }
-                      
-                    }}?>
-                  </tbody>
-
-               </table>
-            </div>
           </div>
+
         </div>
+
       </div>
-      <!--End Side Tabbed Sample-->
 
-      <!--Top Crop Production-->
-      <?php echo "Top Crop Producers" ?>
+    </section>--><!-- End Contact Section -->
 
-      <form class="d-none d-md-flex input-group w-auto my-auto" method="post">
-      <select  class="form-select" name="topCropSelect" id="topCropSelect">
-        <option disabled selected>Choose Crop</option>
-        <option value="Cabbage">Cabbage</option>
-        <option value="Chinese Cabbage">Chinese Cabbage</option>
-        <option value="Lettuce">Lettuce</option>
-        <option value="Cauliflower">Cauliflower</option>
-        <option value="Snap Beans">Snap Beans</option>
-        <option value="Garden Peas">Garden Peas</option>
-        <option value="Sweet Pepper">Sweet Pepper</option>
-        <option value="White Potato">White Potato</option>
-        <option value="Carrots">Carrots</option>
-        <option value="other">Others</option>
-      </select>
-
-      
-        <select class="form-select" name="fromYearTopCrop" id="fromYearTopCrop">
-          <option disabled selected>From</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-        </select>
-
-      
-          <select disabled class="form-select"  name="toYearTopCrop" id="toYearTopCrop">
-            <option disabled selected>To</option>
-            <option id="to2015TopCrop" value="2015">2015</option>
-            <option id="to2016TopCrop" value="2016">2016</option>
-            <option id="to2017TopCrop" value="2017">2017</option>
-            <option id="to2018TopCrop" value="2018">2018</option>
-            <option id="to2019TopCrop" value="2019">2019</option>
-          </select>
-
-      <button type="submit" name="topCropSubmitBtn" class="btn  btn-color-primary btn-block btn-lg"
-        data-mdb-ripple-color="dark">Search
-      </button>
-    </form>
-
-      <?php 
-        if(isset($_POST['topCropSubmitBtn'])){
-
-          if(isset($_POST['fromYearTopCrop']) && isset($_POST['toYearTopCrop']) && isset($_POST['topCropSelect'])){
-            $yearSearchedFromTop = $_POST['fromYearTopCrop'];
-            $yearSearchedToTop = $_POST['toYearTopCrop'];
-            $cropSelectedTop = $_POST['topCropSelect'];
-
-            $query= "SELECT MAX( prodRate ) AS 'topCrop' FROM `historicaldataset` WHERE cropName = '$cropSelectedTop' and harvestYear between '$yearSearchedFromTop' and '$yearSearchedToTop'";
-            $topCropResult=mysqli_query($link, $query);
-            $topCropData = mysqli_fetch_array( $topCropResult);
-
-            $topCropDataRes = $topCropData['topCrop'];
-
-            $topProdRateResult=mysqli_query($link,"SELECT * FROM historicaldataset WHERE prodRate = '$topCropDataRes' and cropName = '$cropSelectedTop' and harvestYear between '$yearSearchedFromTop' and '$yearSearchedToTop'");
-
-              $prodRateRow=mysqli_fetch_array($topProdRateResult);
-
-
-              echo $prodRateRow["munName"]." is the Top Producer of ". $cropSelectedTop. " During " .$yearSearchedFromTop." to ".$yearSearchedToTop;
-
-          }else{
-          echo "yaaa";
-          }
-        }
-       ?>
-
-
-
-      <script type="text/javascript">
-                document.getElementById("fromYearTopCrop").onchange = function () {
-                  document.getElementById("toYearTopCrop").setAttribute("disabled", "disabled");
-                  if (this.value == '2015'){
-                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
-                    document.getElementById("to2015TopCrop").disabled = false; 
-                    document.getElementById("to2016TopCrop").disabled = false; 
-                    document.getElementById("to2017TopCrop").disabled = false; 
-                    document.getElementById("to2018TopCrop").disabled = false;
-                    document.getElementById("to2019TopCrop").disabled = false;
-
-                  }
-                  else if (this.value == '2016'){
-                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
-                    document.getElementById("to2015TopCrop").disabled = true; 
-                    document.getElementById("to2016TopCrop").disabled = false; 
-                    document.getElementById("to2017TopCrop").disabled = false; 
-                    document.getElementById("to2018TopCrop").disabled = false;
-                    document.getElementById("to2019TopCrop").disabled = false; 
-
-
-                  } 
-                  else if (this.value == '2017'){
-                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
-                    document.getElementById("to2015TopCrop").disabled = true;
-                    document.getElementById("to2016TopCrop").disabled = true;
-                    document.getElementById("to2017TopCrop").disabled = false; 
-                    document.getElementById("to2018TopCrop").disabled = false;
-                    document.getElementById("to2019TopCrop").disabled = false; 
-                  }
-                  else if (this.value == '2018'){
-                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
-                    document.getElementById("to2015TopCrop").disabled = true;
-                    document.getElementById("to2016TopCrop").disabled = true;
-                    document.getElementById("to2017TopCrop").disabled = true;
-                    document.getElementById("to2018TopCrop").disabled = false;
-                    document.getElementById("to2019TopCrop").disabled = false; 
-                  }
-                  else if (this.value == '2019'){
-                    document.getElementById("toYearTopCrop").removeAttribute("disabled");
-                    document.getElementById("to2015TopCrop").disabled = true;
-                    document.getElementById("to2016TopCrop").disabled = true;
-                    document.getElementById("to2017TopCrop").disabled = true;    
-                    document.getElementById("to2018TopCrop").disabled = true;
-                    document.getElementById("to2019TopCrop").disabled = false;               
-                  }
-                };
-              </script>
-
-
-      <!--End of Top Crop Production-->
-
-
-  <script>
-    document.getElementById("ifYes").style.display = "none";
-      function yesnoCheck(that) {
-        if (that.value == "other") {
-          //alert("check");
-          document.getElementById("ifYes").style.display = "block";
-        } else {
-          document.getElementById("ifYes").style.display = "none";
-        }
-      }
-    </script>
-
-
-
-
-    
-</div>
-  </div>
-</main>
-<!--Main layout-->
-<?php include '../../template/footer.php'; ?>
+  </main><!-- End #main -->
+<?php include 'template/guest-page-footer.php'; ?>
