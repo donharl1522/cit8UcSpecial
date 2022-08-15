@@ -32,7 +32,6 @@
                      <table id="example" class="table align-middle mb-0 bg-white my-5">
                         <thead class="bg-light">
                            <tr>
-                              <th>ID</th>
                               <th>Crop Name</th>
                               <th>Crop Start</th>
                               <th>Crop Maturity</th>
@@ -47,7 +46,6 @@
                               $res=mysqli_query($link,"SELECT * FROM crops_table");
                               while($row=mysqli_fetch_array($res)):?>
                            <tr>
-                              <td><?php echo $row["cropID"]; ?></td>
                               <td><?php echo $row["cropName"]; ?></td>
                               <td><?php echo $row["cropStart"]; ?></td>
                               <td><?php echo $row["cropMaturity"]; ?></td>
@@ -171,6 +169,7 @@
     $(document).ready(function() {
     var table = $('#example').DataTable( {
         lengthChange: false,
+        dom: 'frtipB',
         buttons: [
             { extend: 'excel', text: 'Export as excel', className: 'background-color-alt',
                 exportOptions: {

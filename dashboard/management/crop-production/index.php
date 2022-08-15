@@ -146,6 +146,7 @@
     $(document).ready(function() {
     var table = $('#example').DataTable( {
         lengthChange: false,
+        dom: 'frtipB',
         buttons: [
             { extend: 'excel', text: 'Export as excel', className: 'background-color-alt',
                 exportOptions: {
