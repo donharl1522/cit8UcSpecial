@@ -178,13 +178,13 @@
                   <p class="fw-normal mb-1"><?php echo $row["munName"]; ?></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?> <span class="text-muted mb-0">ha</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?> <span class="text-muted mb-0">mt</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?></p>
+                  <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?> <span class="text-muted mb-0">mt/ha</span></p>
                </td>
             </tr>
             <?php endwhile?>
@@ -222,13 +222,13 @@
                   <p class="fw-normal mb-1"><?php echo $row["harvestYear"]; ?></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["prodArea"]; ?> <span class="text-muted mb-0">ha</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["cropProd"]; ?> <span class="text-muted mb-0">mt</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?></p>
+                  <p class="fw-normal mb-1 fw-bold"><?php echo $row["prodRate"]; ?> <span class="text-muted mb-0">mt/ha</span></p>
                </td>
             </tr>
             <?php endwhile?>
