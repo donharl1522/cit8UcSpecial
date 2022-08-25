@@ -87,9 +87,9 @@
                   <th>Year</th>
                   <th>Month</th>
                   <th>Rainfall</th>
-                  <th>tMax</th>
-                  <th>tMin</th>
-                  <th>rh</th>
+                  <th>Max Temperature</th>
+                  <th>Minimum Temperature</th>
+                  <th>Relative Humidity</th>
                   <th>Wind Speed</th>
                   <th>Wind Direction</th>
                </tr>
@@ -112,16 +112,16 @@
                   <p class="fw-normal mb-1"><?php echo $row["rainFall"]; ?></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["tMax"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["tMax"]; ?> <span class="text-muted mb-0">°C</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["tMin"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["tMin"]; ?> <span class="text-muted mb-0">°C</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["rh"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["rh"]; ?> <span class="text-muted mb-0">%</span></p>
                </td>
                <td>
-                  <p class="fw-normal mb-1"><?php echo $row["windSpeed"]; ?></p>
+                  <p class="fw-normal mb-1"><?php echo $row["windSpeed"]; ?> <span class="text-muted mb-0">km/h</span></p>
                </td>
                <td>
                   <p class="fw-normal mb-1"><?php echo $row["windDirection"]; ?></p>
